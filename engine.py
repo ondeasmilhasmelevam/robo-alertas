@@ -10,6 +10,7 @@ from collections import defaultdict
 from seats_api import SeatsAeroClient
 from processor import process_results, get_destination_region, CABIN_FIELDS, CABIN_NAMES, parse_cost, source_display, get_smart_pricing, is_award, airport_display
 from formatter import format_alert_premium, format_alert_grouped, format_price_drop, format_alert_ida_volta
+import publicar_site
 from telegram_bot import TelegramBot
 from history import AlertHistory
 from price_records import PriceRecords
@@ -359,6 +360,7 @@ def run_cycle_for_channel(client, bot, channel, origins, max_alerts, callback=No
         if len(alerts_group) >= 2:
             # FORMATO AGRUPADO
             programs_data = []
+            pares_site = []
             for a in alerts_group:
                 key = (a["destination"], a["origin"], a["source"])
                 volta = return_flights.get(key)
@@ -385,12 +387,17 @@ def run_cycle_for_channel(client, bot, channel, origins, max_alerts, callback=No
 
                 programs_data.append(pd)
                 all_sent_alerts.append(a)
+                pares_site.append((a, volta if analysis["mode"] == "ida_volta" else None))
 
                 pr.check_and_update(a["origin"],a["destination"],a["source"],a["cabin"],a["miles"])
 
             if programs_data:
                 msg = format_alert_grouped(orig, dest, cabin, cabin_name, programs_data, region=alerts_group[0].get("region",""))
-                if bot_ch.send_message(msg): sent += 1
+                if bot_ch.send_message(msg):
+                    sent += 1
+                    # So entra no site o que REALMENTE foi enviado no grupo.
+                    for al, vl in pares_site:
+                        publicar_site.registrar(al, vl)
                 time.sleep(2)
         else:
             # FORMATO INDIVIDUAL
@@ -415,7 +422,9 @@ def run_cycle_for_channel(client, bot, channel, origins, max_alerts, callback=No
             tip = get_emission_tip(a["source"],a.get("region",""),a["cabin"])
             if tip: msg += f"\n\n\U0001f4a1 {tip}"
 
-            if bot_ch.send_message(msg): sent += 1
+            if bot_ch.send_message(msg):
+                sent += 1
+                publicar_site.registrar(a, volta if analysis["mode"] == "ida_volta" else None)
             all_sent_alerts.append(a)
             time.sleep(2)
 
@@ -653,6 +662,7 @@ def run_iberia_scan(client, bot, channels, origins, max_alerts, callback=None):
                     volta = None
                 msg = format_alert_ida_volta(a, volta)
                 if bot_ch.send_message(msg):
+                    publicar_site.registrar(a, volta)
                     history.mark_sent(a)
                     # CONSERTADO 26/11/2026: chamava pr.check_and_update(a),
                     # mas a funcao pede os campos separados (igual no ciclo

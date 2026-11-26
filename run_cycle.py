@@ -28,6 +28,7 @@ from channels import load_config
 from seats_api import SeatsAeroClient
 from telegram_bot import TelegramBot
 from engine import run_cycle_for_channel, run_melhores_destinos, run_iberia_scan
+import publicar_site
 
 
 def _log(msg=""):
@@ -144,6 +145,13 @@ def main():
             run_melhores_destinos(bot, canais, callback=_log)
         except Exception as e:
             _log(f"[Melhores Destinos] ERRO: {e}")
+
+    # Arquivo que o site le (alertas_site.json). So tem o que foi enviado
+    # de verdade; em --teste o BotDeTeste nao envia, entao nao grava nada.
+    try:
+        publicar_site.salvar(callback=_log)
+    except Exception as e:
+        _log(f"[site] Nao deu pra gravar o alertas_site.json: {e}")
 
     _log("=" * 58)
     _log(f"Ciclo terminado em {(time.time() - inicio) / 60:.1f} min"
