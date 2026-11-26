@@ -1,0 +1,650 @@
+{
+  "alerts": {
+    "GRU-EZE-turkish-60000-49c5784b": {
+      "sent_at": "2026-07-27T21:06:45.700459",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "miles": 60000
+    },
+    "GRU-VVI-smiles-20000-a7160bd1": {
+      "sent_at": "2026-07-27T21:06:45.700459",
+      "route": "GRU->VVI",
+      "source": "smiles",
+      "miles": 20000
+    },
+    "GIG-MVD-smiles-29000-76193de0": {
+      "sent_at": "2026-07-27T21:06:45.700459",
+      "route": "GIG->MVD",
+      "source": "smiles",
+      "miles": 29000
+    },
+    "GIG-ASU-smiles-35000-76193de0": {
+      "sent_at": "2026-07-27T21:06:45.700459",
+      "route": "GIG->ASU",
+      "source": "smiles",
+      "miles": 35000
+    },
+    "GRU-SCL-turkish-40000-7a244f01": {
+      "sent_at": "2026-07-27T21:06:45.700459",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GRU-BOG-smiles_drop-46000-d41d8cd9": {
+      "sent_at": "2026-07-27T21:06:48.518060",
+      "route": "GRU->BOG",
+      "source": "smiles_drop",
+      "miles": 46000
+    },
+    "CNF-SCL-delta_drop-15900-d41d8cd9": {
+      "sent_at": "2026-07-27T22:38:38.743654",
+      "route": "CNF->SCL",
+      "source": "delta_drop",
+      "miles": 15900
+    },
+    "GRU-EZE-turkish-60000-9f9cf709": {
+      "sent_at": "2026-07-28T21:20:49.370835",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "miles": 60000
+    },
+    "GRU-VVI-smiles-20000-17c83d5a": {
+      "sent_at": "2026-07-28T21:20:49.370835",
+      "route": "GRU->VVI",
+      "source": "smiles",
+      "miles": 20000
+    },
+    "GRU-EZE-turkish-40000-753542f8": {
+      "sent_at": "2026-07-28T21:20:49.370835",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GRU-SCL-turkish-40000-4b6d140c": {
+      "sent_at": "2026-07-28T21:20:49.370835",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GRU-EZE-turkish-60000-2af13ac7": {
+      "sent_at": "2026-07-29T21:49:29.870256",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "miles": 60000
+    },
+    "GRU-SCL-turkish-60000-d66a11aa": {
+      "sent_at": "2026-07-29T21:49:29.870256",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "miles": 60000
+    },
+    "GRU-VVI-smiles-20000-68cbc30b": {
+      "sent_at": "2026-07-29T21:49:29.870256",
+      "route": "GRU->VVI",
+      "source": "smiles",
+      "miles": 20000
+    },
+    "GIG-MVD-smiles-20000-c61c73c7": {
+      "sent_at": "2026-07-29T21:49:29.870256",
+      "route": "GIG->MVD",
+      "source": "smiles",
+      "miles": 20000
+    },
+    "GIG-ASU-smiles-35000-68cbc30b": {
+      "sent_at": "2026-07-29T21:49:29.870256",
+      "route": "GIG->ASU",
+      "source": "smiles",
+      "miles": 35000
+    },
+    "GRU-SCL-turkish-40000-a14e8dc7": {
+      "sent_at": "2026-07-29T21:49:29.870256",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GRU-EZE-aeroplan_drop-20000-d41d8cd9": {
+      "sent_at": "2026-07-29T21:49:32.617510",
+      "route": "GRU->EZE",
+      "source": "aeroplan_drop",
+      "miles": 20000
+    },
+    "GRU-EZE-turkish-60000-e0f5da19": {
+      "sent_at": "2026-07-30T21:21:06.142722",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "miles": 60000
+    },
+    "GRU-SCL-turkish-60000-48cc7744": {
+      "sent_at": "2026-07-30T21:21:06.142722",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "miles": 60000
+    },
+    "GRU-VVI-smiles-20000-c61c73c7": {
+      "sent_at": "2026-07-30T21:21:06.142722",
+      "route": "GRU->VVI",
+      "source": "smiles",
+      "miles": 20000
+    },
+    "GRU-EZE-turkish-40000-462f1c48": {
+      "sent_at": "2026-07-30T21:21:06.142722",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GRU-SCL-turkish-40000-902953e6": {
+      "sent_at": "2026-07-30T21:21:06.142722",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GRU-BOG-smiles-43000-c61c73c7": {
+      "sent_at": "2026-07-30T21:21:06.142722",
+      "route": "GRU->BOG",
+      "source": "smiles",
+      "miles": 43000
+    },
+    "GRU-VVI-american_drop-12500-d41d8cd9": {
+      "sent_at": "2026-07-30T21:21:08.735816",
+      "route": "GRU->VVI",
+      "source": "american_drop",
+      "miles": 12500
+    },
+    "GRU-MDZ-delta_drop-15900-d41d8cd9": {
+      "sent_at": "2026-07-30T21:21:14.799828",
+      "route": "GRU->MDZ",
+      "source": "delta_drop",
+      "miles": 15900
+    },
+    "GRU-EZE-aeroplan_drop-26800-d41d8cd9": {
+      "sent_at": "2026-07-30T21:21:19.585149",
+      "route": "GRU->EZE",
+      "source": "aeroplan_drop",
+      "miles": 26800
+    },
+    "GRU-EZE-turkish-60000-da3d3032": {
+      "sent_at": "2026-07-31T05:42:17.944792",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "miles": 60000
+    },
+    "GRU-SCL-turkish-60000-205858be": {
+      "sent_at": "2026-07-31T05:42:17.944792",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "miles": 60000
+    },
+    "GRU-EZE-turkish-40000-6edcbf13": {
+      "sent_at": "2026-07-31T05:42:17.944792",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GRU-EZE-turkish-60000-9bdb3f11": {
+      "sent_at": "2026-08-01T08:50:48.149084",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "miles": 60000
+    },
+    "GIG-ASU-smiles-28000-f3a36f62": {
+      "sent_at": "2026-08-01T08:50:48.149084",
+      "route": "GIG->ASU",
+      "source": "smiles",
+      "miles": 28000
+    },
+    "GRU-SCL-turkish-40000-c43436ec": {
+      "sent_at": "2026-08-01T08:50:48.149084",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GRU-BOG-smiles-43000-f3a36f62": {
+      "sent_at": "2026-08-01T08:50:48.149084",
+      "route": "GRU->BOG",
+      "source": "smiles",
+      "miles": 43000
+    },
+    "GRU-ASU-delta_drop-12700-d41d8cd9": {
+      "sent_at": "2026-08-01T08:50:52.636889",
+      "route": "GRU->ASU",
+      "source": "delta_drop",
+      "miles": 12700
+    },
+    "GIG-COR-flyingblue_drop-14000-d41d8cd9": {
+      "sent_at": "2026-08-01T08:50:57.308043",
+      "route": "GIG->COR",
+      "source": "flyingblue_drop",
+      "miles": 14000
+    },
+    "GRU-EZE-aeroplan_drop-25000-d41d8cd9": {
+      "sent_at": "2026-08-01T08:51:02.448953",
+      "route": "GRU->EZE",
+      "source": "aeroplan_drop",
+      "miles": 25000
+    },
+    "GRU-EZE-turkish-60000-558fc14a": {
+      "sent_at": "2026-08-01T21:56:31.879261",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "miles": 60000
+    },
+    "GIG-ASU-smiles-28000-37a4a2cb": {
+      "sent_at": "2026-08-01T21:56:31.879261",
+      "route": "GIG->ASU",
+      "source": "smiles",
+      "miles": 28000
+    },
+    "GRU-EZE-turkish-40000-00c98179": {
+      "sent_at": "2026-08-01T21:56:31.879261",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GRU-SCL-turkish-40000-bb4b84ec": {
+      "sent_at": "2026-08-01T21:56:31.879261",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GRU-CCS-smiles-61000-0f590408": {
+      "sent_at": "2026-08-01T21:56:31.879261",
+      "route": "GRU->CCS",
+      "source": "smiles",
+      "miles": 61000
+    },
+    "GRU-BOG-american_drop-12500-d41d8cd9": {
+      "sent_at": "2026-08-01T21:56:34.849350",
+      "route": "GRU->BOG",
+      "source": "american_drop",
+      "miles": 12500
+    },
+    "GIG-ASU-smiles-28000-0f590408": {
+      "sent_at": "2026-08-02T21:13:36.048907",
+      "route": "GIG->ASU",
+      "source": "smiles",
+      "miles": 28000
+    },
+    "GRU-EZE-turkish-40000-f83337b0": {
+      "sent_at": "2026-08-02T21:13:36.048907",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GRU-SCL-turkish-40000-d4c740fb": {
+      "sent_at": "2026-08-02T21:13:36.048907",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GRU-EZE-turkish-60000-b67e1b72": {
+      "sent_at": "2026-08-03T21:47:36.316427",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "miles": 60000
+    },
+    "GRU-SCL-turkish-60000-cb5ff218": {
+      "sent_at": "2026-08-03T21:47:36.316427",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "miles": 60000
+    },
+    "GRU-VVI-smiles-20000-242347e9": {
+      "sent_at": "2026-08-03T21:47:36.316427",
+      "route": "GRU->VVI",
+      "source": "smiles",
+      "miles": 20000
+    },
+    "GIG-MVD-smiles-20000-8d6e6b92": {
+      "sent_at": "2026-08-03T21:47:36.316427",
+      "route": "GIG->MVD",
+      "source": "smiles",
+      "miles": 20000
+    },
+    "GIG-ASU-smiles-28000-242347e9": {
+      "sent_at": "2026-08-03T21:47:36.316427",
+      "route": "GIG->ASU",
+      "source": "smiles",
+      "miles": 28000
+    },
+    "GIG-ROS-smiles-36000-242347e9": {
+      "sent_at": "2026-08-03T21:47:36.316427",
+      "route": "GIG->ROS",
+      "source": "smiles",
+      "miles": 36000
+    },
+    "GRU-EZE-turkish-40000-ed8b28ab": {
+      "sent_at": "2026-08-03T21:47:36.316427",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GRU-SCL-turkish-40000-3d662863": {
+      "sent_at": "2026-08-03T21:47:36.316427",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GRU-VVI-smiles_drop-20000-d41d8cd9": {
+      "sent_at": "2026-08-03T21:47:39.428598",
+      "route": "GRU->VVI",
+      "source": "smiles_drop",
+      "miles": 20000
+    },
+    "GRU-SCL-turkish-60000-174b0cab": {
+      "sent_at": "2026-08-04T21:07:18.534055",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "miles": 60000
+    },
+    "GRU-EZE-turkish-60000-f58cc233": {
+      "sent_at": "2026-08-04T21:07:18.534055",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "miles": 60000
+    },
+    "GIG-MVD-smiles-20000-9992f3df": {
+      "sent_at": "2026-08-04T21:07:18.534055",
+      "route": "GIG->MVD",
+      "source": "smiles",
+      "miles": 20000
+    },
+    "GRU-EZE-turkish-40000-963efdf2": {
+      "sent_at": "2026-08-04T21:07:18.534055",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GRU-SCL-turkish-40000-3aa493bf": {
+      "sent_at": "2026-08-04T21:07:18.534055",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GIG-BOG-aeroplan_drop-35000-d41d8cd9": {
+      "sent_at": "2026-08-04T21:07:21.483975",
+      "route": "GIG->BOG",
+      "source": "aeroplan_drop",
+      "miles": 35000
+    },
+    "GIG-AEP-smiles-32000-5152c8c2": {
+      "sent_at": "2026-08-05T21:29:47.291269",
+      "route": "GIG->AEP",
+      "source": "smiles",
+      "miles": 32000
+    },
+    "GRU-SCL-turkish-40000-906afd4b": {
+      "sent_at": "2026-08-05T21:29:47.291269",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GRU-EZE-aeroplan_drop-19800-d41d8cd9": {
+      "sent_at": "2026-08-05T21:29:50.084107",
+      "route": "GRU->EZE",
+      "source": "aeroplan_drop",
+      "miles": 19800
+    },
+    "GRU-SCL-turkish-60000-0ac1612f": {
+      "sent_at": "2026-08-06T21:49:23.643710",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "miles": 60000
+    },
+    "GIG-MVD-smiles-20000-e9de69d1": {
+      "sent_at": "2026-08-06T21:49:23.643710",
+      "route": "GIG->MVD",
+      "source": "smiles",
+      "miles": 20000
+    },
+    "GRU-SCL-turkish-40000-7da00a33": {
+      "sent_at": "2026-08-06T21:49:23.643710",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GRU-EZE-turkish-60000-56f5a8d1": {
+      "sent_at": "2026-08-07T21:10:13.360916",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "miles": 60000
+    },
+    "GIG-AEP-smiles-32000-1522ca39": {
+      "sent_at": "2026-08-07T21:10:13.360916",
+      "route": "GIG->AEP",
+      "source": "smiles",
+      "miles": 32000
+    },
+    "CNF-EZE-smiles-36000-1522ca39": {
+      "sent_at": "2026-08-07T21:10:13.360916",
+      "route": "CNF->EZE",
+      "source": "smiles",
+      "miles": 36000
+    },
+    "GRU-SCL-turkish-40000-e439c2f1": {
+      "sent_at": "2026-08-07T21:10:13.360916",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GRU-EZE-turkish-40000-fef33da0": {
+      "sent_at": "2026-08-07T21:10:13.360916",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GRU-SCL-turkish-60000-84bdec3a": {
+      "sent_at": "2026-08-10T20:25:09.043876",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "miles": 60000
+    },
+    "GRU-EZE-turkish-60000-bda7d5cb": {
+      "sent_at": "2026-08-10T20:25:09.043876",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "miles": 60000
+    },
+    "GRU-SCL-turkish-40000-707477d6": {
+      "sent_at": "2026-08-10T20:25:09.043876",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GRU-EZE-turkish-40000-84ff813b": {
+      "sent_at": "2026-08-10T20:25:09.043876",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "miles": 40000
+    },
+    "GRU-BOG-smiles-64000-706e0830": {
+      "sent_at": "2026-08-10T20:25:09.043876",
+      "route": "GRU->BOG",
+      "source": "smiles",
+      "miles": 64000
+    },
+    "CNF-EZE-american_drop-10000-d41d8cd9": {
+      "sent_at": "2026-08-10T20:25:11.828244",
+      "route": "CNF->EZE",
+      "source": "american_drop",
+      "miles": 10000
+    },
+    "GIG-AEP-american_drop-10000-d41d8cd9": {
+      "sent_at": "2026-08-10T20:25:17.008061",
+      "route": "GIG->AEP",
+      "source": "american_drop",
+      "miles": 10000
+    },
+    "GIG-EZE-american_drop-10000-d41d8cd9": {
+      "sent_at": "2026-08-10T20:25:21.869665",
+      "route": "GIG->EZE",
+      "source": "american_drop",
+      "miles": 10000
+    },
+    "GRU-ASU-american_drop-10000-d41d8cd9": {
+      "sent_at": "2026-08-10T20:25:27.180234",
+      "route": "GRU->ASU",
+      "source": "american_drop",
+      "miles": 10000
+    },
+    "GRU-AEP-american_drop-10000-d41d8cd9": {
+      "sent_at": "2026-08-10T20:25:32.085598",
+      "route": "GRU->AEP",
+      "source": "american_drop",
+      "miles": 10000
+    },
+    "GRU-EZE-turkish_drop-60000-d41d8cd9": {
+      "sent_at": "2026-08-10T20:25:36.888269",
+      "route": "GRU->EZE",
+      "source": "turkish_drop",
+      "miles": 60000
+    },
+    "GRU-SCL-turkish_drop-60000-d41d8cd9": {
+      "sent_at": "2026-08-10T20:25:51.938220",
+      "route": "GRU->SCL",
+      "source": "turkish_drop",
+      "miles": 60000
+    }
+  },
+  "best_prices": {
+    "GRU-SCL|turkish|business": {
+      "miles": 60000,
+      "sent_at": "2026-08-10T20:25:09.043876",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "cabin": "business"
+    },
+    "GRU-EZE|turkish|business": {
+      "miles": 60000,
+      "sent_at": "2026-08-10T20:25:09.043876",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "cabin": "business"
+    },
+    "GRU-SCL|turkish|economy": {
+      "miles": 40000,
+      "sent_at": "2026-08-10T20:25:09.043876",
+      "route": "GRU->SCL",
+      "source": "turkish",
+      "cabin": "economy"
+    },
+    "GRU-EZE|turkish|economy": {
+      "miles": 40000,
+      "sent_at": "2026-08-10T20:25:09.043876",
+      "route": "GRU->EZE",
+      "source": "turkish",
+      "cabin": "economy"
+    },
+    "GRU-VVI|smiles|economy": {
+      "miles": 20000,
+      "sent_at": "2026-08-03T21:47:36.316427",
+      "route": "GRU->VVI",
+      "source": "smiles",
+      "cabin": "economy"
+    },
+    "GIG-MVD|smiles|economy": {
+      "miles": 20000,
+      "sent_at": "2026-08-06T21:49:23.643710",
+      "route": "GIG->MVD",
+      "source": "smiles",
+      "cabin": "economy"
+    },
+    "GIG-ASU|smiles|economy": {
+      "miles": 28000,
+      "sent_at": "2026-08-03T21:47:36.316427",
+      "route": "GIG->ASU",
+      "source": "smiles",
+      "cabin": "economy"
+    },
+    "GRU-EZE|aeroplan_drop|business": {
+      "miles": 19800,
+      "sent_at": "2026-08-05T21:29:50.084107",
+      "route": "GRU->EZE",
+      "source": "aeroplan_drop",
+      "cabin": "business"
+    },
+    "GIG-ROS|smiles|economy": {
+      "miles": 36000,
+      "sent_at": "2026-08-03T21:47:36.316427",
+      "route": "GIG->ROS",
+      "source": "smiles",
+      "cabin": "economy"
+    },
+    "GRU-VVI|smiles_drop|economy": {
+      "miles": 20000,
+      "sent_at": "2026-08-03T21:47:39.428598",
+      "route": "GRU->VVI",
+      "source": "smiles_drop",
+      "cabin": "economy"
+    },
+    "GIG-BOG|aeroplan_drop|business": {
+      "miles": 35000,
+      "sent_at": "2026-08-04T21:07:21.483975",
+      "route": "GIG->BOG",
+      "source": "aeroplan_drop",
+      "cabin": "business"
+    },
+    "GIG-AEP|smiles|economy": {
+      "miles": 32000,
+      "sent_at": "2026-08-07T21:10:13.360916",
+      "route": "GIG->AEP",
+      "source": "smiles",
+      "cabin": "economy"
+    },
+    "CNF-EZE|smiles|economy": {
+      "miles": 36000,
+      "sent_at": "2026-08-07T21:10:13.360916",
+      "route": "CNF->EZE",
+      "source": "smiles",
+      "cabin": "economy"
+    },
+    "CNF-EZE|american_drop|economy": {
+      "miles": 10000,
+      "sent_at": "2026-08-10T20:25:11.828244",
+      "route": "CNF->EZE",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "GIG-AEP|american_drop|economy": {
+      "miles": 10000,
+      "sent_at": "2026-08-10T20:25:17.008061",
+      "route": "GIG->AEP",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "GIG-EZE|american_drop|economy": {
+      "miles": 10000,
+      "sent_at": "2026-08-10T20:25:21.869665",
+      "route": "GIG->EZE",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "GRU-ASU|american_drop|economy": {
+      "miles": 10000,
+      "sent_at": "2026-08-10T20:25:27.180234",
+      "route": "GRU->ASU",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "GRU-AEP|american_drop|economy": {
+      "miles": 10000,
+      "sent_at": "2026-08-10T20:25:32.085598",
+      "route": "GRU->AEP",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "GRU-EZE|turkish_drop|business": {
+      "miles": 60000,
+      "sent_at": "2026-08-10T20:25:36.888269",
+      "route": "GRU->EZE",
+      "source": "turkish_drop",
+      "cabin": "business"
+    },
+    "GRU-SCL|turkish_drop|business": {
+      "miles": 60000,
+      "sent_at": "2026-08-10T20:25:51.938220",
+      "route": "GRU->SCL",
+      "source": "turkish_drop",
+      "cabin": "business"
+    }
+  }
+}

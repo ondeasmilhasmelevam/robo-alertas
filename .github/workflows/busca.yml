@@ -1,0 +1,125 @@
+name: Busca de alertas
+
+# Horarios de Brasilia (BRT = UTC-3). O GitHub so aceita cron em UTC.
+#   21h BRT -> 00:00 UTC (dia seguinte)
+#    0h BRT -> 03:00 UTC
+#    2h BRT -> 05:00 UTC
+#    3h BRT -> 06:00 UTC
+#    6h BRT -> 09:00 UTC
+# O GitHub pode atrasar alguns minutos quando esta cheio; nao e erro.
+on:
+  schedule:
+    - cron: "0 0 * * *"
+    - cron: "0 3 * * *"
+    - cron: "0 5 * * *"
+    - cron: "0 6 * * *"
+    - cron: "0 9 * * *"
+  workflow_dispatch:
+    inputs:
+      teste:
+        description: "Rodar em modo teste (nao envia nada pro Telegram)"
+        type: boolean
+        default: false
+      canal:
+        description: "Rodar so um canal (parte do nome). Vazio = todos"
+        type: string
+        default: ""
+
+# Uma execucao por vez: duas ao mesmo tempo brigariam pelo historico.
+concurrency:
+  group: busca-alertas
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # para gravar de volta o historico de alertas enviados
+
+jobs:
+  buscar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+
+    steps:
+      - name: Baixar o codigo
+        uses: actions/checkout@v4
+
+      - name: Instalar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      # O historico de precos (4,6 MB) e grande pra ficar no git, entao mora
+      # no cache do Actions. A chave muda a cada execucao pra sempre gravar
+      # uma versao nova; o restore-keys pega a mais recente que existir.
+      - name: Recuperar historico de precos
+        uses: actions/cache@v4
+        with:
+          path: |
+            pricing_history.json
+            price_records.json
+          key: precos-${{ github.run_id }}
+          restore-keys: |
+            precos-
+
+      - name: Montar o channels_config.json a partir dos Secrets
+        env:
+          CHANNELS_CONFIG: ${{ secrets.CHANNELS_CONFIG }}
+        run: |
+          if [ -z "$CHANNELS_CONFIG" ]; then
+            echo "::error::O Secret CHANNELS_CONFIG esta vazio. Cole nele o conteudo do channels_config.json."
+            exit 1
+          fi
+          printf '%s' "$CHANNELS_CONFIG" > channels_config.json
+          python -c "import json;json.load(open('channels_config.json',encoding='utf-8'));print('channels_config.json OK')"
+
+      - name: Rodar a busca
+        env:
+          SEATS_API_KEY:        ${{ secrets.SEATS_API_KEY }}
+          TELEGRAM_BOT_TOKEN:   ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_API_ID:      ${{ secrets.TELEGRAM_API_ID }}
+          TELEGRAM_API_HASH:    ${{ secrets.TELEGRAM_API_HASH }}
+          DISCORD_WEBHOOK:      ${{ secrets.DISCORD_WEBHOOK }}
+          ROVE_SESSION_COOKIE:  ${{ secrets.ROVE_SESSION_COOKIE }}
+          ROVE_COOKIE_HEADER:   ${{ secrets.ROVE_COOKIE_HEADER }}
+          ROVE_ANON_KEY:        ${{ secrets.ROVE_ANON_KEY }}
+          ROVE_REFRESH_TOKEN:   ${{ secrets.ROVE_REFRESH_TOKEN }}
+          AVIOS_ADMIN_CHAT:     ${{ secrets.AVIOS_ADMIN_CHAT }}
+          PYTHONUNBUFFERED: "1"
+        run: |
+          ARGS=""
+          if [ "${{ inputs.teste }}" = "true" ]; then ARGS="$ARGS --teste"; fi
+          if [ -n "${{ inputs.canal }}" ]; then ARGS="$ARGS --canal ${{ inputs.canal }}"; fi
+          python run_cycle.py $ARGS
+
+      - name: Enxugar o historico de precos
+        if: always()
+        run: python compactar_estado.py || true
+
+      # O historico de alertas enviados e pequeno e precisa sobreviver pra
+      # sempre (e ele que evita repetir alerta), entao volta pro repositorio.
+      - name: Guardar o historico de alertas no repositorio
+        if: always()
+        run: |
+          git config user.name  "robo-alertas"
+          git config user.email "robo-alertas@users.noreply.github.com"
+          git add historico_*.json md_history.json vmm_reposted.json || true
+          if git diff --cached --quiet; then
+            echo "Nada mudou no historico."
+          else
+            git commit -m "historico: execucao de $(date -u '+%d/%m/%Y %H:%M') UTC"
+            git pull --rebase --autostash origin ${{ github.ref_name }} || true
+            git push
+          fi
+
+      - name: Guardar o log pra conferir depois
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: log-${{ github.run_id }}
+          path: |
+            *.log
+          if-no-files-found: ignore
+          retention-days: 7

@@ -1,0 +1,1847 @@
+{
+  "alerts": {
+    "GRU-PTY-flyingblue-33000-90acae4e": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GRU->PTY",
+      "source": "flyingblue",
+      "miles": 33000
+    },
+    "GRU-PTY-aeroplan-50000-5544c723": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GRU->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-PTY-united-90000-c8e5aa3a": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GRU->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GRU-PTY-smiles-213000-48b1f5f9": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GRU->PTY",
+      "source": "smiles",
+      "miles": 213000
+    },
+    "GIG-PTY-flyingblue-34500-391c3595": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GIG->PTY",
+      "source": "flyingblue",
+      "miles": 34500
+    },
+    "GIG-PTY-aeroplan-50000-5dfa8122": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GIG->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GIG-PTY-united-90000-b5b779bc": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GIG->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GIG-PTY-azul-163048-6e1a10e6": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GIG->PTY",
+      "source": "azul",
+      "miles": 163048
+    },
+    "GIG-PTY-smiles-222000-cf968089": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GIG->PTY",
+      "source": "smiles",
+      "miles": 222000
+    },
+    "GRU-SJO-aeroplan-50000-5544c723": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GRU->SJO",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-MEX-delta-77500-07cd18eb": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 77500
+    },
+    "GRU-AUA-american-99000-935fff80": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GRU->AUA",
+      "source": "american",
+      "miles": 99000
+    },
+    "GRU-AUA-smiles-216000-f43b0c99": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GRU->AUA",
+      "source": "smiles",
+      "miles": 216000
+    },
+    "GRU-PTY-flyingblue-16500-1e98c99b": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GRU->PTY",
+      "source": "flyingblue",
+      "miles": 16500
+    },
+    "GRU-PTY-smiles-66000-95e6d039": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GRU->PTY",
+      "source": "smiles",
+      "miles": 66000
+    },
+    "GRU-PTY-azul-86274-95e6d039": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GIG-PTY-flyingblue-17000-534b952a": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GIG->PTY",
+      "source": "flyingblue",
+      "miles": 17000
+    },
+    "GIG-PTY-united-35000-264e7dab": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GIG->PTY",
+      "source": "united",
+      "miles": 35000
+    },
+    "GIG-PTY-smiles-74000-70ef0ba4": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GIG->PTY",
+      "source": "smiles",
+      "miles": 74000
+    },
+    "GIG-PTY-azul-86274-0c2910e2": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GIG->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GRU-SJO-flyingblue-24500-c83676ad": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GRU->SJO",
+      "source": "flyingblue",
+      "miles": 24500
+    },
+    "GRU-AUA-american-33000-4e335f75": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GRU->AUA",
+      "source": "american",
+      "miles": 33000
+    },
+    "GRU-AUA-smiles-43000-70ef0ba4": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GRU->AUA",
+      "source": "smiles",
+      "miles": 43000
+    },
+    "GRU-MEX-delta-35000-2e8cc0ab": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 35000
+    },
+    "GRU-MEX-smiles-113000-eadec391": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GRU->MEX",
+      "source": "smiles",
+      "miles": 113000
+    },
+    "GRU-PUJ-smiles-75000-95e6d039": {
+      "sent_at": "2026-07-25T08:58:09.492876",
+      "route": "GRU->PUJ",
+      "source": "smiles",
+      "miles": 75000
+    },
+    "GRU-AUA-smiles_drop-43000-d41d8cd9": {
+      "sent_at": "2026-07-25T08:58:12.150817",
+      "route": "GRU->AUA",
+      "source": "smiles_drop",
+      "miles": 43000
+    },
+    "GRU-MEX-delta_drop-77500-d41d8cd9": {
+      "sent_at": "2026-07-25T08:58:16.918479",
+      "route": "GRU->MEX",
+      "source": "delta_drop",
+      "miles": 77500
+    },
+    "GRU-PTY-flyingblue-33000-484e19cf": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GRU->PTY",
+      "source": "flyingblue",
+      "miles": 33000
+    },
+    "GRU-PTY-aeroplan-50000-7d757912": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GRU->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-PTY-united-90000-9db40f37": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GRU->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GRU-PTY-smiles-213000-b88a9c1c": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GRU->PTY",
+      "source": "smiles",
+      "miles": 213000
+    },
+    "GIG-PTY-flyingblue-34500-9495f838": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GIG->PTY",
+      "source": "flyingblue",
+      "miles": 34500
+    },
+    "GIG-PTY-aeroplan-50000-288fcac7": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GIG->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GIG-PTY-united-90000-78ff7f38": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GIG->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GIG-PTY-smiles-222000-ee3af064": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GIG->PTY",
+      "source": "smiles",
+      "miles": 222000
+    },
+    "GRU-SJO-aeroplan-50000-b14daf85": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GRU->SJO",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-MEX-flyingblue-56500-856e9c9a": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GRU->MEX",
+      "source": "flyingblue",
+      "miles": 56500
+    },
+    "GRU-MEX-delta-77500-19118a32": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 77500
+    },
+    "GRU-PUJ-american-99000-68cbc30b": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GRU->PUJ",
+      "source": "american",
+      "miles": 99000
+    },
+    "GRU-AUA-smiles-216000-b88a9c1c": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GRU->AUA",
+      "source": "smiles",
+      "miles": 216000
+    },
+    "GRU-PTY-flyingblue-16500-34af3271": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GRU->PTY",
+      "source": "flyingblue",
+      "miles": 16500
+    },
+    "GRU-PTY-smiles-66000-eadec391": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GRU->PTY",
+      "source": "smiles",
+      "miles": 66000
+    },
+    "GRU-PTY-azul-86274-66e4c738": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GIG-PTY-flyingblue-17000-f0d3bf34": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GIG->PTY",
+      "source": "flyingblue",
+      "miles": 17000
+    },
+    "GIG-PTY-smiles-62000-0c2910e2": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GIG->PTY",
+      "source": "smiles",
+      "miles": 62000
+    },
+    "GIG-PTY-azul-86274-c1af40a7": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GIG->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GRU-AUA-american-33000-935fff80": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GRU->AUA",
+      "source": "american",
+      "miles": 33000
+    },
+    "GRU-MEX-delta-35000-3020091a": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 35000
+    },
+    "GRU-PUJ-smiles-52000-f91b304a": {
+      "sent_at": "2026-07-25T21:37:19.798243",
+      "route": "GRU->PUJ",
+      "source": "smiles",
+      "miles": 52000
+    },
+    "GIG-PTY-flyingblue_drop-34500-d41d8cd9": {
+      "sent_at": "2026-07-25T21:37:32.378534",
+      "route": "GIG->PTY",
+      "source": "flyingblue_drop",
+      "miles": 34500
+    },
+    "GRU-PTY-flyingblue-33000-54cab504": {
+      "sent_at": "2026-07-26T21:40:00.634181",
+      "route": "GRU->PTY",
+      "source": "flyingblue",
+      "miles": 33000
+    },
+    "GRU-PTY-aeroplan-50000-bdab66ea": {
+      "sent_at": "2026-07-26T21:40:00.634181",
+      "route": "GRU->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-PTY-united-90000-8f971eff": {
+      "sent_at": "2026-07-26T21:40:00.634181",
+      "route": "GRU->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GRU-PTY-smiles-213000-288fcac7": {
+      "sent_at": "2026-07-26T21:40:00.634181",
+      "route": "GRU->PTY",
+      "source": "smiles",
+      "miles": 213000
+    },
+    "GIG-PTY-flyingblue-34500-76231c4e": {
+      "sent_at": "2026-07-26T21:40:00.634181",
+      "route": "GIG->PTY",
+      "source": "flyingblue",
+      "miles": 34500
+    },
+    "GIG-PTY-smiles-222000-288fcac7": {
+      "sent_at": "2026-07-26T21:40:00.634181",
+      "route": "GIG->PTY",
+      "source": "smiles",
+      "miles": 222000
+    },
+    "GRU-SJO-aeroplan-50000-071bd840": {
+      "sent_at": "2026-07-26T21:40:00.634181",
+      "route": "GRU->SJO",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-MEX-flyingblue-56500-9992f3df": {
+      "sent_at": "2026-07-26T21:40:00.634181",
+      "route": "GRU->MEX",
+      "source": "flyingblue",
+      "miles": 56500
+    },
+    "GRU-PUJ-american-99000-a64de9a7": {
+      "sent_at": "2026-07-26T21:40:00.634181",
+      "route": "GRU->PUJ",
+      "source": "american",
+      "miles": 99000
+    },
+    "GRU-AUA-smiles-216000-ee3af064": {
+      "sent_at": "2026-07-26T21:40:00.634181",
+      "route": "GRU->AUA",
+      "source": "smiles",
+      "miles": 216000
+    },
+    "GRU-PTY-flyingblue-16500-4d8096d5": {
+      "sent_at": "2026-07-26T21:40:00.634181",
+      "route": "GRU->PTY",
+      "source": "flyingblue",
+      "miles": 16500
+    },
+    "GRU-PTY-smiles-66000-76193de0": {
+      "sent_at": "2026-07-26T21:40:00.634181",
+      "route": "GRU->PTY",
+      "source": "smiles",
+      "miles": 66000
+    },
+    "GRU-PTY-azul-86274-a7160bd1": {
+      "sent_at": "2026-07-26T21:40:00.634181",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GIG-PTY-flyingblue-17000-8af2165f": {
+      "sent_at": "2026-07-26T21:40:00.634181",
+      "route": "GIG->PTY",
+      "source": "flyingblue",
+      "miles": 17000
+    },
+    "GIG-PTY-smiles-58000-76193de0": {
+      "sent_at": "2026-07-26T21:40:00.634181",
+      "route": "GIG->PTY",
+      "source": "smiles",
+      "miles": 58000
+    },
+    "GIG-PTY-azul-86274-264e7dab": {
+      "sent_at": "2026-07-26T21:40:00.634181",
+      "route": "GIG->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GRU-PUJ-american-32500-a7160bd1": {
+      "sent_at": "2026-07-26T21:40:00.634181",
+      "route": "GRU->PUJ",
+      "source": "american",
+      "miles": 32500
+    },
+    "GRU-MEX-delta-35000-bec183a5": {
+      "sent_at": "2026-07-26T21:40:00.634181",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 35000
+    },
+    "GRU-MEX-smiles-106000-76193de0": {
+      "sent_at": "2026-07-26T21:40:00.634181",
+      "route": "GRU->MEX",
+      "source": "smiles",
+      "miles": 106000
+    },
+    "GRU-PTY-aeroplan-50000-f0beb2da": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GRU->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-PTY-united-90000-af4e7e78": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GRU->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GRU-PTY-azul-163048-2a8e65d0": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "miles": 163048
+    },
+    "GRU-PTY-smiles-213000-d7df0fa0": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GRU->PTY",
+      "source": "smiles",
+      "miles": 213000
+    },
+    "GIG-PTY-aeroplan-50000-105c2163": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GIG->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GIG-PTY-united-90000-e0412b28": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GIG->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GIG-PTY-azul-163048-3d718cdc": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GIG->PTY",
+      "source": "azul",
+      "miles": 163048
+    },
+    "GIG-PTY-smiles-222000-650d72f3": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GIG->PTY",
+      "source": "smiles",
+      "miles": 222000
+    },
+    "GRU-SJO-aeroplan-50000-6508c673": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GRU->SJO",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-MEX-delta-77500-98848d06": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 77500
+    },
+    "GRU-AUA-smiles-216000-05ec9e01": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GRU->AUA",
+      "source": "smiles",
+      "miles": 216000
+    },
+    "GRU-PTY-flyingblue-16500-f94b44b1": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GRU->PTY",
+      "source": "flyingblue",
+      "miles": 16500
+    },
+    "GRU-PTY-smiles-66000-a7160bd1": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GRU->PTY",
+      "source": "smiles",
+      "miles": 66000
+    },
+    "GRU-PTY-azul-86274-650d72f3": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GRU-MEX-flyingblue-30000-242347e9": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GRU->MEX",
+      "source": "flyingblue",
+      "miles": 30000
+    },
+    "GRU-MEX-delta-35000-5145a84b": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 35000
+    },
+    "GRU-MEX-smiles-106000-a7160bd1": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GRU->MEX",
+      "source": "smiles",
+      "miles": 106000
+    },
+    "GRU-AUA-american-32500-2ca50c9f": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GRU->AUA",
+      "source": "american",
+      "miles": 32500
+    },
+    "GRU-AUA-smiles-43000-c83676ad": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GRU->AUA",
+      "source": "smiles",
+      "miles": 43000
+    },
+    "GIG-PTY-united-35000-a7160bd1": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GIG->PTY",
+      "source": "united",
+      "miles": 35000
+    },
+    "GIG-PTY-azul-86274-2ca50c9f": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GIG->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GRU-PUJ-smiles-47000-c83676ad": {
+      "sent_at": "2026-07-27T21:38:01.759312",
+      "route": "GRU->PUJ",
+      "source": "smiles",
+      "miles": 47000
+    },
+    "GRU-PUJ-american_drop-32500-d41d8cd9": {
+      "sent_at": "2026-07-27T21:38:04.459431",
+      "route": "GRU->PUJ",
+      "source": "american_drop",
+      "miles": 32500
+    },
+    "GIG-PTY-azul-163048-c95e161f": {
+      "sent_at": "2026-07-28T21:55:25.903263",
+      "route": "GIG->PTY",
+      "source": "azul",
+      "miles": 163048
+    },
+    "GIG-PTY-smiles-222000-a1a0d2a8": {
+      "sent_at": "2026-07-28T21:55:25.903263",
+      "route": "GIG->PTY",
+      "source": "smiles",
+      "miles": 222000
+    },
+    "GRU-PTY-smiles-213000-ffed1d0f": {
+      "sent_at": "2026-07-28T21:55:25.903263",
+      "route": "GRU->PTY",
+      "source": "smiles",
+      "miles": 213000
+    },
+    "GRU-AUA-smiles-216000-69f7f7b9": {
+      "sent_at": "2026-07-28T21:55:25.903263",
+      "route": "GRU->AUA",
+      "source": "smiles",
+      "miles": 216000
+    },
+    "GRU-PTY-flyingblue-16500-aa3eefda": {
+      "sent_at": "2026-07-28T21:55:25.903263",
+      "route": "GRU->PTY",
+      "source": "flyingblue",
+      "miles": 16500
+    },
+    "GRU-PTY-smiles-66000-17c83d5a": {
+      "sent_at": "2026-07-28T21:55:25.903263",
+      "route": "GRU->PTY",
+      "source": "smiles",
+      "miles": 66000
+    },
+    "GRU-PTY-azul-86274-9e392b88": {
+      "sent_at": "2026-07-28T21:55:25.903263",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GRU-PUJ-american-32500-c83676ad": {
+      "sent_at": "2026-07-28T21:55:25.903263",
+      "route": "GRU->PUJ",
+      "source": "american",
+      "miles": 32500
+    },
+    "GRU-AUA-american-32500-17c83d5a": {
+      "sent_at": "2026-07-28T21:55:25.903263",
+      "route": "GRU->AUA",
+      "source": "american",
+      "miles": 32500
+    },
+    "GRU-MEX-delta-35000-bc8df5db": {
+      "sent_at": "2026-07-28T21:55:25.903263",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 35000
+    },
+    "GRU-MEX-smiles-106000-c83676ad": {
+      "sent_at": "2026-07-28T21:55:25.903263",
+      "route": "GRU->MEX",
+      "source": "smiles",
+      "miles": 106000
+    },
+    "GIG-PTY-united-35000-c83676ad": {
+      "sent_at": "2026-07-28T21:55:25.903263",
+      "route": "GIG->PTY",
+      "source": "united",
+      "miles": 35000
+    },
+    "GIG-PTY-azul-86274-22d17b60": {
+      "sent_at": "2026-07-28T21:55:25.903263",
+      "route": "GIG->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GRU-PTY-aeroplan-50000-d53d7318": {
+      "sent_at": "2026-07-29T22:17:06.921773",
+      "route": "GRU->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-PTY-united-90000-7a255464": {
+      "sent_at": "2026-07-29T22:17:06.921773",
+      "route": "GRU->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GRU-PTY-azul-163048-9e1d2cb4": {
+      "sent_at": "2026-07-29T22:17:06.921773",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "miles": 163048
+    },
+    "GRU-PTY-smiles-203000-dc968750": {
+      "sent_at": "2026-07-29T22:17:06.921773",
+      "route": "GRU->PTY",
+      "source": "smiles",
+      "miles": 203000
+    },
+    "GIG-PTY-aeroplan-50000-681c298a": {
+      "sent_at": "2026-07-29T22:17:06.921773",
+      "route": "GIG->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GIG-PTY-united-90000-1914bdfe": {
+      "sent_at": "2026-07-29T22:17:06.921773",
+      "route": "GIG->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GIG-PTY-azul-163048-1a1cf543": {
+      "sent_at": "2026-07-29T22:17:06.921773",
+      "route": "GIG->PTY",
+      "source": "azul",
+      "miles": 163048
+    },
+    "GIG-PTY-smiles-222000-c1471438": {
+      "sent_at": "2026-07-29T22:17:06.921773",
+      "route": "GIG->PTY",
+      "source": "smiles",
+      "miles": 222000
+    },
+    "GRU-SJO-aeroplan-50000-06afbc0b": {
+      "sent_at": "2026-07-29T22:17:06.921773",
+      "route": "GRU->SJO",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-MEX-delta-77500-31b42488": {
+      "sent_at": "2026-07-29T22:17:06.921773",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 77500
+    },
+    "GRU-PUJ-american-99000-08540144": {
+      "sent_at": "2026-07-29T22:17:06.921773",
+      "route": "GRU->PUJ",
+      "source": "american",
+      "miles": 99000
+    },
+    "GRU-AUA-smiles-205000-3dde2a72": {
+      "sent_at": "2026-07-29T22:17:06.921773",
+      "route": "GRU->AUA",
+      "source": "smiles",
+      "miles": 205000
+    },
+    "GRU-PTY-flyingblue-16500-b2cb9e9e": {
+      "sent_at": "2026-07-29T22:17:06.921773",
+      "route": "GRU->PTY",
+      "source": "flyingblue",
+      "miles": 16500
+    },
+    "GRU-PTY-smiles-66000-7a36ff9b": {
+      "sent_at": "2026-07-29T22:17:06.921773",
+      "route": "GRU->PTY",
+      "source": "smiles",
+      "miles": 66000
+    },
+    "GRU-PTY-azul-86274-41702158": {
+      "sent_at": "2026-07-29T22:17:06.921773",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GRU-MEX-delta-35000-a547cd57": {
+      "sent_at": "2026-07-29T22:17:06.921773",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 35000
+    },
+    "GIG-PTY-azul-86274-988e30b7": {
+      "sent_at": "2026-07-29T22:17:06.921773",
+      "route": "GIG->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GIG-PTY-aeroplan-50000-2021f258": {
+      "sent_at": "2026-08-01T09:28:39.609782",
+      "route": "GIG->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GIG-PTY-united-90000-2021f258": {
+      "sent_at": "2026-08-01T09:28:39.609782",
+      "route": "GIG->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GIG-PTY-smiles-211000-8d6e6b92": {
+      "sent_at": "2026-08-01T09:28:39.609782",
+      "route": "GIG->PTY",
+      "source": "smiles",
+      "miles": 211000
+    },
+    "GRU-PTY-aeroplan-50000-1232a4be": {
+      "sent_at": "2026-08-01T09:28:39.609782",
+      "route": "GRU->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-PTY-united-90000-c6314985": {
+      "sent_at": "2026-08-01T09:28:39.609782",
+      "route": "GRU->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GRU-PTY-azul-163048-f2ad3841": {
+      "sent_at": "2026-08-01T09:28:39.609782",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "miles": 163048
+    },
+    "GRU-SJO-aeroplan-50000-1232a4be": {
+      "sent_at": "2026-08-01T09:28:39.609782",
+      "route": "GRU->SJO",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-MEX-delta-77500-c1edaba8": {
+      "sent_at": "2026-08-01T09:28:39.609782",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 77500
+    },
+    "GRU-AUA-american-99000-0f590408": {
+      "sent_at": "2026-08-01T09:28:39.609782",
+      "route": "GRU->AUA",
+      "source": "american",
+      "miles": 99000
+    },
+    "GRU-AUA-smiles-205000-be312cf0": {
+      "sent_at": "2026-08-01T09:28:39.609782",
+      "route": "GRU->AUA",
+      "source": "smiles",
+      "miles": 205000
+    },
+    "GRU-PTY-flyingblue-16500-b3e4fff1": {
+      "sent_at": "2026-08-01T09:28:39.609782",
+      "route": "GRU->PTY",
+      "source": "flyingblue",
+      "miles": 16500
+    },
+    "GRU-PTY-united-35000-dcc70302": {
+      "sent_at": "2026-08-01T09:28:39.609782",
+      "route": "GRU->PTY",
+      "source": "united",
+      "miles": 35000
+    },
+    "GRU-PTY-smiles-56000-37a4a2cb": {
+      "sent_at": "2026-08-01T09:28:39.609782",
+      "route": "GRU->PTY",
+      "source": "smiles",
+      "miles": 56000
+    },
+    "GRU-PTY-azul-86274-09546a9a": {
+      "sent_at": "2026-08-01T09:28:39.609782",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GRU-PUJ-american-32500-4388ddd1": {
+      "sent_at": "2026-08-01T09:28:39.609782",
+      "route": "GRU->PUJ",
+      "source": "american",
+      "miles": 32500
+    },
+    "GRU-AUA-american-32500-f3a36f62": {
+      "sent_at": "2026-08-01T09:28:39.609782",
+      "route": "GRU->AUA",
+      "source": "american",
+      "miles": 32500
+    },
+    "GIG-PTY-united-35000-e9de69d1": {
+      "sent_at": "2026-08-01T09:28:39.609782",
+      "route": "GIG->PTY",
+      "source": "united",
+      "miles": 35000
+    },
+    "GIG-PTY-azul-86274-be312cf0": {
+      "sent_at": "2026-08-01T09:28:39.609782",
+      "route": "GIG->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GRU-MEX-delta-35000-cdc6ba74": {
+      "sent_at": "2026-08-01T09:28:39.609782",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 35000
+    },
+    "GRU-AUA-american_drop-32500-d41d8cd9": {
+      "sent_at": "2026-08-01T09:28:42.212292",
+      "route": "GRU->AUA",
+      "source": "american_drop",
+      "miles": 32500
+    },
+    "GRU-PTY-aeroplan-50000-7fce8e5e": {
+      "sent_at": "2026-08-01T22:26:50.685556",
+      "route": "GRU->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-PTY-united-90000-7163e6bf": {
+      "sent_at": "2026-08-01T22:26:50.685556",
+      "route": "GRU->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GRU-SJO-aeroplan-50000-c8413d3b": {
+      "sent_at": "2026-08-01T22:26:50.685556",
+      "route": "GRU->SJO",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GIG-PTY-aeroplan-50000-bd56495d": {
+      "sent_at": "2026-08-01T22:26:50.685556",
+      "route": "GIG->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-MEX-delta-77500-66a243fa": {
+      "sent_at": "2026-08-01T22:26:50.685556",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 77500
+    },
+    "GRU-AUA-american-99000-08540144": {
+      "sent_at": "2026-08-01T22:26:50.685556",
+      "route": "GRU->AUA",
+      "source": "american",
+      "miles": 99000
+    },
+    "GRU-AUA-smiles-205000-d9fd7d06": {
+      "sent_at": "2026-08-01T22:26:50.685556",
+      "route": "GRU->AUA",
+      "source": "smiles",
+      "miles": 205000
+    },
+    "GRU-PTY-flyingblue-16500-c6314985": {
+      "sent_at": "2026-08-01T22:26:50.685556",
+      "route": "GRU->PTY",
+      "source": "flyingblue",
+      "miles": 16500
+    },
+    "GRU-PTY-united-35000-d5bac12a": {
+      "sent_at": "2026-08-01T22:26:50.685556",
+      "route": "GRU->PTY",
+      "source": "united",
+      "miles": 35000
+    },
+    "GRU-PTY-azul-86274-d9fd7d06": {
+      "sent_at": "2026-08-01T22:26:50.685556",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GIG-PTY-flyingblue-17000-c6314985": {
+      "sent_at": "2026-08-01T22:26:50.685556",
+      "route": "GIG->PTY",
+      "source": "flyingblue",
+      "miles": 17000
+    },
+    "GIG-PTY-smiles-58000-37a4a2cb": {
+      "sent_at": "2026-08-01T22:26:50.685556",
+      "route": "GIG->PTY",
+      "source": "smiles",
+      "miles": 58000
+    },
+    "GIG-PTY-azul-86274-d9fd7d06": {
+      "sent_at": "2026-08-01T22:26:50.685556",
+      "route": "GIG->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GRU-PUJ-american-32500-0f590408": {
+      "sent_at": "2026-08-01T22:26:50.685556",
+      "route": "GRU->PUJ",
+      "source": "american",
+      "miles": 32500
+    },
+    "GRU-MEX-delta-35000-6a366fb0": {
+      "sent_at": "2026-08-01T22:26:50.685556",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 35000
+    },
+    "GIG-PTY-aeroplan-50000-39305cfa": {
+      "sent_at": "2026-08-02T21:46:28.501679",
+      "route": "GIG->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GIG-PTY-smiles-211000-bc8df5db": {
+      "sent_at": "2026-08-02T21:46:28.501679",
+      "route": "GIG->PTY",
+      "source": "smiles",
+      "miles": 211000
+    },
+    "GRU-PTY-aeroplan-50000-39305cfa": {
+      "sent_at": "2026-08-02T21:46:28.501679",
+      "route": "GRU->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-PTY-united-90000-d8104758": {
+      "sent_at": "2026-08-02T21:46:28.501679",
+      "route": "GRU->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GRU-SJO-aeroplan-50000-c3002ee7": {
+      "sent_at": "2026-08-02T21:46:28.501679",
+      "route": "GRU->SJO",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-MEX-flyingblue-57000-ecf9a488": {
+      "sent_at": "2026-08-02T21:46:28.501679",
+      "route": "GRU->MEX",
+      "source": "flyingblue",
+      "miles": 57000
+    },
+    "GRU-MEX-delta-77500-042a78b7": {
+      "sent_at": "2026-08-02T21:46:28.501679",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 77500
+    },
+    "GRU-AUA-smiles-205000-2021f258": {
+      "sent_at": "2026-08-02T21:46:28.501679",
+      "route": "GRU->AUA",
+      "source": "smiles",
+      "miles": 205000
+    },
+    "GRU-PTY-flyingblue-16500-d8104758": {
+      "sent_at": "2026-08-02T21:46:28.501679",
+      "route": "GRU->PTY",
+      "source": "flyingblue",
+      "miles": 16500
+    },
+    "GRU-PTY-united-35000-38e413aa": {
+      "sent_at": "2026-08-02T21:46:28.501679",
+      "route": "GRU->PTY",
+      "source": "united",
+      "miles": 35000
+    },
+    "GRU-PTY-azul-86274-2021f258": {
+      "sent_at": "2026-08-02T21:46:28.501679",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GIG-PTY-flyingblue-17000-d8104758": {
+      "sent_at": "2026-08-02T21:46:28.501679",
+      "route": "GIG->PTY",
+      "source": "flyingblue",
+      "miles": 17000
+    },
+    "GIG-PTY-azul-86274-2021f258": {
+      "sent_at": "2026-08-02T21:46:28.501679",
+      "route": "GIG->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GRU-MEX-flyingblue-28500-43edb315": {
+      "sent_at": "2026-08-02T21:46:28.501679",
+      "route": "GRU->MEX",
+      "source": "flyingblue",
+      "miles": 28500
+    },
+    "GRU-MEX-delta-35000-bb566707": {
+      "sent_at": "2026-08-02T21:46:28.501679",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 35000
+    },
+    "GIG-PTY-aeroplan-50000-13651a9e": {
+      "sent_at": "2026-08-03T22:18:50.527604",
+      "route": "GIG->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GIG-PTY-united-90000-ba58b8ce": {
+      "sent_at": "2026-08-03T22:18:50.527604",
+      "route": "GIG->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GIG-PTY-smiles-211000-a547cd57": {
+      "sent_at": "2026-08-03T22:18:50.527604",
+      "route": "GIG->PTY",
+      "source": "smiles",
+      "miles": 211000
+    },
+    "GRU-PTY-aeroplan-50000-c0f121b4": {
+      "sent_at": "2026-08-03T22:18:50.527604",
+      "route": "GRU->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-PTY-united-90000-e974771d": {
+      "sent_at": "2026-08-03T22:18:50.527604",
+      "route": "GRU->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GRU-PTY-azul-163048-02a9cb99": {
+      "sent_at": "2026-08-03T22:18:50.527604",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "miles": 163048
+    },
+    "GRU-SJO-aeroplan-50000-8c8c4186": {
+      "sent_at": "2026-08-03T22:18:50.527604",
+      "route": "GRU->SJO",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-MEX-delta-77500-9b969ab3": {
+      "sent_at": "2026-08-03T22:18:50.527604",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 77500
+    },
+    "GRU-AUA-smiles-205000-4bbe2811": {
+      "sent_at": "2026-08-03T22:18:50.527604",
+      "route": "GRU->AUA",
+      "source": "smiles",
+      "miles": 205000
+    },
+    "GRU-PTY-flyingblue-16500-51a68d19": {
+      "sent_at": "2026-08-03T22:18:50.527604",
+      "route": "GRU->PTY",
+      "source": "flyingblue",
+      "miles": 16500
+    },
+    "GRU-PTY-united-35000-f8a6e7bd": {
+      "sent_at": "2026-08-03T22:18:50.527604",
+      "route": "GRU->PTY",
+      "source": "united",
+      "miles": 35000
+    },
+    "GRU-PTY-azul-86274-a547cd57": {
+      "sent_at": "2026-08-03T22:18:50.527604",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GIG-PTY-flyingblue-17000-51a68d19": {
+      "sent_at": "2026-08-03T22:18:50.527604",
+      "route": "GIG->PTY",
+      "source": "flyingblue",
+      "miles": 17000
+    },
+    "GIG-PTY-united-35000-f8a6e7bd": {
+      "sent_at": "2026-08-03T22:18:50.527604",
+      "route": "GIG->PTY",
+      "source": "united",
+      "miles": 35000
+    },
+    "GIG-PTY-azul-86274-4bbe2811": {
+      "sent_at": "2026-08-03T22:18:50.527604",
+      "route": "GIG->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GRU-SJO-flyingblue-24500-43edb315": {
+      "sent_at": "2026-08-03T22:18:50.527604",
+      "route": "GRU->SJO",
+      "source": "flyingblue",
+      "miles": 24500
+    },
+    "GRU-PUJ-american-32500-9992f3df": {
+      "sent_at": "2026-08-03T22:18:50.527604",
+      "route": "GRU->PUJ",
+      "source": "american",
+      "miles": 32500
+    },
+    "GRU-PUJ-smiles-48000-9992f3df": {
+      "sent_at": "2026-08-03T22:18:50.527604",
+      "route": "GRU->PUJ",
+      "source": "smiles",
+      "miles": 48000
+    },
+    "GRU-MEX-delta-35000-e619a6c4": {
+      "sent_at": "2026-08-03T22:18:50.527604",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 35000
+    },
+    "GRU-AUA-smiles-61000-8d6e6b92": {
+      "sent_at": "2026-08-03T22:18:50.527604",
+      "route": "GRU->AUA",
+      "source": "smiles",
+      "miles": 61000
+    },
+    "GRU-PTY-aeroplan-50000-e0eef1f8": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GRU->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-PTY-united-90000-e0eef1f8": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GRU->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GRU-PTY-azul-163048-6474b8b8": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "miles": 163048
+    },
+    "GRU-PTY-smiles-203000-6620ad21": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GRU->PTY",
+      "source": "smiles",
+      "miles": 203000
+    },
+    "GIG-PTY-aeroplan-50000-a5483f08": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GIG->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GIG-PTY-united-90000-4b51086a": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GIG->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GIG-PTY-smiles-211000-d632ca59": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GIG->PTY",
+      "source": "smiles",
+      "miles": 211000
+    },
+    "GRU-SJO-aeroplan-50000-e0eef1f8": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GRU->SJO",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-MEX-delta-77500-5a326d7d": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 77500
+    },
+    "GRU-AUA-smiles-205000-6620ad21": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GRU->AUA",
+      "source": "smiles",
+      "miles": 205000
+    },
+    "GRU-PUJ-smiles-233000-4fbad57f": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GRU->PUJ",
+      "source": "smiles",
+      "miles": 233000
+    },
+    "GRU-PTY-flyingblue-16500-0d408a9a": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GRU->PTY",
+      "source": "flyingblue",
+      "miles": 16500
+    },
+    "GRU-PTY-united-35000-68bba0d4": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GRU->PTY",
+      "source": "united",
+      "miles": 35000
+    },
+    "GRU-PTY-azul-86274-6620ad21": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GIG-PTY-flyingblue-17000-0d408a9a": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GIG->PTY",
+      "source": "flyingblue",
+      "miles": 17000
+    },
+    "GIG-PTY-united-35000-68bba0d4": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GIG->PTY",
+      "source": "united",
+      "miles": 35000
+    },
+    "GIG-PTY-azul-86274-6620ad21": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GIG->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GRU-SJO-flyingblue-24500-03b7620f": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GRU->SJO",
+      "source": "flyingblue",
+      "miles": 24500
+    },
+    "GRU-MEX-flyingblue-28000-03b7620f": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GRU->MEX",
+      "source": "flyingblue",
+      "miles": 28000
+    },
+    "GRU-MEX-delta-35000-47700645": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 35000
+    },
+    "GRU-MEX-smiles-106000-5152c8c2": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GRU->MEX",
+      "source": "smiles",
+      "miles": 106000
+    },
+    "GRU-AUA-smiles-61000-9992f3df": {
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GRU->AUA",
+      "source": "smiles",
+      "miles": 61000
+    },
+    "GRU-PTY-aeroplan-50000-e84c49f6": {
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GRU->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-PTY-united-90000-8305caea": {
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GRU->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GRU-PTY-smiles-203000-c8b673e8": {
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GRU->PTY",
+      "source": "smiles",
+      "miles": 203000
+    },
+    "GIG-PTY-aeroplan-50000-c1d3b3ef": {
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GIG->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GIG-PTY-united-90000-8f015189": {
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GIG->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GIG-PTY-smiles-211000-17d925bb": {
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GIG->PTY",
+      "source": "smiles",
+      "miles": 211000
+    },
+    "GRU-SJO-aeroplan-50000-038295aa": {
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GRU->SJO",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-MEX-delta-77500-de1059c4": {
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 77500
+    },
+    "GRU-AUA-smiles-205000-f21a5bdb": {
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GRU->AUA",
+      "source": "smiles",
+      "miles": 205000
+    },
+    "GRU-PUJ-smiles-233000-8bdc9cb3": {
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GRU->PUJ",
+      "source": "smiles",
+      "miles": 233000
+    },
+    "GRU-PTY-flyingblue-16500-ade18f55": {
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GRU->PTY",
+      "source": "flyingblue",
+      "miles": 16500
+    },
+    "GRU-PTY-united-35000-10b563d9": {
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GRU->PTY",
+      "source": "united",
+      "miles": 35000
+    },
+    "GRU-PTY-azul-86274-c8b673e8": {
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GIG-PTY-flyingblue-17000-8305caea": {
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GIG->PTY",
+      "source": "flyingblue",
+      "miles": 17000
+    },
+    "GIG-PTY-united-35000-10b563d9": {
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GIG->PTY",
+      "source": "united",
+      "miles": 35000
+    },
+    "GIG-PTY-smiles-58000-e9de69d1": {
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GIG->PTY",
+      "source": "smiles",
+      "miles": 58000
+    },
+    "GIG-PTY-azul-86274-c8b673e8": {
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GIG->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GRU-SJO-flyingblue-24500-aec8c50e": {
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GRU->SJO",
+      "source": "flyingblue",
+      "miles": 24500
+    },
+    "GRU-PUJ-american-32500-1522ca39": {
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GRU->PUJ",
+      "source": "american",
+      "miles": 32500
+    },
+    "GRU-PUJ-smiles-67000-a8815078": {
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GRU->PUJ",
+      "source": "smiles",
+      "miles": 67000
+    },
+    "GRU-MEX-delta-35000-1dc28851": {
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 35000
+    },
+    "GRU-PTY-aeroplan-50000-5e3922fb": {
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GRU->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-PTY-united-90000-e952c449": {
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GRU->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GRU-PTY-azul-163048-de4c8437": {
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "miles": 163048
+    },
+    "GRU-PTY-smiles-203000-9a43be8d": {
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GRU->PTY",
+      "source": "smiles",
+      "miles": 203000
+    },
+    "GIG-PTY-aeroplan-50000-271d8971": {
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GIG->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GIG-PTY-united-90000-5f4ffdbf": {
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GIG->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GIG-PTY-smiles-211000-ebb76e69": {
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GIG->PTY",
+      "source": "smiles",
+      "miles": 211000
+    },
+    "GRU-SJO-aeroplan-50000-31ccb258": {
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GRU->SJO",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-MEX-delta-77500-9bf70eb4": {
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 77500
+    },
+    "GRU-AUA-smiles-205000-40df98c6": {
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GRU->AUA",
+      "source": "smiles",
+      "miles": 205000
+    },
+    "GRU-PUJ-smiles-233000-d65f9144": {
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GRU->PUJ",
+      "source": "smiles",
+      "miles": 233000
+    },
+    "GRU-PTY-flyingblue-16500-476c125a": {
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GRU->PTY",
+      "source": "flyingblue",
+      "miles": 16500
+    },
+    "GRU-PTY-united-35000-9a43be8d": {
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GRU->PTY",
+      "source": "united",
+      "miles": 35000
+    },
+    "GRU-PTY-azul-86274-9a43be8d": {
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GIG-PTY-flyingblue-17000-61e45bf8": {
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GIG->PTY",
+      "source": "flyingblue",
+      "miles": 17000
+    },
+    "GIG-PTY-united-35000-9a43be8d": {
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GIG->PTY",
+      "source": "united",
+      "miles": 35000
+    },
+    "GIG-PTY-azul-86274-9a43be8d": {
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GIG->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GRU-SJO-flyingblue-24500-d63149b5": {
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GRU->SJO",
+      "source": "flyingblue",
+      "miles": 24500
+    },
+    "GRU-MEX-delta-35000-99262d1e": {
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 35000
+    },
+    "GRU-PUJ-smiles-47000-1522ca39": {
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GRU->PUJ",
+      "source": "smiles",
+      "miles": 47000
+    },
+    "GRU-PTY-aeroplan-50000-ce37a829": {
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-PTY-united-90000-f781412a": {
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GRU-PTY-azul-163048-f7635789": {
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "miles": 163048
+    },
+    "GRU-PTY-smiles-203000-b9c28f22": {
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->PTY",
+      "source": "smiles",
+      "miles": 203000
+    },
+    "GIG-PTY-aeroplan-50000-481edcef": {
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GIG->PTY",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GIG-PTY-united-90000-25e5e9ab": {
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GIG->PTY",
+      "source": "united",
+      "miles": 90000
+    },
+    "GRU-SJO-aeroplan-50000-ce37a829": {
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->SJO",
+      "source": "aeroplan",
+      "miles": 50000
+    },
+    "GRU-MEX-delta-77500-785eeaec": {
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "miles": 77500
+    },
+    "GRU-AUA-smiles-205000-845b4bf6": {
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->AUA",
+      "source": "smiles",
+      "miles": 205000
+    },
+    "GRU-PUJ-smiles-233000-fbba464a": {
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->PUJ",
+      "source": "smiles",
+      "miles": 233000
+    },
+    "GRU-PTY-flyingblue-16500-7f392f23": {
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->PTY",
+      "source": "flyingblue",
+      "miles": 16500
+    },
+    "GRU-PTY-united-30000-4fbad57f": {
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->PTY",
+      "source": "united",
+      "miles": 30000
+    },
+    "GRU-PTY-azul-86274-b9c28f22": {
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GIG-PTY-flyingblue-17000-7f392f23": {
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GIG->PTY",
+      "source": "flyingblue",
+      "miles": 17000
+    },
+    "GIG-PTY-united-35000-f13bffed": {
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GIG->PTY",
+      "source": "united",
+      "miles": 35000
+    },
+    "GIG-PTY-azul-86274-b9c28f22": {
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GIG->PTY",
+      "source": "azul",
+      "miles": 86274
+    },
+    "GRU-SJO-flyingblue-24500-098647be": {
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->SJO",
+      "source": "flyingblue",
+      "miles": 24500
+    }
+  },
+  "best_prices": {
+    "GRU-PTY|aeroplan|business": {
+      "miles": 50000,
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->PTY",
+      "source": "aeroplan",
+      "cabin": "business"
+    },
+    "GRU-PTY|united|business": {
+      "miles": 90000,
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->PTY",
+      "source": "united",
+      "cabin": "business"
+    },
+    "GRU-PTY|smiles|business": {
+      "miles": 203000,
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->PTY",
+      "source": "smiles",
+      "cabin": "business"
+    },
+    "GIG-PTY|aeroplan|business": {
+      "miles": 50000,
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GIG->PTY",
+      "source": "aeroplan",
+      "cabin": "business"
+    },
+    "GIG-PTY|united|business": {
+      "miles": 90000,
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GIG->PTY",
+      "source": "united",
+      "cabin": "business"
+    },
+    "GIG-PTY|smiles|business": {
+      "miles": 211000,
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GIG->PTY",
+      "source": "smiles",
+      "cabin": "business"
+    },
+    "GRU-SJO|aeroplan|business": {
+      "miles": 50000,
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->SJO",
+      "source": "aeroplan",
+      "cabin": "business"
+    },
+    "GRU-MEX|delta|business": {
+      "miles": 77500,
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "cabin": "business"
+    },
+    "GRU-AUA|american|business": {
+      "miles": 99000,
+      "sent_at": "2026-08-01T22:26:50.685556",
+      "route": "GRU->AUA",
+      "source": "american",
+      "cabin": "business"
+    },
+    "GRU-AUA|smiles|business": {
+      "miles": 205000,
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->AUA",
+      "source": "smiles",
+      "cabin": "business"
+    },
+    "GRU-PTY|flyingblue|economy": {
+      "miles": 16500,
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->PTY",
+      "source": "flyingblue",
+      "cabin": "economy"
+    },
+    "GRU-PTY|smiles|economy": {
+      "miles": 56000,
+      "sent_at": "2026-08-01T09:28:39.609782",
+      "route": "GRU->PTY",
+      "source": "smiles",
+      "cabin": "economy"
+    },
+    "GRU-PTY|azul|economy": {
+      "miles": 86274,
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "cabin": "economy"
+    },
+    "GIG-PTY|flyingblue|economy": {
+      "miles": 17000,
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GIG->PTY",
+      "source": "flyingblue",
+      "cabin": "economy"
+    },
+    "GIG-PTY|united|economy": {
+      "miles": 35000,
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GIG->PTY",
+      "source": "united",
+      "cabin": "economy"
+    },
+    "GIG-PTY|smiles|economy": {
+      "miles": 58000,
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GIG->PTY",
+      "source": "smiles",
+      "cabin": "economy"
+    },
+    "GIG-PTY|azul|economy": {
+      "miles": 86274,
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GIG->PTY",
+      "source": "azul",
+      "cabin": "economy"
+    },
+    "GRU-AUA|american|economy": {
+      "miles": 32500,
+      "sent_at": "2026-08-01T09:28:39.609782",
+      "route": "GRU->AUA",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GRU-MEX|delta|economy": {
+      "miles": 35000,
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GRU->MEX",
+      "source": "delta",
+      "cabin": "economy"
+    },
+    "GRU-MEX|smiles|economy": {
+      "miles": 106000,
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GRU->MEX",
+      "source": "smiles",
+      "cabin": "economy"
+    },
+    "GRU-PUJ|american|economy": {
+      "miles": 32500,
+      "sent_at": "2026-08-05T22:00:18.217524",
+      "route": "GRU->PUJ",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GRU-PTY|azul|business": {
+      "miles": 163048,
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->PTY",
+      "source": "azul",
+      "cabin": "business"
+    },
+    "GRU-MEX|flyingblue|economy": {
+      "miles": 28000,
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GRU->MEX",
+      "source": "flyingblue",
+      "cabin": "economy"
+    },
+    "GRU-PTY|united|economy": {
+      "miles": 30000,
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->PTY",
+      "source": "united",
+      "cabin": "economy"
+    },
+    "GRU-AUA|american_drop|economy": {
+      "miles": 32500,
+      "sent_at": "2026-08-01T09:28:42.212292",
+      "route": "GRU->AUA",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "GRU-SJO|flyingblue|economy": {
+      "miles": 24500,
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->SJO",
+      "source": "flyingblue",
+      "cabin": "economy"
+    },
+    "GRU-PUJ|smiles|business": {
+      "miles": 233000,
+      "sent_at": "2026-08-07T21:39:54.084408",
+      "route": "GRU->PUJ",
+      "source": "smiles",
+      "cabin": "business"
+    },
+    "GRU-AUA|smiles|economy": {
+      "miles": 61000,
+      "sent_at": "2026-08-04T21:40:27.736522",
+      "route": "GRU->AUA",
+      "source": "smiles",
+      "cabin": "economy"
+    },
+    "GRU-PUJ|smiles|economy": {
+      "miles": 47000,
+      "sent_at": "2026-08-06T22:18:37.830957",
+      "route": "GRU->PUJ",
+      "source": "smiles",
+      "cabin": "economy"
+    }
+  }
+}

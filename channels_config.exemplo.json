@@ -1,0 +1,26 @@
+{
+  "_leia": "Modelo do channels_config.json. Na nuvem as chaves vêm dos Secrets do GitHub (ver channels.py -> SEGREDOS_ENV); aqui ficam vazias de propósito.",
+  "seats_api_key": "",
+  "telegram_bot_token": "",
+  "discord_webhook": "",
+  "check_interval_minutes": 60,
+  "max_alerts_per_cycle": 80,
+  "origins": ["GIG", "GRU"],
+  "channels": [
+    {
+      "name": "OndeAsMilhasMeLevam Europa",
+      "chat_id": "",
+      "origins": ["FOR", "REC", "GIG", "GRU", "BOG", "CCS", "UIO", "LIM", "EZE", "MVD", "GYE", "SCL"],
+      "regions": ["europa"],
+      "cabins": ["economy", "business", "first"],
+      "programs": ["azul", "smiles", "latam", "aeroplan", "american", "united", "qatar",
+                   "flyingblue", "lufthansa", "virginatlantic", "copa", "finnair",
+                   "iberia", "british"],
+      "avios_destinations": ["MAD"],
+      "enabled": true,
+      "melhores_destinos": false
+    }
+  ],
+  "melhores_destinos_enabled": false,
+  "avios_enabled": false
+}

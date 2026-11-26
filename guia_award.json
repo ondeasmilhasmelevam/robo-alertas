@@ -1,0 +1,135 @@
+{
+  "_meta": {
+    "descricao": "Extração do guia 'Programas Internacionais — Guia Operacional' (Mariano Feigenbaum). Referência para a régua de tetos (AWARD_RULES) e enriquecimento de alertas.",
+    "fonte": "https://vercel-deploy-xi-rose-50.vercel.app/",
+    "extraido_em": "2026-07-09",
+    "unidade": "milhas one-way salvo indicação",
+    "obs": "regua_tetos = tetos ex-Brasil aplicados no config.py (business/economy/premium). Charts = tabelas verbatim do guia."
+  },
+
+  "regua_tetos_aplicados": {
+    "_nota": "Valores efetivamente colocados em AWARD_RULES (config.py). Só sources SmartPricing (copa, aeroplan, american, finnair, delta...). iberia/british/qatar usam faixa por distância, não estes tetos.",
+    "europa":          {"business": {"copa": 45000, "aeroplan": 75000, "american": 90000, "finnair": 90000}, "economy": {"copa": 25000, "aeroplan": 30000}, "premium": {"copa": 40000, "aeroplan": 45000}},
+    "eua":             {"business": {"copa": 45000}, "economy": {"copa": 25000, "aeroplan": 25000}, "premium": {"copa": 40000, "aeroplan": 40000}},
+    "asia":            {"business": {"copa": 60000, "aeroplan": 90000}},
+    "america_sul":     {"business": {"copa": 35000, "aeroplan": 40000}, "premium": {"copa": 30000, "aeroplan": 35000}},
+    "america_central": {"business": {"copa": 45000, "aeroplan": 45000}, "economy": {"copa": 25000, "aeroplan": 25000}, "premium": {"copa": 40000, "aeroplan": 45000}},
+    "africa":          {"business": {"copa": 60000, "aeroplan": 75000}},
+    "oceania":         {"business": {"copa": 85000, "aeroplan": 90000}}
+  },
+
+  "yq_por_programa": {
+    "aeroplan": {"status": "nao", "obs": "Não repassa na maioria dos parceiros"},
+    "lifemiles": {"status": "nao", "obs": "Não cobra em voos saindo do Brasil"},
+    "united": {"status": "nao", "obs": "Não repassa YQ"},
+    "copa": {"status": "raro", "obs": "Repassa principalmente Swiss e Lufthansa"},
+    "turkish": {"status": "sim", "obs": "Alto na Lufthansa, Swiss, Thai e ANA"},
+    "alaska": {"status": "raro", "obs": "Alto só da British e Icelandair"},
+    "american": {"status": "depende", "obs": "Alto da British; moderado da Iberia, Qatar e Royal Jordanian"},
+    "flyingblue": {"status": "sim", "obs": "Alto da Air France, KLM e Virgin"},
+    "ana": {"status": "sim", "obs": "Alto na maioria Star (exceto United, Air Canada, Copa e Avianca)"},
+    "british": {"status": "sim", "obs": "MUITO ALTO (exceto AA, LATAM, Qantas e Alaska)"},
+    "iberia": {"status": "depende", "obs": "Alto da Qatar e British; baixo Iberia, AA, LATAM e Alaska"},
+    "qatar": {"status": "depende", "obs": "Alto Qatar, British e Virgin; das outras baixo"},
+    "emirates": {"status": "sim", "obs": "Alto em todas (exceto Azul, Gol e Copa)"},
+    "virginatlantic": {"status": "sim", "obs": "Alto Virgin, Air France e KLM (exceto ANA e Delta)"},
+    "cathay": {"status": "sim", "obs": "Alto British/Virgin/Lufthansa/Swiss; baixo LATAM/AA/Alaska/Fiji"},
+    "singapore": {"status": "depende", "obs": "Voo próprio sem YQ; moderado Lufthansa e Swiss"}
+  },
+
+  "onde_buscar_emitir": [
+    {"cia": "Aegean", "seatsaero": true, "buscar_via": "Aeroplan", "emitir_barato": "Aegean"},
+    {"cia": "Air Canada", "seatsaero": true, "buscar_via": "United", "emitir_barato": "Azul / Smiles"},
+    {"cia": "Air China", "seatsaero": true, "buscar_via": "Aeroplan", "emitir_barato": "Air Canada"},
+    {"cia": "ANA", "seatsaero": true, "buscar_via": "Aeroplan", "emitir_barato": "ANA"},
+    {"cia": "Avianca", "seatsaero": true, "buscar_via": "Aeroplan", "emitir_barato": "Smiles"},
+    {"cia": "Copa", "seatsaero": true, "buscar_via": "United", "emitir_barato": "Azul / Smiles"},
+    {"cia": "Ethiopian", "seatsaero": true, "buscar_via": "United", "emitir_barato": "Smiles"},
+    {"cia": "Lufthansa", "seatsaero": true, "buscar_via": "Aeroplan", "emitir_barato": "Air Canada"},
+    {"cia": "Singapore", "seatsaero": true, "buscar_via": "Aeroplan", "emitir_barato": "Air Canada"},
+    {"cia": "South African", "seatsaero": true, "buscar_via": "Aeroplan", "emitir_barato": "Smiles"},
+    {"cia": "Swiss", "seatsaero": true, "buscar_via": "Aeroplan", "emitir_barato": "Air Canada"},
+    {"cia": "TAP", "seatsaero": false, "buscar_via": "AwardTool", "emitir_barato": "TAP"},
+    {"cia": "Turkish", "seatsaero": true, "buscar_via": "Aeroplan", "emitir_barato": "Azul / Smiles"},
+    {"cia": "United", "seatsaero": true, "buscar_via": "Aeroplan", "emitir_barato": "Azul"},
+    {"cia": "Alaska", "seatsaero": true, "buscar_via": "AAdvantage", "emitir_barato": "Qatar"},
+    {"cia": "American", "seatsaero": true, "buscar_via": "Alaska", "emitir_barato": "Smiles / Finnair"},
+    {"cia": "British", "seatsaero": false, "buscar_via": "Flight Time Calendar", "emitir_barato": "British"},
+    {"cia": "Iberia", "seatsaero": false, "buscar_via": "Flight Time Calendar", "emitir_barato": "Iberia"},
+    {"cia": "Qatar", "seatsaero": true, "buscar_via": "AAdvantage", "emitir_barato": "Iberia"},
+    {"cia": "Finnair", "seatsaero": true, "buscar_via": "AAdvantage", "emitir_barato": "Finnair / LATAM"},
+    {"cia": "Cathay", "seatsaero": true, "buscar_via": "AAdvantage", "emitir_barato": "Finnair"},
+    {"cia": "Fiji", "seatsaero": true, "buscar_via": "AAdvantage", "emitir_barato": "Finnair"},
+    {"cia": "JAL", "seatsaero": true, "buscar_via": "AAdvantage", "emitir_barato": "LATAM"},
+    {"cia": "Malaysia", "seatsaero": true, "buscar_via": "Alaska", "emitir_barato": "Qatar"},
+    {"cia": "Qantas", "seatsaero": true, "buscar_via": "AAdvantage", "emitir_barato": "LATAM"},
+    {"cia": "Royal Air Maroc", "seatsaero": true, "buscar_via": "AAdvantage", "emitir_barato": "Finnair"},
+    {"cia": "Delta", "seatsaero": true, "buscar_via": "Virgin Atlantic", "emitir_barato": "LATAM"},
+    {"cia": "Virgin Atlantic", "seatsaero": false, "buscar_via": "Flight Time Calendar", "emitir_barato": "LATAM"},
+    {"cia": "Air Europa", "seatsaero": true, "buscar_via": "Flying Blue", "emitir_barato": "Air Europa"},
+    {"cia": "Air France", "seatsaero": true, "buscar_via": "Virgin Atlantic", "emitir_barato": "Flying Blue"},
+    {"cia": "KLM", "seatsaero": true, "buscar_via": "Virgin Atlantic", "emitir_barato": "Flying Blue"},
+    {"cia": "Aeromexico", "seatsaero": true, "buscar_via": "Flying Blue", "emitir_barato": "Flying Blue"},
+    {"cia": "GOL", "seatsaero": true, "buscar_via": "AA / Smiles", "emitir_barato": "GOL"},
+    {"cia": "Azul", "seatsaero": true, "buscar_via": "Azul", "emitir_barato": "Azul"},
+    {"cia": "LATAM", "seatsaero": true, "buscar_via": "Virgin Atlantic", "emitir_barato": "Finnair"},
+    {"cia": "Etihad", "seatsaero": true, "buscar_via": "AAdvantage", "emitir_barato": "Azul / AA (First)"},
+    {"cia": "Emirates", "seatsaero": true, "buscar_via": "Qantas", "emitir_barato": "Aegean / Qantas (First)"}
+  ],
+
+  "sweet_spots": [
+    {"programa": "finnair", "rota": "GRU->EUA Executiva AA", "milhas": 55000, "moeda": "Avios"},
+    {"programa": "finnair", "rota": "GRU->Europa Executiva Royal Air Maroc", "milhas": 50500, "moeda": "Avios"},
+    {"programa": "finnair", "rota": "GRU->MIA 1a Classe", "milhas": 75000, "moeda": "Avios"},
+    {"programa": "finnair", "rota": "GRU->Lima Executiva", "milhas": 20000, "moeda": "Avios"},
+    {"programa": "alaska", "rota": "JAL Asia Executiva", "milhas": 75000},
+    {"programa": "alaska", "rota": "Starlux TPE Executiva", "milhas": 75000},
+    {"programa": "alaska", "rota": "Aer Lingus DUB Executiva", "milhas": 45000},
+    {"programa": "aeroplan", "rota": "GRU->Europa Economy", "milhas": 30000},
+    {"programa": "aeroplan", "rota": "GRU->EUA/Canada Business", "milhas": 60000, "faixa": "55000-65000"},
+    {"programa": "aeroplan", "rota": "EUA->Japao/Asia Business", "milhas": 62500, "faixa": "55000-70000"},
+    {"programa": "copa", "rota": "Brasil->Caribe Business", "milhas": 40000},
+    {"programa": "copa", "rota": "Brasil->Australia/NZ Business", "milhas": 82500, "economy": 50000},
+    {"programa": "qatar", "rota": "GRU->EZE Business (LATAM parceira)", "milhas": 16500, "moeda": "Avios"},
+    {"programa": "qatar", "rota": "GRU->LIS/MAD/BCN Economy (LATAM)", "milhas": 25750, "moeda": "Avios"},
+    {"programa": "lifemiles", "rota": "GRU->NAV (Capadocia via IST) Turkish", "milhas": 65000}
+  ],
+
+  "charts": {
+    "copa_connectmiles_amsul_sul": {
+      "_nota": "Origem Am.Sul Sul (ARG,BOL,BRA,CHI,PAR,URU) -> destino. one-way.",
+      "europa":          {"eco": 17500, "bus": 35000, "first": 52500},
+      "oriente_medio":   {"eco": 17500, "bus": 35000, "first": 52500},
+      "africa_cs":       {"eco": 25000, "bus": 50000, "first": 75000},
+      "asia_central":    {"eco": 25000, "bus": 50000, "first": 75000},
+      "extremo_oriente": {"eco": 25000, "bus": 50000, "first": 75000},
+      "oceania":         {"eco": 30000, "bus": 60000, "first": 90000},
+      "am_norte":        {"eco": 17500, "bus": 35000, "first": 52500},
+      "am_sul_central":  {"eco": 7500,  "bus": 15000, "first": 22500},
+      "havai":           {"eco": 22500, "bus": 45000, "first": 67500}
+    },
+    "aeroplan_por_distancia": {
+      "dentro_am_sul":      {"eco": [6000, 17500], "bus": [15000, 35000]},
+      "am_sul_am_norte":    {"eco": [15000, 25000], "bus": [35000, 65000], "prem": [25000, 40000]},
+      "am_sul_atlantico":   {"eco": [17500, 30000], "bus": [40000, 75000], "prem": [30000, 45000]},
+      "am_norte_atlantico": {"eco": [12500, 27500], "bus": [30000, 65000], "prem": [20000, 45000]},
+      "dentro_pacifico":    {"eco": [10000, 27500], "bus": [25000, 70000], "prem": [17500, 45000]},
+      "am_norte_pacifico":  {"eco": [17500, 37500], "bus": [45000, 85000], "prem": [30000, 60000]}
+    },
+    "avios_oneworld_por_distancia_gru": {
+      "_nota": "Zona por distância (milhas). Exemplos ex-GRU.",
+      "zona2_gru_eze": {"eco": 9000,  "bus": 16500,  "first": 33000},
+      "zona3_gru_scl": {"eco": 11000, "bus": 22000,  "first": 44000},
+      "zona6_gru_jfk_lis_mad_jnb": {"eco": 25750, "bus": 77250, "first": 103000},
+      "zona7_gru_lax_fco_mxp": {"eco": 31000, "bus": 92750, "first": 123750},
+      "zona9_scl_mel": {"eco": 51500, "bus": 154500, "first": 206000}
+    },
+    "alaska_parceiros_eua_europa_omedio_africa": {
+      "z2": {"eco": 22500, "prem": 30000, "bus": 45000, "first": 67500},
+      "z3": {"eco": 27500, "prem": 35000, "bus": 55000, "first": 82500},
+      "z4": {"eco": 35000, "prem": 45000, "bus": 70000, "first": 105000},
+      "z5": {"eco": 42500, "prem": 55000, "bus": 85000, "first": 130000},
+      "z6": {"eco": 55000, "prem": 72500, "bus": 110000, "first": 165000}
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "distance_based_sources": [
+    "iberia",
+    "british",
+    "qatar"
+  ],
+  "company_limits": {
+    "iberia": {
+      "enabled": true,
+      "max_miles_business": 0,
+      "max_miles_economy": 0,
+      "note": "0 = usa tabela de faixas automaticamente"
+    },
+    "british": {
+      "enabled": true,
+      "max_miles_business": 0,
+      "max_miles_economy": 0
+    },
+    "qatar_distance": {
+      "enabled": true,
+      "max_miles_business": 0,
+      "max_miles_economy": 0,
+      "note": "Qatar no modo distancia (separado do qatar no termometro)"
+    }
+  },
+  "special_search_time": "21:00",
+  "special_search_timezone": "America/Sao_Paulo",
+  "special_search_sources": [
+    "iberia",
+    "british",
+    "qatar"
+  ],
+  "notes": "distance_based_sources usa tabela de faixas por distancia. Demais usam termometro de precos.",
+  "exigir_regua": true,
+  "_nota_exigir_regua": "true = so envia o que a regua cobre (termometro do painel ou tabela de distancia dos Avios). Sem regua para aquele programa/regiao/cabine, NAO envia. false = usa o SmartPricing (historico da rota) como rede de seguranca."
+}

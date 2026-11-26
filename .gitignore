@@ -1,0 +1,49 @@
+# ── NUNCA subir: segredos e dados pessoais ────────────────────────────
+# (no .gitignore o comentario tem que ficar numa linha SOZINHA; se ficar
+#  na mesma linha do nome, o git acha que o comentario faz parte do nome)
+
+# tem chaves em texto puro; na nuvem vem dos Secrets
+channels_config.json
+# perfil do Chrome logado na conta Avios
+.avios_profile/
+# sessao do Telethon (userbot VMM)
+*.session
+*.session-journal
+
+# ── Estado grande: vai pelo cache do Actions, nao pelo git ────────────
+pricing_history.json
+price_records.json
+vmm_observados.jsonl
+
+# ── Gerados ───────────────────────────────────────────────────────────
+*.exe
+build/
+dist/
+__pycache__/
+*.pyc
+*.log
+avios_urls.json
+avios_debug.txt
+*.bak
+*.tmp
+
+# ── Material de divulgacao: nao e do robo e o repositorio e publico ───
+# (sao 41 MB de video, audio e imagem; a sua voz e o seu avatar
+#  continuam normalmente na pasta do PC, so nao vao pro GitHub)
+*.mp4
+*.mp3
+*.wav
+destaques/
+youtube/
+Imagens para grupo de Alertas/
+grupo*.png
+avios_form.png
+roteiros-*.md
+gravacao-*.md
+trechos-*.md
+teleprompter.html
+_regua_painel.txt
+
+# ── Nao precisa na nuvem ──────────────────────────────────────────────
+*.spec
+gerar_exe.bat

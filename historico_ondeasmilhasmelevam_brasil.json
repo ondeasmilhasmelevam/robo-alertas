@@ -1,0 +1,2591 @@
+{
+  "alerts": {
+    "GIG-SSA-american-7500-78034db7": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "GIG->SSA",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CNF-american-7500-78034db7": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "SDU->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-REC-american-7500-8ba47787": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "GIG->REC",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GYN-american-7500-78034db7": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "GIG->GYN",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-BSB-american-7500-78034db7": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "GIG->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GRU-american-7500-78034db7": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "GIG->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGH-american-7500-78034db7": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "GIG->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CGH-american-7500-78034db7": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "SDU->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-BSB-american-7500-78034db7": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "SDU->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-SSA-american-7500-78034db7": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "SDU->SSA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-MCZ-american-7500-8ba47787": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "GIG->MCZ",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-AJU-american-7500-8ba47787": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "GIG->AJU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VCP-american-7500-8ba47787": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "GIG->VCP",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FLN-american-7500-78034db7": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "GIG->FLN",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-GRU-american-7500-78034db7": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "SDU->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CWB-american-7500-78034db7": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "GIG->CWB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-JPA-american-7500-8ba47787": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "GIG->JPA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CNF-american-7500-78034db7": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "GIG->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FOR-american-7500-8ba47787": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "GIG->FOR",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NAT-american-7500-4245edaa": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "GIG->NAT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGB-american-7500-78034db7": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "GIG->CGB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-IGU-american-7500-78034db7": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "GIG->IGU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VIX-american-7500-a624fc63": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "GIG->VIX",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-POA-american-7500-a624fc63": {
+      "sent_at": "2026-09-30T12:23:34.710431",
+      "route": "GIG->POA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-MCZ-american_drop-7500-d41d8cd9": {
+      "sent_at": "2026-09-30T12:23:37.866821",
+      "route": "GIG->MCZ",
+      "source": "american_drop",
+      "miles": 7500
+    },
+    "GIG-VIX-american_drop-7500-d41d8cd9": {
+      "sent_at": "2026-09-30T12:23:42.661753",
+      "route": "GIG->VIX",
+      "source": "american_drop",
+      "miles": 7500
+    },
+    "GIG-REC-american_drop-7500-d41d8cd9": {
+      "sent_at": "2026-09-30T12:23:47.666898",
+      "route": "GIG->REC",
+      "source": "american_drop",
+      "miles": 7500
+    },
+    "GIG-SLZ-american-7500-6c4424ef": {
+      "sent_at": "2026-09-30T19:36:36.921499",
+      "route": "GIG->SLZ",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SLZ-american_drop-7500-d41d8cd9": {
+      "sent_at": "2026-09-30T19:36:39.709811",
+      "route": "GIG->SLZ",
+      "source": "american_drop",
+      "miles": 7500
+    },
+    "GIG-VIX-american-7500-c2e45df3": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "GIG->VIX",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GRU-american-7500-c2e45df3": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "GIG->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CNF-american-7500-c2e45df3": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "SDU->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GYN-american-7500-c2e45df3": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "GIG->GYN",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-BSB-american-7500-c2e45df3": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "GIG->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SSA-american-7500-c2e45df3": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "GIG->SSA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGH-american-7500-c2e45df3": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "GIG->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-SSA-american-7500-c2e45df3": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "SDU->SSA",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CGH-american-7500-c2e45df3": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "SDU->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-BSB-american-7500-c2e45df3": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "SDU->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-POA-american-7500-c2e45df3": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "GIG->POA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FLN-american-7500-c2e45df3": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "GIG->FLN",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-GRU-american-7500-c2e45df3": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "SDU->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CWB-american-7500-c2e45df3": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "GIG->CWB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CNF-american-7500-c2e45df3": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "GIG->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGB-american-7500-c2e45df3": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "GIG->CGB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-IGU-american-7500-c2e45df3": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "GIG->IGU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NAT-american-7500-6c4424ef": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "GIG->NAT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-REC-american-7500-6c4424ef": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "GIG->REC",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-AJU-american-7500-6c4424ef": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "GIG->AJU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VCP-american-7500-6c4424ef": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "GIG->VCP",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FOR-american-7500-6c4424ef": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "GIG->FOR",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-JPA-american-7500-6c4424ef": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "GIG->JPA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NVT-american-7500-6c4424ef": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "GIG->NVT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-MCZ-american-7500-6c4424ef": {
+      "sent_at": "2026-09-30T21:41:52.412333",
+      "route": "GIG->MCZ",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NAT-american_drop-7500-d41d8cd9": {
+      "sent_at": "2026-09-30T21:41:55.047014",
+      "route": "GIG->NAT",
+      "source": "american_drop",
+      "miles": 7500
+    },
+    "GIG-IGU-american-7500-6c4424ef": {
+      "sent_at": "2026-10-01T16:06:55.595391",
+      "route": "GIG->IGU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VIX-american-7500-0efd68a4": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "GIG->VIX",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GRU-american-7500-0efd68a4": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "GIG->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CNF-american-7500-0efd68a4": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "SDU->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GYN-american-7500-0efd68a4": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "GIG->GYN",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-BSB-american-7500-0efd68a4": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "GIG->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SSA-american-7500-0efd68a4": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "GIG->SSA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGH-american-7500-0efd68a4": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "GIG->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-SSA-american-7500-0efd68a4": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "SDU->SSA",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CGH-american-7500-0efd68a4": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "SDU->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-BSB-american-7500-0efd68a4": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "SDU->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-POA-american-7500-0efd68a4": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "GIG->POA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FLN-american-7500-0efd68a4": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "GIG->FLN",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-GRU-american-7500-0efd68a4": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "SDU->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CWB-american-7500-0efd68a4": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "GIG->CWB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CNF-american-7500-0efd68a4": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "GIG->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGB-american-7500-0efd68a4": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "GIG->CGB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NAT-american-7500-31882d3a": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "GIG->NAT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SLZ-american-7500-31882d3a": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "GIG->SLZ",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-REC-american-7500-31882d3a": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "GIG->REC",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-AJU-american-7500-31882d3a": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "GIG->AJU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VCP-american-7500-31882d3a": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "GIG->VCP",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FOR-american-7500-31882d3a": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "GIG->FOR",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-JPA-american-7500-31882d3a": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "GIG->JPA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-IGU-american-7500-31882d3a": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "GIG->IGU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NVT-american-7500-31882d3a": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "GIG->NVT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-MCZ-american-7500-31882d3a": {
+      "sent_at": "2026-10-01T17:10:11.813557",
+      "route": "GIG->MCZ",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NAT-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "GIG->NAT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SLZ-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "GIG->SLZ",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-REC-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "GIG->REC",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GYN-american-7500-6c4424ef": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "GIG->GYN",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CNF-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "SDU->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-BSB-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "GIG->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGH-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "GIG->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CGH-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "SDU->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SSA-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "GIG->SSA",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-SSA-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "SDU->SSA",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-BSB-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "SDU->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-AJU-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "GIG->AJU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VCP-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "GIG->VCP",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FLN-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "GIG->FLN",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-GRU-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "SDU->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CWB-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "GIG->CWB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CNF-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "GIG->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FOR-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "GIG->FOR",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-JPA-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "GIG->JPA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGB-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "GIG->CGB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-IGU-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "GIG->IGU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NVT-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "GIG->NVT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VIX-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "GIG->VIX",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GRU-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "GIG->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-MCZ-american-7500-4adb9086": {
+      "sent_at": "2026-10-01T21:16:43.972237",
+      "route": "GIG->MCZ",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GYN-american_drop-7500-d41d8cd9": {
+      "sent_at": "2026-10-01T21:16:47.356381",
+      "route": "GIG->GYN",
+      "source": "american_drop",
+      "miles": 7500
+    },
+    "GIG-NAT-american-7500-d42f8d58": {
+      "sent_at": "2026-10-02T09:34:30.861265",
+      "route": "GIG->NAT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SLZ-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "GIG->SLZ",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-REC-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "GIG->REC",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GYN-american-7500-31882d3a": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "GIG->GYN",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CNF-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "SDU->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-BSB-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "GIG->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGH-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "GIG->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CGH-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "SDU->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SSA-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "GIG->SSA",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-SSA-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "SDU->SSA",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-BSB-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "SDU->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-AJU-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "GIG->AJU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VCP-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "GIG->VCP",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FLN-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "GIG->FLN",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-GRU-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "SDU->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CWB-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "GIG->CWB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CNF-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "GIG->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FOR-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "GIG->FOR",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-JPA-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "GIG->JPA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGB-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "GIG->CGB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-IGU-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "GIG->IGU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NVT-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "GIG->NVT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VIX-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "GIG->VIX",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GRU-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "GIG->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-MCZ-american-7500-3daf4c05": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "GIG->MCZ",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NAT-american-7500-0f9a31ec": {
+      "sent_at": "2026-10-02T16:46:50.338662",
+      "route": "GIG->NAT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NVT-american-7500-e68e1b5e": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->NVT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-REC-american-7500-e68e1b5e": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->REC",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-BSB-american-7500-d42f8d58": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGH-american-7500-e68e1b5e": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CGH-american-7500-d42f8d58": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "SDU->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-SSA-american-7500-e68e1b5e": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "SDU->SSA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SSA-american-7500-e68e1b5e": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->SSA",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-BSB-american-7500-d42f8d58": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "SDU->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-AJU-american-7500-e68e1b5e": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->AJU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VCP-american-7500-e68e1b5e": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->VCP",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FLN-american-7500-e68e1b5e": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->FLN",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-GRU-american-7500-d42f8d58": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "SDU->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CWB-american-7500-e68e1b5e": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->CWB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CNF-american-7500-e68e1b5e": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FOR-american-7500-e68e1b5e": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->FOR",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NAT-american-7500-e68e1b5e": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->NAT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-JPA-american-7500-d42f8d58": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->JPA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGB-american-7500-e68e1b5e": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->CGB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-IGU-american-7500-e68e1b5e": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->IGU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VIX-american-7500-d42f8d58": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->VIX",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GRU-american-7500-d42f8d58": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-MCZ-american-7500-d42f8d58": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->MCZ",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SLZ-american-7500-e68e1b5e": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->SLZ",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CNF-american-7500-d42f8d58": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "SDU->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-POA-american-7500-076b9a7f": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->POA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-MAO-american-7500-076b9a7f": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->MAO",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GYN-american-7500-076b9a7f": {
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->GYN",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-MAO-american_drop-7500-d41d8cd9": {
+      "sent_at": "2026-10-02T21:53:22.000180",
+      "route": "GIG->MAO",
+      "source": "american_drop",
+      "miles": 7500
+    },
+    "GIG-JPA-american_drop-7500-d41d8cd9": {
+      "sent_at": "2026-10-02T21:53:26.638537",
+      "route": "GIG->JPA",
+      "source": "american_drop",
+      "miles": 7500
+    },
+    "SDU-GRU-american_drop-7500-d41d8cd9": {
+      "sent_at": "2026-10-02T21:53:31.452063",
+      "route": "SDU->GRU",
+      "source": "american_drop",
+      "miles": 7500
+    },
+    "GIG-GRU-american-7500-e68e1b5e": {
+      "sent_at": "2026-10-02T22:55:12.447870",
+      "route": "GIG->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SLZ-american-7500-d42f8d58": {
+      "sent_at": "2026-10-03T07:07:30.137569",
+      "route": "GIG->SLZ",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-REC-american-7500-d42f8d58": {
+      "sent_at": "2026-10-03T10:11:26.036380",
+      "route": "GIG->REC",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NVT-american-7500-f13ad968": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "GIG->NVT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-BSB-american-7500-0f9a31ec": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "GIG->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGH-american-7500-f13ad968": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "GIG->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CGH-american-7500-0f9a31ec": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "SDU->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-SSA-american-7500-f13ad968": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "SDU->SSA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SSA-american-7500-f13ad968": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "GIG->SSA",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-BSB-american-7500-0f9a31ec": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "SDU->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-AJU-american-7500-f13ad968": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "GIG->AJU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VCP-american-7500-f13ad968": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "GIG->VCP",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FLN-american-7500-f13ad968": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "GIG->FLN",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-GRU-american-7500-0f9a31ec": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "SDU->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CWB-american-7500-f13ad968": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "GIG->CWB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CNF-american-7500-f13ad968": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "GIG->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FOR-american-7500-f13ad968": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "GIG->FOR",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NAT-american-7500-f13ad968": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "GIG->NAT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-JPA-american-7500-0f9a31ec": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "GIG->JPA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGB-american-7500-f13ad968": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "GIG->CGB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-IGU-american-7500-f13ad968": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "GIG->IGU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VIX-american-7500-0f9a31ec": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "GIG->VIX",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GRU-american-7500-f13ad968": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "GIG->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SLZ-american-7500-0f9a31ec": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "GIG->SLZ",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CNF-american-7500-0f9a31ec": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "SDU->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GYN-american-7500-f2c67b85": {
+      "sent_at": "2026-10-03T17:23:09.258814",
+      "route": "GIG->GYN",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGH-american-7500-16e1e0c2": {
+      "sent_at": "2026-10-03T21:28:17.875585",
+      "route": "GIG->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-SSA-american-7500-076b9a7f": {
+      "sent_at": "2026-10-03T21:28:17.875585",
+      "route": "SDU->SSA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SSA-american-7500-16e1e0c2": {
+      "sent_at": "2026-10-03T21:28:17.875585",
+      "route": "GIG->SSA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-AJU-american-7500-16e1e0c2": {
+      "sent_at": "2026-10-03T21:28:17.875585",
+      "route": "GIG->AJU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VCP-american-7500-076b9a7f": {
+      "sent_at": "2026-10-03T21:28:17.875585",
+      "route": "GIG->VCP",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FLN-american-7500-16e1e0c2": {
+      "sent_at": "2026-10-03T21:28:17.875585",
+      "route": "GIG->FLN",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CNF-american-7500-16e1e0c2": {
+      "sent_at": "2026-10-03T21:28:17.875585",
+      "route": "GIG->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CWB-american-7500-16e1e0c2": {
+      "sent_at": "2026-10-03T21:28:17.875585",
+      "route": "GIG->CWB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FOR-american-7500-076b9a7f": {
+      "sent_at": "2026-10-03T21:28:17.875585",
+      "route": "GIG->FOR",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NAT-american-7500-16e1e0c2": {
+      "sent_at": "2026-10-03T21:28:17.875585",
+      "route": "GIG->NAT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NVT-american-7500-16e1e0c2": {
+      "sent_at": "2026-10-03T21:28:17.875585",
+      "route": "GIG->NVT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGB-american-7500-16e1e0c2": {
+      "sent_at": "2026-10-03T21:28:17.875585",
+      "route": "GIG->CGB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-IGU-american-7500-16e1e0c2": {
+      "sent_at": "2026-10-03T21:28:17.875585",
+      "route": "GIG->IGU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GRU-american-7500-16e1e0c2": {
+      "sent_at": "2026-10-03T21:28:17.875585",
+      "route": "GIG->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GYN-american-7500-16e1e0c2": {
+      "sent_at": "2026-10-03T21:28:17.875585",
+      "route": "GIG->GYN",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-POA-american-7500-cf410c99": {
+      "sent_at": "2026-10-03T21:28:17.875585",
+      "route": "GIG->POA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-JPA-american-7500-cf410c99": {
+      "sent_at": "2026-10-03T21:28:17.875585",
+      "route": "GIG->JPA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VIX-american-7500-cf410c99": {
+      "sent_at": "2026-10-03T21:28:17.875585",
+      "route": "GIG->VIX",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SLZ-american-7500-cf410c99": {
+      "sent_at": "2026-10-03T21:28:17.875585",
+      "route": "GIG->SLZ",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-BSB-american-7500-cf410c99": {
+      "sent_at": "2026-10-03T21:28:17.875585",
+      "route": "GIG->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FOR-american_drop-7500-d41d8cd9": {
+      "sent_at": "2026-10-03T21:28:20.628894",
+      "route": "GIG->FOR",
+      "source": "american_drop",
+      "miles": 7500
+    },
+    "SDU-SSA-american_drop-7500-d41d8cd9": {
+      "sent_at": "2026-10-03T21:28:25.302567",
+      "route": "SDU->SSA",
+      "source": "american_drop",
+      "miles": 7500
+    },
+    "SDU-CGH-american-7500-cf410c99": {
+      "sent_at": "2026-10-04T03:38:16.472937",
+      "route": "SDU->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-GRU-american-7500-cf410c99": {
+      "sent_at": "2026-10-04T03:38:16.472937",
+      "route": "SDU->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VCP-american_drop-7500-d41d8cd9": {
+      "sent_at": "2026-10-04T03:38:19.665084",
+      "route": "GIG->VCP",
+      "source": "american_drop",
+      "miles": 7500
+    },
+    "GIG-CGH-american-7500-9975b0a6": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "GIG->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-SSA-american-7500-f2c67b85": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "SDU->SSA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SSA-american-7500-9975b0a6": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "GIG->SSA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-AJU-american-7500-9975b0a6": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "GIG->AJU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VCP-american-7500-f2c67b85": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "GIG->VCP",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FLN-american-7500-9975b0a6": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "GIG->FLN",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CNF-american-7500-9975b0a6": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "GIG->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CWB-american-7500-9975b0a6": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "GIG->CWB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FOR-american-7500-f2c67b85": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "GIG->FOR",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NAT-american-7500-9975b0a6": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "GIG->NAT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NVT-american-7500-9975b0a6": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "GIG->NVT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGB-american-7500-9975b0a6": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "GIG->CGB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-IGU-american-7500-9975b0a6": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "GIG->IGU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GRU-american-7500-9975b0a6": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "GIG->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GYN-american-7500-9975b0a6": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "GIG->GYN",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-GRU-american-7500-a0feca5d": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "SDU->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-POA-american-7500-a0feca5d": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "GIG->POA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-JPA-american-7500-a0feca5d": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "GIG->JPA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VIX-american-7500-a0feca5d": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "GIG->VIX",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SLZ-american-7500-a0feca5d": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "GIG->SLZ",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-BSB-american-7500-a0feca5d": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "GIG->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CGH-american-7500-a0feca5d": {
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "SDU->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GRU-american-7500-8e13b1b0": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "GIG->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-GRU-american-7500-8e13b1b0": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "SDU->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-POA-american-7500-8e13b1b0": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "GIG->POA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-AJU-american-7500-8e13b1b0": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "GIG->AJU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FLN-american-7500-8e13b1b0": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "GIG->FLN",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CWB-american-7500-8e13b1b0": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "GIG->CWB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CNF-american-7500-8e13b1b0": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "GIG->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NAT-american-7500-cf410c99": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "GIG->NAT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-JPA-american-7500-8e13b1b0": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "GIG->JPA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGB-american-7500-8e13b1b0": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "GIG->CGB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-IGU-american-7500-8e13b1b0": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "GIG->IGU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NVT-american-7500-cf410c99": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "GIG->NVT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VIX-american-7500-8e13b1b0": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "GIG->VIX",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SLZ-american-7500-8e13b1b0": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "GIG->SLZ",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-BSB-american-7500-8e13b1b0": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "GIG->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GYN-american-7500-8e13b1b0": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "GIG->GYN",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGH-american-7500-8e13b1b0": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "GIG->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CGH-american-7500-8e13b1b0": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "SDU->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SSA-american-7500-8e13b1b0": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "GIG->SSA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FOR-american-7500-561022e1": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "GIG->FOR",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-REC-american-7500-561022e1": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "GIG->REC",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CNF-american-7500-561022e1": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "SDU->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-BSB-american-7500-561022e1": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "SDU->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VCP-american-7500-561022e1": {
+      "sent_at": "2026-10-04T21:05:32.033610",
+      "route": "GIG->VCP",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NVT-american_drop-7500-d41d8cd9": {
+      "sent_at": "2026-10-04T21:05:35.103888",
+      "route": "GIG->NVT",
+      "source": "american_drop",
+      "miles": 7500
+    },
+    "GIG-SSA-american-7500-cf410c99": {
+      "sent_at": "2026-10-05T12:27:57.781761",
+      "route": "GIG->SSA",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CNF-american_drop-7500-d41d8cd9": {
+      "sent_at": "2026-10-05T12:28:00.582279",
+      "route": "SDU->CNF",
+      "source": "american_drop",
+      "miles": 7500
+    },
+    "GIG-GRU-american-7500-add102bf": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-GRU-american-7500-add102bf": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "SDU->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-POA-american-7500-add102bf": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->POA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-AJU-american-7500-add102bf": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->AJU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FLN-american-7500-add102bf": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->FLN",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CWB-american-7500-add102bf": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->CWB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CNF-american-7500-add102bf": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NAT-american-7500-a0feca5d": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->NAT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-JPA-american-7500-add102bf": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->JPA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGB-american-7500-add102bf": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->CGB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-IGU-american-7500-add102bf": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->IGU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NVT-american-7500-a0feca5d": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->NVT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VIX-american-7500-add102bf": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->VIX",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SLZ-american-7500-add102bf": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->SLZ",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-BSB-american-7500-add102bf": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GYN-american-7500-add102bf": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->GYN",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGH-american-7500-add102bf": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CGH-american-7500-add102bf": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "SDU->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SSA-american-7500-a0feca5d": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->SSA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FOR-american-7500-73a017ea": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->FOR",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-REC-american-7500-73a017ea": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->REC",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CNF-american-7500-73a017ea": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "SDU->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-BSB-american-7500-73a017ea": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "SDU->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VCP-american-7500-73a017ea": {
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->VCP",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-FLN-american-7500-312f11b7": {
+      "sent_at": "2026-10-05T21:42:56.940581",
+      "route": "GIG->FLN",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-GRU-american-7500-312f11b7": {
+      "sent_at": "2026-10-05T21:42:56.940581",
+      "route": "SDU->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CWB-american-7500-312f11b7": {
+      "sent_at": "2026-10-05T21:42:56.940581",
+      "route": "GIG->CWB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CNF-american-7500-312f11b7": {
+      "sent_at": "2026-10-05T21:42:56.940581",
+      "route": "GIG->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-JPA-american-7500-561022e1": {
+      "sent_at": "2026-10-05T21:42:56.940581",
+      "route": "GIG->JPA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGB-american-7500-312f11b7": {
+      "sent_at": "2026-10-05T21:42:56.940581",
+      "route": "GIG->CGB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VIX-american-7500-312f11b7": {
+      "sent_at": "2026-10-05T21:42:56.940581",
+      "route": "GIG->VIX",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GRU-american-7500-312f11b7": {
+      "sent_at": "2026-10-05T21:42:56.940581",
+      "route": "GIG->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SLZ-american-7500-561022e1": {
+      "sent_at": "2026-10-05T21:42:56.940581",
+      "route": "GIG->SLZ",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GYN-american-7500-312f11b7": {
+      "sent_at": "2026-10-05T21:42:56.940581",
+      "route": "GIG->GYN",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CNF-american-7500-312f11b7": {
+      "sent_at": "2026-10-05T21:42:56.940581",
+      "route": "SDU->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-BSB-american-7500-312f11b7": {
+      "sent_at": "2026-10-05T21:42:56.940581",
+      "route": "GIG->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CGH-american-7500-312f11b7": {
+      "sent_at": "2026-10-05T21:42:56.940581",
+      "route": "SDU->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGH-american-7500-312f11b7": {
+      "sent_at": "2026-10-05T21:42:56.940581",
+      "route": "GIG->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-BSB-american-7500-312f11b7": {
+      "sent_at": "2026-10-05T21:42:56.940581",
+      "route": "SDU->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-POA-american-7500-312f11b7": {
+      "sent_at": "2026-10-05T21:42:56.940581",
+      "route": "GIG->POA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-AJU-american-7500-312f11b7": {
+      "sent_at": "2026-10-05T21:42:56.940581",
+      "route": "GIG->AJU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VCP-american-7500-312f11b7": {
+      "sent_at": "2026-10-05T21:42:56.940581",
+      "route": "GIG->VCP",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NAT-american-7500-90e496a3": {
+      "sent_at": "2026-10-05T21:42:56.940581",
+      "route": "GIG->NAT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-POA-american-7500-561022e1": {
+      "sent_at": "2026-10-06T11:02:58.800233",
+      "route": "GIG->POA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-POA-american_drop-7500-d41d8cd9": {
+      "sent_at": "2026-10-06T11:03:01.727576",
+      "route": "GIG->POA",
+      "source": "american_drop",
+      "miles": 7500
+    },
+    "GIG-FLN-american-7500-000a1a83": {
+      "sent_at": "2026-10-06T17:13:40.384985",
+      "route": "GIG->FLN",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-GRU-american-7500-000a1a83": {
+      "sent_at": "2026-10-06T17:13:40.384985",
+      "route": "SDU->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CWB-american-7500-000a1a83": {
+      "sent_at": "2026-10-06T17:13:40.384985",
+      "route": "GIG->CWB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CNF-american-7500-000a1a83": {
+      "sent_at": "2026-10-06T17:13:40.384985",
+      "route": "GIG->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGB-american-7500-000a1a83": {
+      "sent_at": "2026-10-06T17:13:40.384985",
+      "route": "GIG->CGB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VIX-american-7500-000a1a83": {
+      "sent_at": "2026-10-06T17:13:40.384985",
+      "route": "GIG->VIX",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GRU-american-7500-000a1a83": {
+      "sent_at": "2026-10-06T17:13:40.384985",
+      "route": "GIG->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-SLZ-american-7500-73a017ea": {
+      "sent_at": "2026-10-06T17:13:40.384985",
+      "route": "GIG->SLZ",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GYN-american-7500-000a1a83": {
+      "sent_at": "2026-10-06T17:13:40.384985",
+      "route": "GIG->GYN",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CNF-american-7500-000a1a83": {
+      "sent_at": "2026-10-06T17:13:40.384985",
+      "route": "SDU->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-BSB-american-7500-000a1a83": {
+      "sent_at": "2026-10-06T17:13:40.384985",
+      "route": "GIG->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CGH-american-7500-000a1a83": {
+      "sent_at": "2026-10-06T17:13:40.384985",
+      "route": "SDU->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGH-american-7500-000a1a83": {
+      "sent_at": "2026-10-06T17:13:40.384985",
+      "route": "GIG->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-BSB-american-7500-000a1a83": {
+      "sent_at": "2026-10-06T17:13:40.384985",
+      "route": "SDU->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-POA-american-7500-73a017ea": {
+      "sent_at": "2026-10-06T17:13:40.384985",
+      "route": "GIG->POA",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VCP-american-7500-000a1a83": {
+      "sent_at": "2026-10-06T17:13:40.384985",
+      "route": "GIG->VCP",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-NAT-american-7500-10f18b75": {
+      "sent_at": "2026-10-06T17:13:40.384985",
+      "route": "GIG->NAT",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VIX-american-7500-79a11104": {
+      "sent_at": "2026-10-06T21:19:33.720064",
+      "route": "GIG->VIX",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VIX-smiles-11200-90e496a3": {
+      "sent_at": "2026-10-06T21:19:33.720064",
+      "route": "GIG->VIX",
+      "source": "smiles",
+      "miles": 11200
+    },
+    "GIG-CNF-american-7500-79a11104": {
+      "sent_at": "2026-10-06T21:19:33.720064",
+      "route": "GIG->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGB-american-7500-90e496a3": {
+      "sent_at": "2026-10-06T21:19:33.720064",
+      "route": "GIG->CGB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GRU-american-7500-79a11104": {
+      "sent_at": "2026-10-06T21:19:33.720064",
+      "route": "GIG->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CNF-american-7500-90e496a3": {
+      "sent_at": "2026-10-06T21:19:33.720064",
+      "route": "SDU->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GYN-american-7500-79a11104": {
+      "sent_at": "2026-10-06T21:19:33.720064",
+      "route": "GIG->GYN",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-BSB-american-7500-79a11104": {
+      "sent_at": "2026-10-06T21:19:33.720064",
+      "route": "GIG->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGH-american-7500-90e496a3": {
+      "sent_at": "2026-10-06T21:19:33.720064",
+      "route": "GIG->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CGH-american-7500-90e496a3": {
+      "sent_at": "2026-10-06T21:19:33.720064",
+      "route": "SDU->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-BSB-american-7500-90e496a3": {
+      "sent_at": "2026-10-06T21:19:33.720064",
+      "route": "SDU->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VCP-american-7500-90e496a3": {
+      "sent_at": "2026-10-06T21:19:33.720064",
+      "route": "GIG->VCP",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-GRU-american-7500-90e496a3": {
+      "sent_at": "2026-10-06T21:19:33.720064",
+      "route": "SDU->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CWB-american-7500-90e496a3": {
+      "sent_at": "2026-10-06T21:19:33.720064",
+      "route": "GIG->CWB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-IGU-american-7500-5c917682": {
+      "sent_at": "2026-10-06T21:19:33.720064",
+      "route": "GIG->IGU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGB-american_drop-7500-d41d8cd9": {
+      "sent_at": "2026-10-06T21:19:41.470177",
+      "route": "GIG->CGB",
+      "source": "american_drop",
+      "miles": 7500
+    },
+    "GIG-CWB-american_drop-7500-d41d8cd9": {
+      "sent_at": "2026-10-06T21:19:46.665706",
+      "route": "GIG->CWB",
+      "source": "american_drop",
+      "miles": 7500
+    },
+    "GIG-BSB-american_drop-7500-d41d8cd9": {
+      "sent_at": "2026-10-07T09:38:32.472373",
+      "route": "GIG->BSB",
+      "source": "american_drop",
+      "miles": 7500
+    },
+    "GIG-CGH-american_drop-7500-d41d8cd9": {
+      "sent_at": "2026-10-07T15:47:43.946713",
+      "route": "GIG->CGH",
+      "source": "american_drop",
+      "miles": 7500
+    },
+    "GIG-CNF-american-7500-082008bb": {
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "GIG->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGB-american-7500-10f18b75": {
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "GIG->CGB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VIX-american-7500-082008bb": {
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "GIG->VIX",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GRU-american-7500-082008bb": {
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "GIG->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CNF-american-7500-10f18b75": {
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "SDU->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GYN-american-7500-082008bb": {
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "GIG->GYN",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-BSB-american-7500-082008bb": {
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "GIG->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGH-american-7500-10f18b75": {
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "GIG->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-CGH-american-7500-10f18b75": {
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "SDU->CGH",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-BSB-american-7500-10f18b75": {
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "SDU->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VCP-american-7500-10f18b75": {
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "GIG->VCP",
+      "source": "american",
+      "miles": 7500
+    },
+    "SDU-GRU-american-7500-10f18b75": {
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "SDU->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CWB-american-7500-10f18b75": {
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "GIG->CWB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-IGU-american-7500-aaa8f033": {
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "GIG->IGU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VIX-american-7500-5c917682": {
+      "sent_at": "2026-10-07T21:55:18.467650",
+      "route": "GIG->VIX",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VIX-smiles-11200-5c917682": {
+      "sent_at": "2026-10-07T21:55:18.467650",
+      "route": "GIG->VIX",
+      "source": "smiles",
+      "miles": 11200
+    },
+    "GIG-GRU-american-7500-5c917682": {
+      "sent_at": "2026-10-07T21:55:18.467650",
+      "route": "GIG->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GYN-american-7500-5c917682": {
+      "sent_at": "2026-10-07T21:55:18.467650",
+      "route": "GIG->GYN",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-BSB-american-7500-5c917682": {
+      "sent_at": "2026-10-07T21:55:18.467650",
+      "route": "GIG->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CNF-american-7500-5c917682": {
+      "sent_at": "2026-10-07T21:55:18.467650",
+      "route": "GIG->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CGH-american_drop-10000-d41d8cd9": {
+      "sent_at": "2026-10-07T21:55:21.363906",
+      "route": "GIG->CGH",
+      "source": "american_drop",
+      "miles": 10000
+    },
+    "GIG-IGU-american_drop-7500-d41d8cd9": {
+      "sent_at": "2026-10-07T21:55:26.419016",
+      "route": "GIG->IGU",
+      "source": "american_drop",
+      "miles": 7500
+    },
+    "SDU-CGH-american_drop-10000-d41d8cd9": {
+      "sent_at": "2026-10-08T12:17:29.723680",
+      "route": "SDU->CGH",
+      "source": "american_drop",
+      "miles": 10000
+    },
+    "GIG-VIX-american-7500-ad15b8c5": {
+      "sent_at": "2026-10-08T17:25:50.189317",
+      "route": "GIG->VIX",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GRU-american-7500-ad15b8c5": {
+      "sent_at": "2026-10-08T17:25:50.189317",
+      "route": "GIG->GRU",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-GYN-american-7500-ad15b8c5": {
+      "sent_at": "2026-10-08T17:25:50.189317",
+      "route": "GIG->GYN",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-BSB-american-7500-ad15b8c5": {
+      "sent_at": "2026-10-08T17:25:50.189317",
+      "route": "GIG->BSB",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-CNF-american-7500-ad15b8c5": {
+      "sent_at": "2026-10-08T17:25:50.189317",
+      "route": "GIG->CNF",
+      "source": "american",
+      "miles": 7500
+    },
+    "GIG-VIX-american_drop-10000-d41d8cd9": {
+      "sent_at": "2026-10-08T21:29:46.137627",
+      "route": "GIG->VIX",
+      "source": "american_drop",
+      "miles": 10000
+    },
+    "GIG-GRU-american_drop-10000-d41d8cd9": {
+      "sent_at": "2026-10-09T21:00:58.476789",
+      "route": "GIG->GRU",
+      "source": "american_drop",
+      "miles": 10000
+    },
+    "GIG-CNF-american_drop-10000-d41d8cd9": {
+      "sent_at": "2026-10-09T21:01:04.372537",
+      "route": "GIG->CNF",
+      "source": "american_drop",
+      "miles": 10000
+    }
+  },
+  "best_prices": {
+    "GIG-BSB|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-08T17:25:50.189317",
+      "route": "GIG->BSB",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "SDU-CGH|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "SDU->CGH",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-CWB|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "GIG->CWB",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-CNF|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-08T17:25:50.189317",
+      "route": "GIG->CNF",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-GRU|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-08T17:25:50.189317",
+      "route": "GIG->GRU",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "SDU-BSB|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "SDU->BSB",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-POA|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-06T17:13:40.384985",
+      "route": "GIG->POA",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-VIX|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-08T17:25:50.189317",
+      "route": "GIG->VIX",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-IGU|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "GIG->IGU",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-FLN|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-06T17:13:40.384985",
+      "route": "GIG->FLN",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-REC|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->REC",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-SSA|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->SSA",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-CGH|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "GIG->CGH",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "SDU-GRU|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "SDU->GRU",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-FOR|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->FOR",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "SDU-SSA|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-04T18:00:17.601404",
+      "route": "SDU->SSA",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-JPA|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-05T21:42:56.940581",
+      "route": "GIG->JPA",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-CGB|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "GIG->CGB",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-VCP|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "GIG->VCP",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "SDU-CNF|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-07T16:50:04.839256",
+      "route": "SDU->CNF",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-GYN|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-08T17:25:50.189317",
+      "route": "GIG->GYN",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-MCZ|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->MCZ",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-AJU|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-05T21:42:56.940581",
+      "route": "GIG->AJU",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-NAT|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-06T17:13:40.384985",
+      "route": "GIG->NAT",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-SLZ|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-06T17:13:40.384985",
+      "route": "GIG->SLZ",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-NVT|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-05T16:35:49.976559",
+      "route": "GIG->NVT",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-GYN|american_drop|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-01T21:16:47.356381",
+      "route": "GIG->GYN",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "GIG-MAO|american|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-02T21:53:19.384590",
+      "route": "GIG->MAO",
+      "source": "american",
+      "cabin": "economy"
+    },
+    "GIG-MAO|american_drop|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-02T21:53:22.000180",
+      "route": "GIG->MAO",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "GIG-JPA|american_drop|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-02T21:53:26.638537",
+      "route": "GIG->JPA",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "SDU-GRU|american_drop|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-02T21:53:31.452063",
+      "route": "SDU->GRU",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "GIG-FOR|american_drop|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-03T21:28:20.628894",
+      "route": "GIG->FOR",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "SDU-SSA|american_drop|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-03T21:28:25.302567",
+      "route": "SDU->SSA",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "GIG-VCP|american_drop|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-04T03:38:19.665084",
+      "route": "GIG->VCP",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "GIG-NVT|american_drop|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-04T21:05:35.103888",
+      "route": "GIG->NVT",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "SDU-CNF|american_drop|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-05T12:28:00.582279",
+      "route": "SDU->CNF",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "GIG-POA|american_drop|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-06T11:03:01.727576",
+      "route": "GIG->POA",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "GIG-VIX|smiles|economy": {
+      "miles": 11200,
+      "sent_at": "2026-10-07T21:55:18.467650",
+      "route": "GIG->VIX",
+      "source": "smiles",
+      "cabin": "economy"
+    },
+    "GIG-CGB|american_drop|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-06T21:19:41.470177",
+      "route": "GIG->CGB",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "GIG-CWB|american_drop|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-06T21:19:46.665706",
+      "route": "GIG->CWB",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "GIG-BSB|american_drop|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-07T09:38:32.472373",
+      "route": "GIG->BSB",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "GIG-CGH|american_drop|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-07T15:47:43.946713",
+      "route": "GIG->CGH",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "GIG-IGU|american_drop|economy": {
+      "miles": 7500,
+      "sent_at": "2026-10-07T21:55:26.419016",
+      "route": "GIG->IGU",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "SDU-CGH|american_drop|economy": {
+      "miles": 10000,
+      "sent_at": "2026-10-08T12:17:29.723680",
+      "route": "SDU->CGH",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "GIG-VIX|american_drop|economy": {
+      "miles": 10000,
+      "sent_at": "2026-10-08T21:29:46.137627",
+      "route": "GIG->VIX",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "GIG-GRU|american_drop|economy": {
+      "miles": 10000,
+      "sent_at": "2026-10-09T21:00:58.476789",
+      "route": "GIG->GRU",
+      "source": "american_drop",
+      "cabin": "economy"
+    },
+    "GIG-CNF|american_drop|economy": {
+      "miles": 10000,
+      "sent_at": "2026-10-09T21:01:04.372537",
+      "route": "GIG->CNF",
+      "source": "american_drop",
+      "cabin": "economy"
+    }
+  }
+}
