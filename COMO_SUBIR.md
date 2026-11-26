@@ -72,13 +72,22 @@ Telegram e os chat_id dos grupos.
 
 **https://github.com/ondeasmilhasmelevam/robo-alertas/actions**
 
-→ **Busca de alertas** → **Run workflow** → marque **teste** → **Run workflow**.
+→ **Busca de alertas** → **Run workflow**. Escolha:
+
+- **modo:** `avios` (gasta ~65 chamadas da API) pra testar barato, ou
+  `completo` (~350)
+- **teste:** marque ✔
 
 Em modo teste ele procura de verdade mas **não manda nada pro Telegram** — só
 escreve na tela o que teria mandado. Clique na execução pra acompanhar.
 
 Se ficou bom, roda de novo **sem** marcar teste, e a partir daí ele vai sozinho
 às 21h, 0h, 2h, 3h e 6h (hora de Brasília).
+
+> **Atenção com a quota.** A conta da seats.aero dá **1000 chamadas por dia**.
+> Uma varredura completa come ~350. O agendamento já foi montado pra caber
+> (~610/dia), mas se você ficar forçando busca completa à mão no mesmo dia, a
+> API corta e o robô perde ofertas de verdade. Pra testar, use `avios`.
 
 ---
 
