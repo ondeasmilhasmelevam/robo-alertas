@@ -1,11 +1,19 @@
 name: Busca de alertas
 
-# Horarios de Brasilia (BRT = UTC-3). O GitHub so aceita cron em UTC.
-#   21h BRT -> 00:00 UTC (dia seguinte)
-#    0h BRT -> 03:00 UTC
-#    2h BRT -> 05:00 UTC
-#    3h BRT -> 06:00 UTC
-#    6h BRT -> 09:00 UTC
+# ORCAMENTO DA API — leia antes de mexer nos horarios.
+# A conta da seats.aero da 1000 chamadas por dia. Medido em 26/11/2026:
+#   varredura COMPLETA (14 programas x 3 cabines) ... ~350 chamadas
+#   varredura AVIOS    (iberia/british/qatar)     ...  ~65 chamadas
+# Por isso 5 varreduras completas por dia NAO cabem (seriam 1750). O desenho:
+#   21h -> completa (~350) + 0h, 2h, 3h e 6h -> avios (~65 cada) = ~610/dia,
+# sobrando uns 390 pra voce forcar busca a mao quando quiser.
+#
+# HORARIOS — de Brasilia (BRT = UTC-3); o GitHub so aceita cron em UTC:
+#   21h BRT -> 00:00 UTC (dia seguinte)   completa
+#    0h BRT -> 03:00 UTC                  avios
+#    2h BRT -> 05:00 UTC                  avios
+#    3h BRT -> 06:00 UTC                  avios
+#    6h BRT -> 09:00 UTC                  avios
 # O GitHub pode atrasar alguns minutos quando esta cheio; nao e erro.
 on:
   schedule:
@@ -16,8 +24,13 @@ on:
     - cron: "0 9 * * *"
   workflow_dispatch:
     inputs:
+      modo:
+        description: "O que buscar"
+        type: choice
+        options: [completo, avios]
+        default: completo
       teste:
-        description: "Rodar em modo teste (nao envia nada pro Telegram)"
+        description: "Modo teste (nao envia nada pro Telegram)"
         type: boolean
         default: false
       canal:
@@ -75,6 +88,21 @@ jobs:
           printf '%s' "$CHANNELS_CONFIG" > channels_config.json
           python -c "import json;json.load(open('channels_config.json',encoding='utf-8'));print('channels_config.json OK')"
 
+      - name: Decidir o que buscar
+        env:
+          AGENDA: ${{ github.event.schedule }}
+          MODO_BOTAO: ${{ inputs.modo }}
+        run: |
+          if [ -n "$MODO_BOTAO" ]; then
+            MODO="$MODO_BOTAO"                 # veio do botao Run workflow
+          elif [ "$AGENDA" = "0 0 * * *" ]; then
+            MODO="completo"                    # 21h de Brasilia
+          else
+            MODO="avios"                       # 0h, 2h, 3h e 6h
+          fi
+          echo "MODO=$MODO" >> "$GITHUB_ENV"
+          echo "Modo desta execucao: $MODO"
+
       - name: Rodar a busca
         env:
           SEATS_API_KEY:        ${{ secrets.SEATS_API_KEY }}
@@ -87,11 +115,14 @@ jobs:
           ROVE_ANON_KEY:        ${{ secrets.ROVE_ANON_KEY }}
           ROVE_REFRESH_TOKEN:   ${{ secrets.ROVE_REFRESH_TOKEN }}
           AVIOS_ADMIN_CHAT:     ${{ secrets.AVIOS_ADMIN_CHAT }}
+          TESTE:                ${{ inputs.teste }}
+          CANAL:                ${{ inputs.canal }}
           PYTHONUNBUFFERED: "1"
         run: |
-          ARGS=""
-          if [ "${{ inputs.teste }}" = "true" ]; then ARGS="$ARGS --teste"; fi
-          if [ -n "${{ inputs.canal }}" ]; then ARGS="$ARGS --canal ${{ inputs.canal }}"; fi
+          ARGS="--modo $MODO"
+          if [ "$TESTE" = "true" ]; then ARGS="$ARGS --teste"; fi
+          if [ -n "$CANAL" ]; then ARGS="$ARGS --canal $CANAL"; fi
+          echo "python run_cycle.py $ARGS"
           python run_cycle.py $ARGS
 
       - name: Enxugar o historico de precos
@@ -109,7 +140,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Nada mudou no historico."
           else
-            git commit -m "historico: execucao de $(date -u '+%d/%m/%Y %H:%M') UTC"
+            git commit -m "historico: $MODO em $(date -u '+%d/%m/%Y %H:%M') UTC"
             git pull --rebase --autostash origin ${{ github.ref_name }} || true
             git push
           fi

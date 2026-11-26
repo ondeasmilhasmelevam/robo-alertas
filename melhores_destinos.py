@@ -268,7 +268,13 @@ def fetch_md_promos(callback=None):
     return promos
 
 
-def send_md_for_channel(promos, bot_token, channel, callback=None):
+def send_md_for_channel(promos, bot, channel, callback=None):
+    """`bot` pode ser o objeto do bot (tem .for_chat) ou o token em texto.
+
+    Aceitar os dois e de proposito: em modo teste quem chega aqui e o
+    BotDeTeste, e passando so o token a gente perdia isso e mandava de
+    verdade pro grupo.
+    """
     """Envia promos MD filtradas para UM canal especifico."""
     import time
     def log(msg):
@@ -300,8 +306,11 @@ def send_md_for_channel(promos, bot_token, channel, callback=None):
         region_label = REGIONS.get(matching[0], {}).get("label", "")
         msg = _format(promo["title"], promo["info"], region_label)
 
-        from telegram_bot import TelegramBot
-        ch_bot = TelegramBot(bot_token, chat_id)
+        if hasattr(bot, "for_chat"):
+            ch_bot = bot.for_chat(chat_id)
+        else:
+            from telegram_bot import TelegramBot
+            ch_bot = TelegramBot(bot, chat_id)
         if ch_bot.send_message(msg):
             total += 1
             log(f"-> {ch_name}: {promo['title'][:50]}...")

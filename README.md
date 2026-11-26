@@ -5,16 +5,24 @@ Roda sozinho na nuvem (GitHub Actions), de graça, sem precisar abrir nada no co
 
 ## Horários (hora de Brasília)
 
-| Hora  | O que faz                                  |
-|-------|--------------------------------------------|
-| 21h   | varredura completa                         |
-| 0h    | varredura completa                         |
-| 2h    | varredura completa                         |
-| 3h    | varredura completa                         |
-| 6h    | varredura completa                         |
+| Hora  | O que busca | Custo na API |
+|-------|-------------|--------------|
+| 21h   | **completa** — todos os 14 programas, 3 cabines | ~350 chamadas |
+| 0h    | Iberia / British / Qatar | ~65 |
+| 2h    | Iberia / British / Qatar | ~65 |
+| 3h    | Iberia / British / Qatar | ~65 |
+| 6h    | Iberia / British / Qatar | ~65 |
+
+**Por que não é completa nas cinco.** A conta da seats.aero dá **1000 chamadas
+por dia** (medido em 26/11/2026). Cinco varreduras completas seriam 1750 — não
+cabe, e o robô ficaria sem chamada no meio do dia. Do jeito acima dá ~610 por
+dia e sobram uns 390 pra você forçar busca à mão. Os quatro horários da
+madrugada são justamente quando Iberia, British e Qatar liberam assento, que é
+o que eles buscam.
 
 O GitHub pode atrasar alguns minutos quando está cheio — é normal, não é erro.
-Pra forçar uma busca fora de hora: aba **Actions** → **Busca de alertas** → **Run workflow**.
+Pra forçar uma busca fora de hora: aba **Actions** → **Busca de alertas** →
+**Run workflow**, e lá você escolhe `completo` ou `avios`.
 
 ## O filtro (régua)
 
@@ -27,7 +35,7 @@ usa a tabela oficial de distância, só a tarifa de baixa temporada (`avios_char
 
 | Arquivo | Pra que serve |
 |---|---|
-| `run_cycle.py` | roda **um** ciclo e sai. É o que a nuvem chama. |
+| `run_cycle.py` | roda **um** ciclo e sai. É o que a nuvem chama. `--modo completo` ou `--modo avios` |
 | `engine.py` | o motor: busca, filtra, formata e envia |
 | `termometro.py` | a régua de preços (painel + programas) |
 | `distance_service.py` | distância entre aeroportos + tarifa Avios por banda |
@@ -61,6 +69,7 @@ variável de ambiente quando ela existe:
 
 ```
 python run_cycle.py --teste          # mostra na tela, não manda no Telegram
+python run_cycle.py --modo avios     # só Iberia/British/Qatar (~65 chamadas)
 python run_cycle.py --canal Europa   # só um canal
 python painel.py                     # a janela de sempre
 ```

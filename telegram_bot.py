@@ -25,6 +25,15 @@ class TelegramBot:
         self.chat_id = chat_id
         self.base_url = TELEGRAM_API.format(token=token)
 
+    def for_chat(self, chat_id: str):
+        """Outro bot igual a este, apontado pra outro grupo.
+
+        Existe pra o motor nao precisar saber QUE tipo de bot ele recebeu: em
+        modo teste quem chega aqui e o BotDeTeste, e antes disso o motor
+        montava um TelegramBot de verdade a partir do token e tentava enviar.
+        """
+        return TelegramBot(self.token, chat_id)
+
     def send_message(self, text: str, silent: bool = False, _mirror: bool = True) -> bool:
         """Envia mensagem de texto. Tenta com parse_mode e sem se falhar."""
         # Espelha pro Discord (uma vez; o Discord faz o proprio split).

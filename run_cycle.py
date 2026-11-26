@@ -10,6 +10,7 @@ NÃO inclui o Avios.com — aquele precisa de Chrome logado e só roda no PC.
 
 Uso:
     python run_cycle.py                 # ciclo completo, envia de verdade
+    python run_cycle.py --modo avios    # so Iberia/British/Qatar (bem mais barato)
     python run_cycle.py --teste         # roda tudo mas NÃO envia (só mostra)
     python run_cycle.py --canal Europa  # só os canais cujo nome contém "Europa"
     python run_cycle.py --sem-md        # pula a parte de Melhores Destinos
@@ -26,7 +27,7 @@ from datetime import datetime
 from channels import load_config
 from seats_api import SeatsAeroClient
 from telegram_bot import TelegramBot
-from engine import run_cycle_for_channel, run_melhores_destinos
+from engine import run_cycle_for_channel, run_melhores_destinos, run_iberia_scan
 
 
 def _log(msg=""):
@@ -53,6 +54,10 @@ class BotDeTeste:
             self.send_message(m)
         return len(messages)
 
+    def for_chat(self, chat_id=""):
+        outro = BotDeTeste(self.token, chat_id)
+        return outro
+
     def test_connection(self):
         return True
 
@@ -62,7 +67,21 @@ def main():
     ap.add_argument("--teste", action="store_true", help="não envia nada, só mostra")
     ap.add_argument("--canal", default="", help="filtra canais pelo nome (texto parcial)")
     ap.add_argument("--sem-md", action="store_true", help="pula Melhores Destinos")
+    ap.add_argument("--modo", choices=["completo", "avios"], default="completo",
+                    help="completo = todos os programas (~350 chamadas da API); "
+                         "avios = so Iberia/British/Qatar (~70). A conta da "
+                         "seats.aero da 1000 chamadas por dia, por isso existem "
+                         "os dois: 5 varreduras completas por dia nao cabem.")
     args = ap.parse_args()
+
+    # O console do Windows nasce em cp1252 e engasga nos emoji do alerta
+    # ("charmap codec can't encode"), o que derrubava o ciclo inteiro no meio.
+    # No Linux do GitHub Actions isso nao acontece, mas aqui sim.
+    for fluxo in (sys.stdout, sys.stderr):
+        try:
+            fluxo.reconfigure(encoding="utf-8", errors="replace")
+        except Exception:
+            pass
 
     logging.basicConfig(level=logging.WARNING,
                         format="%(asctime)s [%(levelname)s] %(message)s",
@@ -90,24 +109,37 @@ def main():
     maximo = cfg.get("max_alerts_per_cycle", 10)
 
     inicio = time.time()
+    rotulo = "COMPLETO" if args.modo == "completo" else "IBERIA/BRITISH/QATAR"
     _log("=" * 58)
-    _log(f"CICLO {datetime.now():%d/%m/%Y %H:%M}"
+    _log(f"CICLO {rotulo} {datetime.now():%d/%m/%Y %H:%M}"
          f"{'  [MODO TESTE — não envia]' if args.teste else ''}")
     _log(f"Canais: {', '.join(c['name'] for c in canais)}")
     _log("=" * 58)
 
     erros = 0
-    for canal in canais:
-        origens = canal.get("origins") or cfg.get("origins", ["GIG", "GRU"])
+    if args.modo == "avios":
+        # Varredura focada: so os 3 programas da familia Avios. E a que roda nos
+        # horarios de liberacao (eles abrem assento as 0h, 2h, 3h, 6h e 21h) e
+        # custa um quinto das chamadas de uma varredura completa.
+        origens = cfg.get("origins", ["GIG", "GRU"])
         try:
-            run_cycle_for_channel(client=cliente, bot=bot, channel=canal,
-                                  origins=origens, max_alerts=maximo,
-                                  callback=_log)
+            run_iberia_scan(client=cliente, bot=bot, channels=canais,
+                            origins=origens, max_alerts=maximo, callback=_log)
         except Exception as e:
             erros += 1
-            _log(f"[{canal['name']}] ERRO: {e}")
+            _log(f"ERRO na varredura Iberia/British/Qatar: {e}")
+    else:
+        for canal in canais:
+            origens = canal.get("origins") or cfg.get("origins", ["GIG", "GRU"])
+            try:
+                run_cycle_for_channel(client=cliente, bot=bot, channel=canal,
+                                      origins=origens, max_alerts=maximo,
+                                      callback=_log)
+            except Exception as e:
+                erros += 1
+                _log(f"[{canal['name']}] ERRO: {e}")
 
-    if not args.sem_md and cfg.get("melhores_destinos_enabled"):
+    if args.modo == "completo" and not args.sem_md and cfg.get("melhores_destinos_enabled"):
         try:
             run_melhores_destinos(bot, canais, callback=_log)
         except Exception as e:

@@ -201,7 +201,7 @@ def run_cycle_for_channel(client, bot, channel, origins, max_alerts, callback=No
 
     log(f"Iniciando busca | Regioes: {', '.join(regions)} | Cabines: {', '.join(cabins)} | {len(channel_programs)} programas")
 
-    bot_ch = TelegramBot(bot.token, chat_id)
+    bot_ch = bot.for_chat(chat_id)
     hfile = f"historico_{name.replace(' ','_').replace('/','_').replace(chr(92),'_').lower()}.json"
     history = AlertHistory(hfile)
 
@@ -529,7 +529,7 @@ def run_melhores_destinos(bot, channels, callback=None):
         if not promos: log("[MD] Nenhuma promo"); return 0
         total = 0
         for ch in md_chs:
-            total += send_md_for_channel(promos, bot.token, ch, callback=callback)
+            total += send_md_for_channel(promos, bot, ch, callback=callback)
         return total
     except Exception as e: log(f"[MD] Erro: {e}"); return 0
 
@@ -571,7 +571,7 @@ def run_iberia_scan(client, bot, channels, origins, max_alerts, callback=None):
         cabins = channel["cabins"]
         chat_id = channel["chat_id"]
 
-        bot_ch = TelegramBot(bot.token, chat_id)
+        bot_ch = bot.for_chat(chat_id)
         hfile = f"historico_{name.replace(' ','_').replace('/','_').replace(chr(92),'_').lower()}.json"
         history = AlertHistory(hfile)
         pr = get_price_records()
@@ -627,25 +627,39 @@ def run_iberia_scan(client, bot, channels, origins, max_alerts, callback=None):
         top_alerts.sort(key=lambda x: x["miles"])
         top_alerts = top_alerts[:max_alerts]
 
-        # Buscar voltas
+        # Buscar voltas.
+        # CONSERTADO 26/11/2026: aqui chamava search_return_flights(), que nao
+        # existe em lugar nenhum — a varredura morria com NameError toda vez
+        # que achava alguma passagem. Usa a mesma _find_returns() do ciclo
+        # completo, cuja chave e (destino, origem, programa) — sem a cabine.
         log(f"[{name}] Buscando voltas...")
-        return_cache = {}
-        for a in top_alerts:
-            rk = (a["destination"], a["origin"], a["source"], a["cabin"])
-            if rk not in return_cache:
-                return_cache[rk] = search_return_flights(client, a["destination"], a["origin"], a["source"], a["cabin"])
-                time.sleep(0.5)
-            a["return_flights"] = return_cache[rk]
+        return_flights = _find_returns(client, top_alerts, cabins)
+        log(f"[{name}] Volta para {len(return_flights)} rotas")
 
         # Formatar e enviar
-        from formatter import format_alert
+        from formatter import format_alert_ida_volta
         enviados = 0
         for a in top_alerts:
             try:
-                msg = format_alert(a)
+                volta = return_flights.get((a["destination"], a["origin"], a["source"]))
+                # Mesmo criterio do ciclo completo: ida inflada ou os dois
+                # lados caros nao vao pro grupo.
+                analise = _analyze_viagem(a, volta, sp)
+                if not analise["send"]:
+                    log(f"[{name}] pulado {a['origin']}->{a['destination']} "
+                        f"{a['source']}: {analise['reason']}")
+                    continue
+                if analise["mode"] == "so_ida":
+                    volta = None
+                msg = format_alert_ida_volta(a, volta)
                 if bot_ch.send_message(msg):
                     history.mark_sent(a)
-                    pr.check_and_update(a)
+                    # CONSERTADO 26/11/2026: chamava pr.check_and_update(a),
+                    # mas a funcao pede os campos separados (igual no ciclo
+                    # completo, linhas 389 e 409). Dava TypeError e o alerta
+                    # ja enviado nao entrava no registro de recorde.
+                    pr.check_and_update(a["origin"], a["destination"],
+                                        a["source"], a["cabin"], a["miles"])
                     enviados += 1
             except Exception as e:
                 log(f"[{name}] Erro envio: {e}")
@@ -750,7 +764,7 @@ def run_weekly_summary(bot, channels, days=7, callback=None):
         msg = "\n".join(L)
 
         try:
-            if TelegramBot(bot.token, chat_id).send_message(msg):
+            if bot.for_chat(chat_id).send_message(msg):
                 log(f"[{name}] Resumo enviado ({total} oportunidades).")
         except Exception as e:
             log(f"[{name}] Erro ao enviar resumo: {e}")
