@@ -473,12 +473,318 @@
       "route": "GIG->MAD",
       "source": "iberia",
       "miles": 24250
+    },
+    "BOG-FRA-lufthansa-43871-7714c1e0": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "BOG->FRA",
+      "source": "lufthansa",
+      "miles": 43871
+    },
+    "BOG-FRA-aeroplan-80000-e79ce3e7": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "BOG->FRA",
+      "source": "aeroplan",
+      "miles": 80000
+    },
+    "LIM-MAD-iberia-50500-8819dbd0": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "LIM->MAD",
+      "source": "iberia",
+      "miles": 50500
+    },
+    "UIO-MAD-iberia-50500-273ff881": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "UIO->MAD",
+      "source": "iberia",
+      "miles": 50500
+    },
+    "UIO-MAD-american-67500-888f202a": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "UIO->MAD",
+      "source": "american",
+      "miles": 67500
+    },
+    "BOG-LHR-aeroplan-80000-f8ea476f": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "BOG->LHR",
+      "source": "aeroplan",
+      "miles": 80000
+    },
+    "BOG-CDG-aeroplan-80000-b24217bc": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "BOG->CDG",
+      "source": "aeroplan",
+      "miles": 80000
+    },
+    "BOG-MAD-aeroplan-80000-b24217bc": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "BOG->MAD",
+      "source": "aeroplan",
+      "miles": 80000
+    },
+    "GRU-MAD-virginatlantic-17000-bf53cc25": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "GRU->MAD",
+      "source": "virginatlantic",
+      "miles": 17000
+    },
+    "GRU-MAD-iberia-20000-c3f0091a": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "GRU->MAD",
+      "source": "iberia",
+      "miles": 20000
+    },
+    "GRU-MAD-british-20000-ad140ae3": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "GRU->MAD",
+      "source": "british",
+      "miles": 20000
+    },
+    "GRU-MAD-latam-62831-d6569b66": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "GRU->MAD",
+      "source": "latam",
+      "miles": 62831
+    },
+    "EZE-MAD-virginatlantic-17000-4c9e9f46": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "EZE->MAD",
+      "source": "virginatlantic",
+      "miles": 17000
+    },
+    "EZE-MAD-iberia-24000-a39c659a": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "EZE->MAD",
+      "source": "iberia",
+      "miles": 24000
+    },
+    "EZE-MAD-smiles-112000-bdb996ce": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "EZE->MAD",
+      "source": "smiles",
+      "miles": 112000
+    },
+    "LIM-MAD-virginatlantic-17000-96e57f20": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "LIM->MAD",
+      "source": "virginatlantic",
+      "miles": 17000
+    },
+    "LIM-MAD-iberia-20000-3799a2c7": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "LIM->MAD",
+      "source": "iberia",
+      "miles": 20000
+    },
+    "SCL-CDG-virginatlantic-17000-96e57f20": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "SCL->CDG",
+      "source": "virginatlantic",
+      "miles": 17000
+    },
+    "SCL-CDG-smiles-75000-75f31dd2": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "SCL->CDG",
+      "source": "smiles",
+      "miles": 75000
+    },
+    "SCL-AMS-virginatlantic-17000-3ab7b0e4": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "SCL->AMS",
+      "source": "virginatlantic",
+      "miles": 17000
+    },
+    "SCL-MAD-virginatlantic-17000-799ee64d": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "SCL->MAD",
+      "source": "virginatlantic",
+      "miles": 17000
+    },
+    "EZE-FCO-virginatlantic-17000-c4889823": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "EZE->FCO",
+      "source": "virginatlantic",
+      "miles": 17000
+    },
+    "EZE-CDG-virginatlantic-17000-c4889823": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "EZE->CDG",
+      "source": "virginatlantic",
+      "miles": 17000
+    },
+    "EZE-AMS-virginatlantic-17000-c4889823": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "EZE->AMS",
+      "source": "virginatlantic",
+      "miles": 17000
+    },
+    "GYE-AMS-virginatlantic-17000-8b372523": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "GYE->AMS",
+      "source": "virginatlantic",
+      "miles": 17000
+    },
+    "GIG-FCO-virginatlantic-17000-bf53cc25": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "GIG->FCO",
+      "source": "virginatlantic",
+      "miles": 17000
+    },
+    "GIG-AMS-virginatlantic-17000-ccf16c13": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "GIG->AMS",
+      "source": "virginatlantic",
+      "miles": 17000
+    },
+    "GRU-LHR-virginatlantic-17000-bf53cc25": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "GRU->LHR",
+      "source": "virginatlantic",
+      "miles": 17000
+    },
+    "BOG-AMS-virginatlantic-17000-a6e38e9a": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "BOG->AMS",
+      "source": "virginatlantic",
+      "miles": 17000
+    },
+    "GRU-AMS-virginatlantic-17000-fbf478be": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "GRU->AMS",
+      "source": "virginatlantic",
+      "miles": 17000
+    },
+    "GIG-CDG-virginatlantic-17000-bf53cc25": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "GIG->CDG",
+      "source": "virginatlantic",
+      "miles": 17000
+    },
+    "GRU-BCN-virginatlantic-17000-4a696285": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "GRU->BCN",
+      "source": "virginatlantic",
+      "miles": 17000
+    },
+    "FOR-LIS-virginatlantic-17000-f56bffe7": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "FOR->LIS",
+      "source": "virginatlantic",
+      "miles": 17000
+    },
+    "GRU-FCO-virginatlantic-17000-857f415a": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "GRU->FCO",
+      "source": "virginatlantic",
+      "miles": 17000
+    },
+    "UIO-MAD-iberia-20000-e5416497": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "UIO->MAD",
+      "source": "iberia",
+      "miles": 20000
+    },
+    "UIO-MAD-smiles-93000-bdb996ce": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "UIO->MAD",
+      "source": "smiles",
+      "miles": 93000
+    },
+    "SCL-LHR-british-30500-3eaf0574": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "SCL->LHR",
+      "source": "british",
+      "miles": 30500
+    },
+    "EZE-BCN-smiles-64000-bdb996ce": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "EZE->BCN",
+      "source": "smiles",
+      "miles": 64000
+    },
+    "BOG-LHR-smiles-92000-75f31dd2": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "BOG->LHR",
+      "source": "smiles",
+      "miles": 92000
+    },
+    "BOG-CDG-smiles-94000-75f31dd2": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "BOG->CDG",
+      "source": "smiles",
+      "miles": 94000
+    },
+    "CCS-MAD-smiles-104000-8222e376": {
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "CCS->MAD",
+      "source": "smiles",
+      "miles": 104000
+    },
+    "SCL-BCN-smiles_drop-47000-d41d8cd9": {
+      "sent_at": "2026-11-27T06:41:39.567928",
+      "route": "SCL->BCN",
+      "source": "smiles_drop",
+      "miles": 47000
+    },
+    "SCL-MAD-smiles_drop-39000-d41d8cd9": {
+      "sent_at": "2026-11-27T06:41:42.794578",
+      "route": "SCL->MAD",
+      "source": "smiles_drop",
+      "miles": 39000
+    },
+    "BOG-CDG-smiles_drop-94000-d41d8cd9": {
+      "sent_at": "2026-11-27T06:41:46.060766",
+      "route": "BOG->CDG",
+      "source": "smiles_drop",
+      "miles": 94000
+    },
+    "GRU-MAD-latam_drop-62831-d41d8cd9": {
+      "sent_at": "2026-11-27T06:41:49.294356",
+      "route": "GRU->MAD",
+      "source": "latam_drop",
+      "miles": 62831
+    },
+    "BOG-LHR-smiles_drop-92000-d41d8cd9": {
+      "sent_at": "2026-11-27T06:41:53.208154",
+      "route": "BOG->LHR",
+      "source": "smiles_drop",
+      "miles": 92000
+    },
+    "BOG-MAD-smiles_drop-346000-d41d8cd9": {
+      "sent_at": "2026-11-27T06:41:56.466463",
+      "route": "BOG->MAD",
+      "source": "smiles_drop",
+      "miles": 346000
+    },
+    "GIG-LIS-aeroplan_drop-80000-d41d8cd9": {
+      "sent_at": "2026-11-27T06:41:59.681820",
+      "route": "GIG->LIS",
+      "source": "aeroplan_drop",
+      "miles": 80000
+    },
+    "BOG-MAD-aeroplan_drop-80000-d41d8cd9": {
+      "sent_at": "2026-11-27T06:42:02.917154",
+      "route": "BOG->MAD",
+      "source": "aeroplan_drop",
+      "miles": 80000
+    },
+    "BOG-AMS-smiles_drop-368000-d41d8cd9": {
+      "sent_at": "2026-11-27T06:42:06.164113",
+      "route": "BOG->AMS",
+      "source": "smiles_drop",
+      "miles": 368000
+    },
+    "BOG-LHR-aeroplan_drop-80000-d41d8cd9": {
+      "sent_at": "2026-11-27T06:42:09.387711",
+      "route": "BOG->LHR",
+      "source": "aeroplan_drop",
+      "miles": 80000
     }
   },
   "best_prices": {
     "EZE-MAD|iberia|economy": {
       "miles": 24000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "EZE->MAD",
       "source": "iberia",
       "cabin": "economy"
@@ -492,28 +798,28 @@
     },
     "GRU-MAD|iberia|economy": {
       "miles": 20000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "GRU->MAD",
       "source": "iberia",
       "cabin": "economy"
     },
     "UIO-MAD|iberia|business": {
       "miles": 50500,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "UIO->MAD",
       "source": "iberia",
       "cabin": "business"
     },
     "LIM-MAD|iberia|economy": {
       "miles": 20000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "LIM->MAD",
       "source": "iberia",
       "cabin": "economy"
     },
     "UIO-MAD|iberia|economy": {
       "miles": 20000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "UIO->MAD",
       "source": "iberia",
       "cabin": "economy"
@@ -548,21 +854,21 @@
     },
     "BOG-FRA|lufthansa|business": {
       "miles": 43871,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "BOG->FRA",
       "source": "lufthansa",
       "cabin": "business"
     },
     "BOG-FRA|aeroplan|business": {
       "miles": 80000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "BOG->FRA",
       "source": "aeroplan",
       "cabin": "business"
     },
     "LIM-MAD|iberia|business": {
       "miles": 50500,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "LIM->MAD",
       "source": "iberia",
       "cabin": "business"
@@ -660,42 +966,42 @@
     },
     "GRU-MAD|virginatlantic|economy": {
       "miles": 17000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "GRU->MAD",
       "source": "virginatlantic",
       "cabin": "economy"
     },
     "GRU-MAD|british|economy": {
       "miles": 20000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "GRU->MAD",
       "source": "british",
       "cabin": "economy"
     },
     "GRU-MAD|latam|economy": {
-      "miles": 64064,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "miles": 62831,
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "GRU->MAD",
       "source": "latam",
       "cabin": "economy"
     },
     "EZE-MAD|virginatlantic|economy": {
       "miles": 17000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "EZE->MAD",
       "source": "virginatlantic",
       "cabin": "economy"
     },
     "EZE-MAD|smiles|economy": {
       "miles": 112000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "EZE->MAD",
       "source": "smiles",
       "cabin": "economy"
     },
     "LIM-MAD|virginatlantic|economy": {
       "miles": 17000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "LIM->MAD",
       "source": "virginatlantic",
       "cabin": "economy"
@@ -709,7 +1015,7 @@
     },
     "FOR-LIS|virginatlantic|economy": {
       "miles": 17000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "FOR->LIS",
       "source": "virginatlantic",
       "cabin": "economy"
@@ -786,14 +1092,14 @@
     },
     "BOG-CDG|smiles|economy": {
       "miles": 94000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "BOG->CDG",
       "source": "smiles",
       "cabin": "economy"
     },
     "SCL-MAD|virginatlantic|economy": {
       "miles": 17000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "SCL->MAD",
       "source": "virginatlantic",
       "cabin": "economy"
@@ -807,28 +1113,28 @@
     },
     "GYE-AMS|virginatlantic|economy": {
       "miles": 17000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "GYE->AMS",
       "source": "virginatlantic",
       "cabin": "economy"
     },
     "GRU-LHR|virginatlantic|economy": {
       "miles": 17000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "GRU->LHR",
       "source": "virginatlantic",
       "cabin": "economy"
     },
     "EZE-AMS|virginatlantic|economy": {
       "miles": 17000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "EZE->AMS",
       "source": "virginatlantic",
       "cabin": "economy"
     },
     "BOG-AMS|virginatlantic|economy": {
       "miles": 17000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "BOG->AMS",
       "source": "virginatlantic",
       "cabin": "economy"
@@ -842,49 +1148,49 @@
     },
     "EZE-FCO|virginatlantic|economy": {
       "miles": 17000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "EZE->FCO",
       "source": "virginatlantic",
       "cabin": "economy"
     },
     "SCL-AMS|virginatlantic|economy": {
       "miles": 17000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "SCL->AMS",
       "source": "virginatlantic",
       "cabin": "economy"
     },
     "SCL-CDG|virginatlantic|economy": {
       "miles": 17000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "SCL->CDG",
       "source": "virginatlantic",
       "cabin": "economy"
     },
     "EZE-CDG|virginatlantic|economy": {
       "miles": 17000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "EZE->CDG",
       "source": "virginatlantic",
       "cabin": "economy"
     },
     "GRU-AMS|virginatlantic|economy": {
       "miles": 17000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "GRU->AMS",
       "source": "virginatlantic",
       "cabin": "economy"
     },
     "GRU-BCN|virginatlantic|economy": {
       "miles": 17000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "GRU->BCN",
       "source": "virginatlantic",
       "cabin": "economy"
     },
     "GIG-FCO|virginatlantic|economy": {
       "miles": 17000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "GIG->FCO",
       "source": "virginatlantic",
       "cabin": "economy"
@@ -898,7 +1204,7 @@
     },
     "GIG-AMS|virginatlantic|economy": {
       "miles": 17000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "GIG->AMS",
       "source": "virginatlantic",
       "cabin": "economy"
@@ -919,7 +1225,7 @@
     },
     "GIG-CDG|virginatlantic|economy": {
       "miles": 17000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "GIG->CDG",
       "source": "virginatlantic",
       "cabin": "economy"
@@ -933,21 +1239,21 @@
     },
     "GRU-FCO|virginatlantic|economy": {
       "miles": 17000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "GRU->FCO",
       "source": "virginatlantic",
       "cabin": "economy"
     },
     "UIO-MAD|smiles|economy": {
       "miles": 93000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "UIO->MAD",
       "source": "smiles",
       "cabin": "economy"
     },
     "SCL-LHR|british|economy": {
       "miles": 30500,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "SCL->LHR",
       "source": "british",
       "cabin": "economy"
@@ -968,7 +1274,7 @@
     },
     "EZE-BCN|smiles|economy": {
       "miles": 64000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "EZE->BCN",
       "source": "smiles",
       "cabin": "economy"
@@ -989,7 +1295,7 @@
     },
     "BOG-LHR|smiles|economy": {
       "miles": 92000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "BOG->LHR",
       "source": "smiles",
       "cabin": "economy"
@@ -1010,7 +1316,7 @@
     },
     "CCS-MAD|smiles|economy": {
       "miles": 104000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T06:41:38.307465",
       "route": "CCS->MAD",
       "source": "smiles",
       "cabin": "economy"
@@ -1028,6 +1334,111 @@
       "route": "GIG->MAD",
       "source": "iberia",
       "cabin": "economy"
+    },
+    "UIO-MAD|american|business": {
+      "miles": 67500,
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "UIO->MAD",
+      "source": "american",
+      "cabin": "business"
+    },
+    "BOG-LHR|aeroplan|business": {
+      "miles": 80000,
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "BOG->LHR",
+      "source": "aeroplan",
+      "cabin": "business"
+    },
+    "BOG-CDG|aeroplan|business": {
+      "miles": 80000,
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "BOG->CDG",
+      "source": "aeroplan",
+      "cabin": "business"
+    },
+    "BOG-MAD|aeroplan|business": {
+      "miles": 80000,
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "BOG->MAD",
+      "source": "aeroplan",
+      "cabin": "business"
+    },
+    "SCL-CDG|smiles|economy": {
+      "miles": 75000,
+      "sent_at": "2026-11-27T06:41:38.307465",
+      "route": "SCL->CDG",
+      "source": "smiles",
+      "cabin": "economy"
+    },
+    "SCL-BCN|smiles_drop|economy": {
+      "miles": 47000,
+      "sent_at": "2026-11-27T06:41:39.567928",
+      "route": "SCL->BCN",
+      "source": "smiles_drop",
+      "cabin": "economy"
+    },
+    "SCL-MAD|smiles_drop|economy": {
+      "miles": 39000,
+      "sent_at": "2026-11-27T06:41:42.794578",
+      "route": "SCL->MAD",
+      "source": "smiles_drop",
+      "cabin": "economy"
+    },
+    "BOG-CDG|smiles_drop|economy": {
+      "miles": 94000,
+      "sent_at": "2026-11-27T06:41:46.060766",
+      "route": "BOG->CDG",
+      "source": "smiles_drop",
+      "cabin": "economy"
+    },
+    "GRU-MAD|latam_drop|economy": {
+      "miles": 62831,
+      "sent_at": "2026-11-27T06:41:49.294356",
+      "route": "GRU->MAD",
+      "source": "latam_drop",
+      "cabin": "economy"
+    },
+    "BOG-LHR|smiles_drop|economy": {
+      "miles": 92000,
+      "sent_at": "2026-11-27T06:41:53.208154",
+      "route": "BOG->LHR",
+      "source": "smiles_drop",
+      "cabin": "economy"
+    },
+    "BOG-MAD|smiles_drop|business": {
+      "miles": 346000,
+      "sent_at": "2026-11-27T06:41:56.466463",
+      "route": "BOG->MAD",
+      "source": "smiles_drop",
+      "cabin": "business"
+    },
+    "GIG-LIS|aeroplan_drop|business": {
+      "miles": 80000,
+      "sent_at": "2026-11-27T06:41:59.681820",
+      "route": "GIG->LIS",
+      "source": "aeroplan_drop",
+      "cabin": "business"
+    },
+    "BOG-MAD|aeroplan_drop|business": {
+      "miles": 80000,
+      "sent_at": "2026-11-27T06:42:02.917154",
+      "route": "BOG->MAD",
+      "source": "aeroplan_drop",
+      "cabin": "business"
+    },
+    "BOG-AMS|smiles_drop|business": {
+      "miles": 368000,
+      "sent_at": "2026-11-27T06:42:06.164113",
+      "route": "BOG->AMS",
+      "source": "smiles_drop",
+      "cabin": "business"
+    },
+    "BOG-LHR|aeroplan_drop|business": {
+      "miles": 80000,
+      "sent_at": "2026-11-27T06:42:09.387711",
+      "route": "BOG->LHR",
+      "source": "aeroplan_drop",
+      "cabin": "business"
     }
   }
 }
