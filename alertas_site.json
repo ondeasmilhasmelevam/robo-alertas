@@ -1,5 +1,50 @@
 [
  {
+  "id": "FOR-MAD-iberia-business",
+  "origem_iata": "FOR",
+  "destino_iata": "MAD",
+  "programa_id": "iberia",
+  "programa": "Avios",
+  "companhia": "Iberia",
+  "cabine": "Executiva",
+  "milhas_ida": 40500,
+  "taxa_ida": 9734.0,
+  "datas_ida": [
+   {
+    "ano": 2026,
+    "mes": 12,
+    "dias": "10 (1)"
+   }
+  ],
+  "milhas_volta": 40500,
+  "taxa_volta": 10542.0,
+  "datas_volta": [
+   {
+    "ano": 2026,
+    "mes": 11,
+    "dias": "27 (1)"
+   },
+   {
+    "ano": 2027,
+    "mes": 3,
+    "dias": "16 (2)"
+   },
+   {
+    "ano": 2027,
+    "mes": 10,
+    "dias": "18 (1)"
+   },
+   {
+    "ano": 2027,
+    "mes": 11,
+    "dias": "3 (1), 12 (1)"
+   }
+  ],
+  "data": "2026-11-27T11:32:09.881157Z",
+  "total_milhas": 81000,
+  "fonte": "robo-alertas"
+ },
+ {
   "id": "BOG-FRA-lufthansa-business",
   "origem_iata": "BOG",
   "destino_iata": "FRA",
