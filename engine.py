@@ -10,6 +10,7 @@ from collections import defaultdict
 from seats_api import SeatsAeroClient
 from processor import process_results, get_destination_region, CABIN_FIELDS, CABIN_NAMES, parse_cost, source_display, get_smart_pricing, is_award, airport_display
 from formatter import format_alert_premium, format_alert_grouped, format_price_drop, format_alert_ida_volta
+import copy
 import publicar_site
 from telegram_bot import TelegramBot
 from history import AlertHistory
@@ -226,20 +227,34 @@ def run_cycle_for_channel(client, bot, channel, origins, max_alerts, callback=No
             source_stats[sk] = {"raw":0,"filtered":0,"awards":0,"error":None}
             t0 = time.time()
             try:
-                results = client.bulk_availability(source=source,cabin=cabin,origin_region="South America",take=1000)
-                filtered = [r for r in results if r.get("Route",{}).get("OriginAirport",r.get("OriginAirport","")) in origins]
-                source_stats[sk]["raw"]=len(results); source_stats[sk]["filtered"]=len(filtered)
+                usa_cache = bool(_ORIGENS_CICLO) and set(origins) <= _ORIGENS_CICLO
+                chave_cache = (source, cabin)
+                if usa_cache and chave_cache in _CACHE_CICLO:
+                    bruto, achados = _CACHE_CICLO[chave_cache]
+                    source_stats[sk]["raw"] = bruto
+                    source_stats[sk]["filtered"] = -1          # -1 = veio do cache
+                else:
+                    alvo = sorted(_ORIGENS_CICLO) if usa_cache else origins
+                    results = client.bulk_availability(source=source,cabin=cabin,origin_region="South America",take=1000)
+                    filtered = [r for r in results if r.get("Route",{}).get("OriginAirport",r.get("OriginAirport","")) in alvo]
+                    source_stats[sk]["raw"]=len(results); source_stats[sk]["filtered"]=len(filtered)
+                    achados = process_results(results=filtered,origin_airports=alvo,cabin=cabin) if filtered else []
+                    bruto = len(results)
+                    if usa_cache:
+                        _CACHE_CICLO[chave_cache] = (bruto, achados)
 
-                if filtered:
-                    alerts = process_results(results=filtered,origin_airports=origins,cabin=cabin)
-                    alerts = [a for a in alerts if get_destination_region(a["destination"]) in regions]
-                    source_stats[sk]["awards"]=len(alerts)
-                    all_alerts.extend(alerts)
+                # Agora sim, o recorte DESTE grupo: as origens e as regioes dele.
+                alerts = [copy.deepcopy(a) for a in achados
+                          if a["origin"] in origins
+                          and get_destination_region(a["destination"]) in regions]
+                source_stats[sk]["awards"]=len(alerts)
+                all_alerts.extend(alerts)
 
                 el = round(time.time()-t0,1)
                 s=source_stats[sk]
-                if s["filtered"]>0 or s["awards"]>0:
-                    log(f"  {source:18s} | {s['raw']:4d} bruto | {s['filtered']:3d} origem | {s['awards']:2d} awards | {el}s")
+                if s["filtered"] != 0 or s["awards"]>0:
+                    origem_txt = "  cache" if s["filtered"] == -1 else f"{s['filtered']:3d} origem"
+                    log(f"  {source:18s} | {s['raw']:4d} bruto | {origem_txt} | {s['awards']:2d} awards | {el}s")
             except Exception as e:
                 source_stats[sk]["error"]=str(e)
                 log(f"  {source:18s} | ERRO: {e}")
@@ -524,6 +539,38 @@ def _find_returns(client, alerts, cabins):
 
     sp.save_periodically()
     return ret
+
+
+# ═══════════════════════════════════════════════════════════════
+# CACHE DO CICLO — uma busca na API serve todos os grupos
+# ═══════════════════════════════════════════════════════════════
+# A consulta ao seats.aero (source + cabine + "South America") e IGUAL pros
+# cinco grupos: ela nao filtra por destino. Quem separa Europa de Brasil e o
+# robo, depois, aqui dentro. Sem isso, ligar os 5 grupos repetia 41 das 90
+# consultas (45%) — "smiles economy" era pedido por 5 canais, "latam economy"
+# por 5, e assim por diante.
+#
+# O que fica guardado e a lista de ACHADOS (3, 4, 0 por consulta), nao a
+# resposta crua (15 mil registros): guardar a resposta estouraria a memoria.
+_CACHE_CICLO = {}
+_ORIGENS_CICLO = None
+
+
+def iniciar_cache_do_ciclo(canais):
+    """Liga o cache. `canais` = os canais que vao rodar neste ciclo."""
+    global _ORIGENS_CICLO
+    _CACHE_CICLO.clear()
+    uniao = set()
+    for c in canais:
+        uniao.update(c.get("origins") or [])
+    _ORIGENS_CICLO = uniao or None
+    return _ORIGENS_CICLO
+
+
+def encerrar_cache_do_ciclo():
+    global _ORIGENS_CICLO
+    _CACHE_CICLO.clear()
+    _ORIGENS_CICLO = None
 
 
 def run_melhores_destinos(bot, channels, callback=None):

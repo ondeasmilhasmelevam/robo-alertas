@@ -27,7 +27,8 @@ from datetime import datetime
 from channels import load_config
 from seats_api import SeatsAeroClient
 from telegram_bot import TelegramBot
-from engine import run_cycle_for_channel, run_melhores_destinos, run_iberia_scan
+from engine import (run_cycle_for_channel, run_melhores_destinos, run_iberia_scan,
+                    iniciar_cache_do_ciclo, encerrar_cache_do_ciclo)
 import publicar_site
 
 
@@ -117,6 +118,13 @@ def main():
     _log(f"Canais: {', '.join(c['name'] for c in canais)}")
     _log("=" * 58)
 
+    # Uma busca na API serve todos os grupos: a consulta nao muda de canal
+    # pra canal, so o recorte depois. Com os 5 grupos ligados isso corta 45%
+    # das chamadas (90 consultas viram 49).
+    uniao = iniciar_cache_do_ciclo(canais)
+    if uniao and len(canais) > 1:
+        _log(f"Cache do ciclo ligado ({len(uniao)} origens no total)")
+
     erros = 0
     if args.modo == "avios":
         # Varredura focada: so os 3 programas da familia Avios. E a que roda nos
@@ -145,6 +153,8 @@ def main():
             run_melhores_destinos(bot, canais, callback=_log)
         except Exception as e:
             _log(f"[Melhores Destinos] ERRO: {e}")
+
+    encerrar_cache_do_ciclo()
 
     # Arquivo que o site le (alertas_site.json). So tem o que foi enviado
     # de verdade; em --teste o BotDeTeste nao envia, entao nao grava nada.
