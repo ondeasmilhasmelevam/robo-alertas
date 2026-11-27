@@ -612,6 +612,24 @@ def run_iberia_scan(client, bot, channels, origins, max_alerts, callback=None):
 
     total_enviados = 0
 
+    # Uma consulta serve todos os grupos.
+    # Ate 27/11/2026 cada grupo refazia a MESMA consulta (mesmo programa, mesma
+    # cabine, mesmas origens) — com 5 grupos ligados isso era chamada da API
+    # jogada fora, e a conta da seats.aero e de 1000 por dia.
+    # E tinha coisa pior: a consulta usava a lista de origens GERAL pra todo
+    # mundo, entao o grupo do Brasil (que pede GIG e SDU) recebia voo saindo de
+    # Fortaleza, e Santos Dumont nao era procurado pra ninguem. Agora a consulta
+    # cobre a UNIAO das origens de todos os grupos (filtrar e de graca: a API
+    # devolve a America do Sul inteira de qualquer jeito) e cada grupo so leva
+    # o que bate com as origens DELE.
+    uniao_origens = set()
+    for c in channels:
+        if c.get("enabled", True):
+            uniao_origens.update(c.get("origins") or origins)
+    uniao_origens = sorted(uniao_origens) or list(origins)
+    cache_scan = {}          # (programa, cabine) -> (bruto, achados)
+    log(f"Origens desta varredura ({len(uniao_origens)}): {', '.join(uniao_origens)}")
+
     for channel in channels:
         if not channel.get("enabled", True):
             continue
@@ -637,21 +655,35 @@ def run_iberia_scan(client, bot, channels, origins, max_alerts, callback=None):
 
         all_alerts = []
 
+        ch_origens = channel.get("origins") or list(origins)
+
         for cabin in cabins:
             for source in scan_programs:
                 t0 = time.time()
                 try:
-                    results = client.bulk_availability(source=source, cabin=cabin, origin_region="South America", take=1000)
-                    filtered = [r for r in results if r.get("Route", {}).get("OriginAirport", r.get("OriginAirport", "")) in origins]
+                    chave = (source, cabin)
+                    if chave in cache_scan:
+                        bruto, achados = cache_scan[chave]
+                        origem_txt = "   cache"
+                    else:
+                        results = client.bulk_availability(source=source, cabin=cabin, origin_region="South America", take=1000)
+                        filtered = [r for r in results
+                                    if r.get("Route", {}).get("OriginAirport", r.get("OriginAirport", "")) in uniao_origens]
+                        achados = process_results(results=filtered, origin_airports=uniao_origens,
+                                                  cabin=cabin) if filtered else []
+                        bruto = len(results)
+                        cache_scan[chave] = (bruto, achados)
+                        origem_txt = f"{len(filtered):4d} origem"
+                        time.sleep(0.5)
 
-                    if filtered:
-                        alerts = process_results(results=filtered, origin_airports=origins, cabin=cabin)
-                        alerts = [a for a in alerts if get_destination_region(a["destination"]) in regions]
-                        all_alerts.extend(alerts)
+                    # O recorte DESTE grupo: as origens dele e as regioes dele.
+                    alerts = [copy.deepcopy(a) for a in achados
+                              if a["origin"] in ch_origens
+                              and get_destination_region(a["destination"]) in regions]
+                    all_alerts.extend(alerts)
 
                     elapsed = time.time() - t0
-                    log(f"[{name}]   {source:18s} | {len(results)} bruto | {len(filtered)} origem | {len(alerts) if filtered else 0} awards | {elapsed:.1f}s")
-                    time.sleep(0.5)
+                    log(f"[{name}]   {source:18s} | {bruto:5d} bruto | {origem_txt} | {len(alerts):2d} awards | {elapsed:.1f}s")
 
                 except Exception as e:
                     log(f"[{name}]   {source} ERRO: {e}")
