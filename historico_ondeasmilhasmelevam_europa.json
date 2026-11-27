@@ -785,6 +785,18 @@
       "route": "FOR->MAD",
       "source": "iberia",
       "miles": 40500
+    },
+    "REC-MAD-british-16000-5a51b90d": {
+      "sent_at": "2026-11-27T14:39:42.236519",
+      "route": "REC->MAD",
+      "source": "british",
+      "miles": 16000
+    },
+    "FOR-MAD-iberia-40500-ac9ac4b0": {
+      "sent_at": "2026-11-27T14:39:43.692719",
+      "route": "FOR->MAD",
+      "source": "iberia",
+      "miles": 40500
     }
   },
   "best_prices": {
@@ -832,7 +844,7 @@
     },
     "FOR-MAD|iberia|business": {
       "miles": 40500,
-      "sent_at": "2026-11-27T11:32:09.875572",
+      "sent_at": "2026-11-27T14:39:43.692719",
       "route": "FOR->MAD",
       "source": "iberia",
       "cabin": "business"
@@ -958,7 +970,7 @@
     },
     "REC-MAD|british|economy": {
       "miles": 16000,
-      "sent_at": "2026-11-26T06:17:40.464672",
+      "sent_at": "2026-11-27T14:39:42.236519",
       "route": "REC->MAD",
       "source": "british",
       "cabin": "economy"
