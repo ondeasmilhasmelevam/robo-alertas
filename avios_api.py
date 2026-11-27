@@ -173,6 +173,15 @@ def read_available_days(page):
     Se houver mais de um calendário (ida/volta), pega o PRIMEIRO (ida).
     """
     rows = page.evaluate(r"""() => {
+  // CONSERTADO 27/11/2026: o Avios renomeou as classes do calendario. Era
+  // "...__available" (dois sublinhados), virou "Itcara_available". Como
+  // "Itcara_dayButton" ainda tem "dayButton", a checagem de pagina carregada
+  // passava e a varredura lia 0 dia em TUDO, sem dar erro.
+  // Cuidado: existe tambem "Itcara_unavailable", que CONTEM "available" —
+  // por isso compara pedaco por pedaco, exigindo que o nome TERMINE em
+  // "available" logo depois de um _ ou -, ou que seja so "available".
+  const _diaLivre = b => (b.className || '').split(/\s+/)
+      .some(c => /(^|[_-])available$/.test(c));
       const btns = [...document.querySelectorAll('button[class*="dayButton"]')];
       // agrupa por calendário (ancestral que contém vários dayButtons)
       const groups = new Map();
@@ -184,7 +193,7 @@ def read_available_days(page):
         if (!groups.has(anc)) groups.set(anc, []);
         groups.get(anc).push({
           aria: b.getAttribute('aria-label') || '',
-          available: (b.className || '').includes('__available'),
+          available: _diaLivre(b),
         });
       });
       const arr = [...groups.values()];
@@ -629,6 +638,15 @@ _CABIN_NAME = {
 #   data-avscan="1" = calendário da VOLTA (direita)
 # Assim uma única busca já dá ida e volta (não precisa varrer a rota invertida).
 _TAG_JS = r"""() => {
+  // CONSERTADO 27/11/2026: o Avios renomeou as classes do calendario. Era
+  // "...__available" (dois sublinhados), virou "Itcara_available". Como
+  // "Itcara_dayButton" ainda tem "dayButton", a checagem de pagina carregada
+  // passava e a varredura lia 0 dia em TUDO, sem dar erro.
+  // Cuidado: existe tambem "Itcara_unavailable", que CONTEM "available" —
+  // por isso compara pedaco por pedaco, exigindo que o nome TERMINE em
+  // "available" logo depois de um _ ou -, ou que seja so "available".
+  const _diaLivre = b => (b.className || '').split(/\s+/)
+      .some(c => /(^|[_-])available$/.test(c));
   document.querySelectorAll('[data-avscan]').forEach(e => e.removeAttribute('data-avscan'));
   const btns = [...document.querySelectorAll('button[class*="dayButton"]')];
   const groups = new Map();
@@ -642,7 +660,7 @@ _TAG_JS = r"""() => {
   const out = [0, 0];
   arr.slice(0, 2).forEach((g, idx) => {
     g.forEach(b => {
-      if ((b.className || '').includes('__available')) {
+      if (_diaLivre(b)) {
         b.setAttribute('data-avscan', String(idx));
         out[idx]++;
       }
@@ -683,7 +701,10 @@ def parse_tooltip(text):
     if m:
         price = int(re.sub(r"[.,]", "", m.group(1)))
     seats = cabin = None
-    m2 = re.search(r"(\d+)\s*(Económica Premium|Econômica Premium|Premium Economy|"
+    # CONSERTADO 27/11/2026: o site passou a escrever "9+" quando tem nove ou
+    # mais assentos ("...8vuelos9+Económica Premium..."). Sem aceitar o "+",
+    # assentos e cabine vinham sempre vazios.
+    m2 = re.search(r"(\d+)\+?\s*(Económica Premium|Econômica Premium|Premium Economy|"
                    r"Económica|Econômica|Economy|Premium|Business|Primera|First)",
                    text, re.I)
     if m2:
@@ -865,7 +886,7 @@ def scan_calendar_hover(page, origin, dest, months=12, cabin=None, log=print,
                 return False
         except Exception:
             return False
-        # dá um respiro pro "__available" ser aplicado nos botões
+        # dá um respiro pro "available" ser aplicado nos botões
         page.wait_for_timeout(1200)
         return True
 

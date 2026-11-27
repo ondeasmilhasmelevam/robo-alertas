@@ -60,18 +60,29 @@ def _datas(datas):
     Mês e ano vão separados de propósito: quem escreve "dezembro" ou "DEZ/26" é
     o site, no padrão dele. Aqui não se inventa texto.
     """
-    por_mes = {}
+    # Mesma regra do formatter.fmt_dates(), que é o que o cliente vê no grupo:
+    # uma linha por data (a mesma data vem repetida, um registro por voo —
+    # sem isso o site mostrava "27 (4), 27 (4), 27 (4)..." quinze vezes), com
+    # o MAIOR número de assentos visto, e o número só aparece quando é de 1 a 4
+    # (acima disso não é escassez, é só ruído).
+    assentos_por_data = {}
     for d in datas or []:
         txt = str(d.get("date", ""))[:10]
-        if len(txt) != 10:
+        if len(txt) != 10 or txt.count("-") != 2:
             continue
+        n = d.get("seats") or 0
+        if txt not in assentos_por_data or n > assentos_por_data[txt]:
+            assentos_por_data[txt] = n
+
+    por_mes = {}
+    for txt in sorted(assentos_por_data):
         try:
             ano, mes, dia = int(txt[:4]), int(txt[5:7]), int(txt[8:10])
         except ValueError:
             continue
-        assentos = d.get("seats") or 0
+        n = assentos_por_data[txt]
         por_mes.setdefault((ano, mes), []).append(
-            f"{dia} ({assentos})" if assentos else str(dia))
+            f"{dia} ({n})" if 1 <= n <= 4 else str(dia))
     return [{"ano": a, "mes": m, "dias": ", ".join(v)}
             for (a, m), v in sorted(por_mes.items())]
 
