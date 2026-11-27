@@ -5,8 +5,10 @@ name: Busca de alertas
 #   varredura COMPLETA (14 programas x 3 cabines) ... ~350 chamadas
 #   varredura AVIOS    (iberia/british/qatar)     ...  ~65 chamadas
 # Por isso 5 varreduras completas por dia NAO cabem (seriam 1750). O desenho:
-#   21h -> completa + 0h, 2h, 3h e 6h -> avios, uns 700/dia no total,
-# sobrando uns 300 pra voce forcar busca a mao quando quiser.
+#   21h -> completa (~400) + 0h, 2h, 3h e 6h -> avios (~75 cada)
+#   9h  -> completa so nos grupos sem Avios (~150)
+# Da uns 850/dia, sobrando pouco pra forcar busca a mao: antes de acrescentar
+# horario ou programa, meca o gasto.
 # Desde 27/11/2026 uma busca so serve os 5 grupos (iniciar_cache_do_ciclo no
 # engine.py), entao ligar os cinco grupos nao mexeu nessa conta.
 #
@@ -132,11 +134,16 @@ jobs:
           git config user.name  "robo-alertas"
           git config user.email "robo-alertas@users.noreply.github.com"
 
-          # Roda uma busca e guarda o resultado. $1 = modo, $2 = marca do
-          # horario ("" quando foi pedido a mao, que nao consome horario).
+          # Roda uma busca e guarda o resultado.
+          #   $1 = modo (completo/avios)
+          #   $2 = marca do horario ("" quando foi pedido a mao, que nao
+          #        consome o horario do dia)
+          #   $3 = quem ("sem-avios" = so os grupos que nao tem
+          #        iberia/british/qatar; vazio = todos os grupos ligados)
           rodar_busca() {
-            MODO="$1"; MARCA="$2"
+            MODO="$1"; MARCA="$2"; QUEM="$3"
             ARGS="--modo $MODO"
+            if [ "$QUEM" = "sem-avios" ]; then ARGS="$ARGS --grupos-sem-avios"; fi
             if [ "$TESTE" = "true" ]; then ARGS="$ARGS --teste"; fi
             if [ -n "$CANAL" ]; then ARGS="$ARGS --canal $CANAL"; fi
             echo "::group::busca $MODO $(date -u '+%H:%M') UTC"
@@ -154,9 +161,11 @@ jobs:
 
             # Volta pro repositorio: o historico de alertas enviados (e ele que
             # evita repetir alerta), o ultima_busca.txt (o relogio do
-            # decidir_busca.py) e o alertas_site.json, que e o arquivo que o
-            # SITE le pra mostrar as passagens (ver publicar_site.py).
-            git add historico_*.json md_history.json vmm_reposted.json alertas_site.json ultima_busca.txt || true
+            # decidir_busca.py), o cota_seats.txt (quanto sobrou da API hoje,
+            # que e o que faz o horario das 9h ceder a vez quando aperta) e o
+            # alertas_site.json, que e o arquivo que o SITE le pra mostrar as
+            # passagens (ver publicar_site.py).
+            git add historico_*.json md_history.json vmm_reposted.json alertas_site.json ultima_busca.txt cota_seats.txt || true
             if git diff --cached --quiet; then
               echo "Nada mudou no historico."
             else
@@ -170,7 +179,7 @@ jobs:
           # seguinte levanta um plantao novo no lugar do que foi cancelado.
           if [ "$EVENTO" = "workflow_dispatch" ] && [ "$E_PLANTAO" != "true" ]; then
             echo "Busca pedida a mao: $MODO_INPUT"
-            rodar_busca "$MODO_INPUT" ""
+            rodar_busca "$MODO_INPUT" "" ""
             exit 0
           fi
 
@@ -184,7 +193,9 @@ jobs:
             echo "$saida" | grep -v '^DECISAO='
             decisao="$(echo "$saida" | grep '^DECISAO=' | tail -1 | cut -d= -f2-)"
             if [ "$(echo "$decisao" | cut -d'|' -f1)" = "sim" ]; then
-              rodar_busca "$(echo "$decisao" | cut -d'|' -f2)" "$(echo "$decisao" | cut -d'|' -f3)"
+              rodar_busca "$(echo "$decisao" | cut -d'|' -f2)" \
+                          "$(echo "$decisao" | cut -d'|' -f3)" \
+                          "$(echo "$decisao" | cut -d'|' -f4)"
             fi
             sleep 300
           done

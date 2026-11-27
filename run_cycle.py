@@ -22,7 +22,7 @@ import argparse
 import logging
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 
 from channels import load_config
 from seats_api import SeatsAeroClient
@@ -74,6 +74,11 @@ def main():
                          "avios = so Iberia/British/Qatar (~70). A conta da "
                          "seats.aero da 1000 chamadas por dia, por isso existem "
                          "os dois: 5 varreduras completas por dia nao cabem.")
+    ap.add_argument("--grupos-sem-avios", action="store_true",
+                    help="so os grupos que NAO tem iberia/british/qatar. A "
+                         "varredura avios pula esses grupos (nao ha o que "
+                         "buscar neles), entao sem isso eles so seriam "
+                         "atendidos uma vez por dia, na varredura completa.")
     args = ap.parse_args()
 
     # O console do Windows nasce em cp1252 e engasga nos emoji do alerta
@@ -101,6 +106,15 @@ def main():
     if args.canal:
         alvo = args.canal.lower()
         canais = [c for c in canais if alvo in c.get("name", "").lower()]
+    if args.grupos_sem_avios:
+        # Quais grupos sao esses sai da propria configuracao, nao de uma lista
+        # escrita a mao: se um dia voce ligar iberia/british/qatar no grupo do
+        # Brasil, ele sai daqui sozinho e passa a ser atendido pelas quatro
+        # varreduras avios da madrugada.
+        from engine import SCHEDULED_SCAN_SOURCES
+        canais = [c for c in canais
+                  if not any(s in (c.get("programs") or [])
+                             for s in SCHEDULED_SCAN_SOURCES)]
     if not canais:
         _log("Nenhum canal ligado (ou nenhum bateu com o filtro). Nada a fazer.")
         return 1
@@ -112,6 +126,8 @@ def main():
 
     inicio = time.time()
     rotulo = "COMPLETO" if args.modo == "completo" else "IBERIA/BRITISH/QATAR"
+    if args.grupos_sem_avios:
+        rotulo += " (so os grupos sem Avios)"
     _log("=" * 58)
     _log(f"CICLO {rotulo} {datetime.now():%d/%m/%Y %H:%M}"
          f"{'  [MODO TESTE — não envia]' if args.teste else ''}")
@@ -166,9 +182,20 @@ def main():
     _log("=" * 58)
     _log(f"Ciclo terminado em {(time.time() - inicio) / 60:.1f} min"
          f"{f' — {erros} canal(is) com erro' if erros else ''}")
-    # chamadas restantes na API (útil pra saber se o plano está estourando)
+    # Quanto sobrou da cota do dia. Fica gravado em cota_seats.txt porque cada
+    # busca é um processo novo: sem o arquivo, a busca seguinte não teria como
+    # saber que a cota está no fim. É isso que o decidir_busca.py lê pra deixar
+    # o horário das 9h (o único que não é abertura de assento) ceder a vez
+    # quando a cota está curta. Em 27/11/2026 a cota zerou no meio do dia e a
+    # busca foi cortada na metade da paginação, sem ninguém ficar sabendo.
     if cliente.remaining_calls is not None:
         _log(f"Chamadas seats.aero restantes hoje: {cliente.remaining_calls}")
+        try:
+            with open("cota_seats.txt", "w", encoding="utf-8") as f:
+                f.write(f"{datetime.now(timezone.utc):%Y-%m-%d} "
+                        f"{cliente.remaining_calls}\n")
+        except OSError:
+            pass
     return 1 if erros else 0
 
 

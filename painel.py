@@ -4,7 +4,7 @@ import customtkinter as ctk
 from tkinter import ttk, messagebox
 import threading, time, logging, os, sys
 from datetime import datetime
-from channels import load_config, save_config, AVAILABLE_REGIONS, AVAILABLE_CABINS
+from channels import load_config, save_config, CONFIG_FILE, AVAILABLE_REGIONS, AVAILABLE_CABINS
 from seats_api import SeatsAeroClient
 from telegram_bot import TelegramBot
 from engine import run_cycle_for_channel, run_melhores_destinos, run_iberia_scan, run_weekly_summary
@@ -35,6 +35,7 @@ class App(ctk.CTk):
         ctk.set_appearance_mode("dark")
         ctk.set_default_color_theme("green")
         self.cd = load_config()
+        self._cfg_mtime = self._mtime_config()
         self.running = False
         self.thread = None
         self._build()
@@ -316,12 +317,49 @@ class App(ctk.CTk):
         if idx is not None:self.cd["channels"][idx]=data
         else:self.cd["channels"].append(data)
         save_config(self.cd);self._load_list()
+    def _mtime_config(self):
+        try:
+            return os.path.getmtime(CONFIG_FILE)
+        except OSError:
+            return None
+
+    def _config_mudou_fora(self):
+        """O arquivo mudou no disco depois que este painel o abriu?
+
+        Acontece de verdade: o channels_config.json e a mesma lista que vai pro
+        cofre da nuvem. Se o painel ficou aberto enquanto a lista mudou (um
+        grupo ligado, por exemplo) e depois voce clica em Salvar, ele grava por
+        cima com a copia velha que tem na memoria — e desfaz a mudanca sem
+        avisar. Foi o que quase aconteceu em 27/11/2026 com os 5 grupos.
+
+        Devolve True se for pra seguir salvando, False se o usuario preferiu
+        recarregar o que esta no disco.
+        """
+        atual = self._mtime_config()
+        if atual is None or self._cfg_mtime is None or atual == self._cfg_mtime:
+            return True
+        segue = messagebox.askyesno(
+            "O arquivo mudou fora do painel",
+            "O channels_config.json foi alterado depois que este painel abriu.\n\n"
+            "Salvar agora grava por cima dessa alteracao.\n\n"
+            "Sim  = salvar assim mesmo (perde a alteracao de fora)\n"
+            "Nao  = recarregar o arquivo do disco (perde o que esta na tela)",
+            default="no")
+        if not segue:
+            self.cd = load_config()
+            self._cfg_mtime = self._mtime_config()
+            self._load_list()
+            self._wl("Configuracao recarregada do disco. Nada foi gravado por cima.")
+        return segue
+
     def _save(self):
+        if not self._config_mudou_fora():
+            return
         self.cd["seats_api_key"]=self.api_var.get().strip()
         self.cd["telegram_bot_token"]=self.tok_var.get().strip()
         self.cd["check_interval_minutes"]=int(self.int_var.get() or 60)
         self.cd["max_alerts_per_cycle"]=int(self.max_var.get() or 10)
-        save_config(self.cd);self._wl("Configuracao salva!")
+        save_config(self.cd);self._cfg_mtime=self._mtime_config();self._wl("Configuracao salva!")
     def _start(self):
         self._save();ak=self.cd.get("seats_api_key","");tok=self.cd.get("telegram_bot_token","")
         chs=[c for c in self.cd.get("channels",[]) if c.get("enabled",True)]
@@ -332,11 +370,28 @@ class App(ctk.CTk):
         self.auto_lbl.configure(text="Monitorando...",text_color=C_GREEN)
         self.status_pill.configure(text="  Online  ",fg_color=C_GREEN_DARK)
         self._wl("Monitoramento iniciado!")
-        self._wl("Varredura Iberia/British/Qatar agendada: 21:02 e 21:05")
-        self._wl("Resumo semanal agendado: sexta-feira 20:00")
+        # A busca de passagens mora na NUVEM desde 27/11/2026 (repo
+        # ondeasmilhasmelevam/robo-alertas, plantao de 5h30 que se religa).
+        # Se o painel tambem buscar, o cliente recebe o MESMO alerta duas
+        # vezes — cada lado tem o seu proprio historico_*.json e nenhum sabe
+        # o que o outro mandou — e a cota da seats.aero (1000 chamadas por
+        # dia) e gasta em dobro. Entao aqui a busca fica parada de proposito.
+        # Pra voltar a buscar pelo PC (se a nuvem cair, por exemplo), ponha
+        # "busca_na_nuvem": false no channels_config.json.
+        if self.cd.get("busca_na_nuvem", True):
+            self._wl("")
+            self._wl("A BUSCA DE PASSAGENS ESTA NA NUVEM — este painel nao vai buscar.")
+            self._wl("  (se buscasse junto, o grupo receberia o mesmo alerta duas vezes")
+            self._wl("   e a cota da API seria gasta em dobro)")
+            self._wl("Aqui seguem rodando: Avios.com, repost do VMM e os botoes de busca a mao.")
+            self._wl("")
+        else:
+            self._wl("Busca PELO PC ligada (busca_na_nuvem = false).")
+            self._wl("Varredura Iberia/British/Qatar agendada: 21:02 e 21:05")
+            self._wl("Resumo semanal agendado: sexta-feira 20:00")
+            self.thread=threading.Thread(target=self._loop,daemon=True);self.thread.start()
+            self.iberia_thread=threading.Thread(target=self._iberia_scheduler,daemon=True);self.iberia_thread.start()
         self._wl("Userbot VMM (repost) iniciando junto...")
-        self.thread=threading.Thread(target=self._loop,daemon=True);self.thread.start()
-        self.iberia_thread=threading.Thread(target=self._iberia_scheduler,daemon=True);self.iberia_thread.start()
         self.vmm_thread=threading.Thread(target=self._start_vmm_userbot,daemon=True);self.vmm_thread.start()
         if self.cd.get("rove_enabled"):
             self._wl("Rove (preço pago) ligado — testando conexão...")
