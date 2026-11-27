@@ -5,23 +5,28 @@ name: Busca de alertas
 #   varredura COMPLETA (14 programas x 3 cabines) ... ~350 chamadas
 #   varredura AVIOS    (iberia/british/qatar)     ...  ~65 chamadas
 # Por isso 5 varreduras completas por dia NAO cabem (seriam 1750). O desenho:
-#   21h -> completa (~350) + 0h, 2h, 3h e 6h -> avios (~65 cada) = ~610/dia,
-# sobrando uns 390 pra voce forcar busca a mao quando quiser.
-# Desde 27/11/2026 uma busca so serve os 5 grupos (ver iniciar_cache_do_ciclo
-# no engine.py), entao ligar os grupos nao mexeu nessa conta.
+#   21h -> completa + 0h, 2h, 3h e 6h -> avios, uns 700/dia no total,
+# sobrando uns 300 pra voce forcar busca a mao quando quiser.
+# Desde 27/11/2026 uma busca so serve os 5 grupos (iniciar_cache_do_ciclo no
+# engine.py), entao ligar os cinco grupos nao mexeu nessa conta.
 #
-# POR QUE BATE DE 20 EM 20 MINUTOS
-# O cron do GitHub em repositorio gratuito atrasa e engole execucao: na noite
-# de 26 pra 27/11/2026, das 4 batidas devidas so 1 aconteceu, e com 6h33 de
-# atraso. Entao o relogio do GitHub nao decide mais nada — ele so bate na
-# porta. Quem decide e o decidir_busca.py, que olha a hora de Brasilia e o
-# arquivo ultima_busca.txt e responde se algum horario do dia ja passou e
-# ainda nao foi feito (com 90 min de tolerancia). Pra um horario se perder,
-# o GitHub teria de engolir cinco batidas seguidas.
-# Os horarios de verdade estao no decidir_busca.py, nao aqui.
+# POR QUE PLANTAO, E NAO AGENDAMENTO
+# O cron do GitHub em repositorio gratuito nao atrasa minutos: atrasa HORAS, e
+# engole execucao. Medido em 27/11/2026: das 4 batidas devidas na noite
+# anterior so 1 aconteceu, com 6h33 de atraso; e a batida das 09:00 UTC saiu as
+# 14:38. Depois disso, com agendamento de 20 em 20 minutos, as batidas das
+# 15:00 e 15:20 simplesmente nao vieram. Nenhuma tolerancia em minutos resolve
+# atraso em horas.
+# Entao o relogio do GitHub nao decide mais nada. Cada execucao fica de
+# PLANTAO por 5h30, olhando a hora de Brasilia de 5 em 5 minutos, e no fim
+# chama a proxima com `gh workflow run` — chamada a mao sai na hora, ao
+# contrario de agendamento. O agendamento de hora em hora fica so de reserva,
+# pra religar a corrente se ela parar. E o mesmo desenho do plantao do site
+# (.github/workflows/alertas.yml), que funciona ha meses.
+# Quem sabe os horarios e o decidir_busca.py, nao este arquivo.
 on:
   schedule:
-    - cron: "*/20 * * * *"
+    - cron: "17 * * * *"   # reserva: religa o plantao se a corrente parar
   workflow_dispatch:
     inputs:
       modo:
@@ -37,38 +42,27 @@ on:
         description: "Rodar so um canal (parte do nome). Vazio = todos"
         type: string
         default: ""
+      plantao:
+        description: "Nao marque: e o proprio robo chamando o proximo plantao"
+        type: boolean
+        default: false
 
 permissions:
   contents: write   # para gravar de volta o historico de alertas enviados
+  actions: write    # para chamar o proximo plantao
+
+concurrency:
+  group: busca-alertas
+  # Um plantao por vez. Quem aperta "Run workflow" fura a fila: cancela o
+  # plantao que esta so esperando a proxima hora, em vez de ficar na fila
+  # atras dele por ate 5h30. O plantao que o robo chama (plantao=true) nao
+  # cancela ninguem: espera o anterior terminar.
+  cancel-in-progress: ${{ github.event_name == 'workflow_dispatch' && inputs.plantao != true }}
 
 jobs:
-  # Trabalho curto (uns 20 segundos) que roda a cada batida so pra responder
-  # "esta na hora?". So quando a resposta e sim e que a busca de verdade sobe.
-  decidir:
+  plantao:
     runs-on: ubuntu-latest
-    outputs:
-      rodar: ${{ steps.relogio.outputs.rodar }}
-      modo:  ${{ steps.relogio.outputs.modo }}
-      marca: ${{ steps.relogio.outputs.marca }}
-    steps:
-      - uses: actions/checkout@v4
-      - id: relogio
-        env:
-          MODO_BOTAO: ${{ inputs.modo }}
-        run: python3 decidir_busca.py
-
-  buscar:
-    needs: decidir
-    if: needs.decidir.outputs.rodar == 'sim'
-    runs-on: ubuntu-latest
-    timeout-minutes: 50
-
-    # Uma busca por vez: duas ao mesmo tempo brigariam pelo historico.
-    # Fica no trabalho, nao no workflow inteiro, pra que as batidas de 20 em
-    # 20 minutos nunca entrem em fila atras de uma busca em andamento.
-    concurrency:
-      group: busca-alertas
-      cancel-in-progress: false
+    timeout-minutes: 350
 
     steps:
       - name: Baixar o codigo
@@ -115,9 +109,14 @@ jobs:
               print("  -", c.get('name', '(sem nome)'))
           PY
 
-      - name: Rodar a busca
+      - name: Plantao
         env:
-          MODO:                 ${{ needs.decidir.outputs.modo }}
+          EVENTO:               ${{ github.event_name }}
+          E_PLANTAO:            ${{ inputs.plantao }}
+          MODO_INPUT:           ${{ inputs.modo }}
+          TESTE:                ${{ inputs.teste }}
+          CANAL:                ${{ inputs.canal }}
+          RAMO:                 ${{ github.ref_name }}
           SEATS_API_KEY:        ${{ secrets.SEATS_API_KEY }}
           TELEGRAM_BOT_TOKEN:   ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_API_ID:      ${{ secrets.TELEGRAM_API_ID }}
@@ -128,46 +127,74 @@ jobs:
           ROVE_ANON_KEY:        ${{ secrets.ROVE_ANON_KEY }}
           ROVE_REFRESH_TOKEN:   ${{ secrets.ROVE_REFRESH_TOKEN }}
           AVIOS_ADMIN_CHAT:     ${{ secrets.AVIOS_ADMIN_CHAT }}
-          TESTE:                ${{ inputs.teste }}
-          CANAL:                ${{ inputs.canal }}
           PYTHONUNBUFFERED: "1"
-        run: |
-          ARGS="--modo $MODO"
-          if [ "$TESTE" = "true" ]; then ARGS="$ARGS --teste"; fi
-          if [ -n "$CANAL" ]; then ARGS="$ARGS --canal $CANAL"; fi
-          echo "python run_cycle.py $ARGS"
-          python run_cycle.py $ARGS
-
-      # So depois que a busca terminou bem e que o horario conta como feito.
-      # Se ela quebrou no meio, o marcador fica como estava e a proxima batida
-      # (dentro da tolerancia) tenta de novo.
-      - name: Marcar o horario como feito
-        if: success() && needs.decidir.outputs.marca != ''
-        run: |
-          printf '%s\n' "${{ needs.decidir.outputs.marca }}" > ultima_busca.txt
-          echo "Horario ${{ needs.decidir.outputs.marca }} marcado como feito."
-
-      - name: Enxugar o historico de precos
-        if: always()
-        run: python compactar_estado.py || true
-
-      # Volta pro repositorio: o historico de alertas enviados (e ele que evita
-      # repetir alerta), o ultima_busca.txt (o relogio do decidir_busca.py) e o
-      # alertas_site.json, que e o arquivo que o SITE le pra mostrar as
-      # passagens (ver publicar_site.py).
-      - name: Guardar o historico de alertas no repositorio
-        if: always()
         run: |
           git config user.name  "robo-alertas"
           git config user.email "robo-alertas@users.noreply.github.com"
-          git add historico_*.json md_history.json vmm_reposted.json alertas_site.json ultima_busca.txt || true
-          if git diff --cached --quiet; then
-            echo "Nada mudou no historico."
-          else
-            git commit -m "historico: ${{ needs.decidir.outputs.modo }} em $(date -u '+%d/%m/%Y %H:%M') UTC"
-            git pull --rebase --autostash origin ${{ github.ref_name }} || true
-            git push
+
+          # Roda uma busca e guarda o resultado. $1 = modo, $2 = marca do
+          # horario ("" quando foi pedido a mao, que nao consome horario).
+          rodar_busca() {
+            MODO="$1"; MARCA="$2"
+            ARGS="--modo $MODO"
+            if [ "$TESTE" = "true" ]; then ARGS="$ARGS --teste"; fi
+            if [ -n "$CANAL" ]; then ARGS="$ARGS --canal $CANAL"; fi
+            echo "::group::busca $MODO $(date -u '+%H:%M') UTC"
+            echo "python run_cycle.py $ARGS"
+            if python run_cycle.py $ARGS; then
+              # So conta como feito se terminou bem; se quebrou no meio, a
+              # volta seguinte do plantao tenta de novo.
+              if [ -n "$MARCA" ]; then printf '%s\n' "$MARCA" > ultima_busca.txt; fi
+            else
+              echo "::warning::a busca de $MODO falhou; o horario fica pra proxima volta."
+            fi
+            echo "::endgroup::"
+
+            python compactar_estado.py || true
+
+            # Volta pro repositorio: o historico de alertas enviados (e ele que
+            # evita repetir alerta), o ultima_busca.txt (o relogio do
+            # decidir_busca.py) e o alertas_site.json, que e o arquivo que o
+            # SITE le pra mostrar as passagens (ver publicar_site.py).
+            git add historico_*.json md_history.json vmm_reposted.json alertas_site.json ultima_busca.txt || true
+            if git diff --cached --quiet; then
+              echo "Nada mudou no historico."
+            else
+              git commit -q -m "historico: $MODO em $(date -u '+%d/%m/%Y %H:%M') UTC"
+              git pull -q --rebase --autostash origin "$RAMO" || true
+              git push -q || echo "::warning::nao deu pra enviar o historico agora; vai na proxima."
+            fi
+          }
+
+          # Pedido a mao pelo botao "Run workflow": roda uma vez e sai. O passo
+          # seguinte levanta um plantao novo no lugar do que foi cancelado.
+          if [ "$EVENTO" = "workflow_dispatch" ] && [ "$E_PLANTAO" != "true" ]; then
+            echo "Busca pedida a mao: $MODO_INPUT"
+            rodar_busca "$MODO_INPUT" ""
+            exit 0
           fi
+
+          # Plantao: 5h30, deixando folga pra chamar o proximo antes do
+          # timeout de 350 minutos.
+          fim=$(( $(date +%s) + 330*60 ))
+          echo "Plantao ligado ate $(date -u -d "@$fim" '+%H:%M') UTC."
+
+          while [ "$(date +%s)" -lt "$fim" ]; do
+            saida="$(python decidir_busca.py)"
+            echo "$saida" | grep -v '^DECISAO='
+            decisao="$(echo "$saida" | grep '^DECISAO=' | tail -1 | cut -d= -f2-)"
+            if [ "$(echo "$decisao" | cut -d'|' -f1)" = "sim" ]; then
+              rodar_busca "$(echo "$decisao" | cut -d'|' -f2)" "$(echo "$decisao" | cut -d'|' -f3)"
+            fi
+            sleep 300
+          done
+          echo "Plantao cumprido; chamando o proximo."
+
+      - name: Chamar o proximo plantao
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run busca.yml --ref "${{ github.ref_name }}" -f plantao=true
 
       - name: Guardar o log pra conferir depois
         if: always()

@@ -3,22 +3,23 @@
 
 Por que isso existe
 -------------------
-O cron do GitHub NAO e confiavel em repositorio gratuito: ele atrasa e, pior,
-simplesmente engole execucoes quando a fila esta cheia. Medido em 27/11/2026:
-das 4 batidas devidas na noite anterior, so 1 aconteceu — e com 6h33 de atraso.
-Cada batida perdida e uma madrugada inteira sem buscar passagem.
+O cron do GitHub NAO e confiavel em repositorio gratuito. Medido em
+27/11/2026: das 4 batidas devidas na noite anterior so 1 aconteceu, com 6h33
+de atraso; a das 09:00 UTC saiu as 14:38; e com agendamento de 20 em 20
+minutos as batidas das 15:00 e 15:20 nao vieram. Atraso em HORAS — nenhuma
+tolerancia em minutos resolve isso. Cada batida perdida e uma madrugada
+inteira sem buscar passagem.
 
-O conserto nao e pedir ao GitHub que seja pontual. E parar de depender de uma
-unica batida: o workflow passa a bater de 20 em 20 minutos e este programa diz
-se ja passou da hora de algum horario do dia e se ele ainda nao foi feito.
-Com 90 minutos de tolerancia, o GitHub teria de engolir CINCO batidas seguidas
-pra um horario se perder.
+Entao o relogio do GitHub nao decide mais nada. O busca.yml fica de PLANTAO
+por 5h30 e chama este programa de 5 em 5 minutos; aqui e que se olha a hora de
+Brasilia e se responde se algum horario do dia ja passou e ainda nao foi feito.
 
 Quem lembra o que ja foi feito e o arquivo `ultima_busca.txt`, gravado de volta
 no repositorio pelo proprio workflow depois que a busca termina. Ele guarda uma
 linha so, no formato `2026-11-27-21`.
 
-Saida: escreve `rodar`, `modo` e `marca` no $GITHUB_OUTPUT.
+Saida: a linha `DECISAO=sim|completo|2026-11-27-21` (que o plantao le) e, se a
+variavel existir, os mesmos campos no $GITHUB_OUTPUT.
 """
 import datetime
 import os
@@ -35,6 +36,9 @@ HORARIOS = [(21, "completo"), (0, "avios"), (2, "avios"), (3, "avios"), (6, "avi
 # Quanto tempo depois da hora ainda vale correr atras do prejuizo. Passou
 # disso, o horario fica pra la: buscar as 23h30 o que era pra ser as 21h ja
 # atrapalha o horario seguinte e gasta chamada da API a toa.
+# Em funcionamento normal isso nem entra em cena: o plantao olha de 5 em 5
+# minutos. A tolerancia e pro caso de a corrente de plantoes ter quebrado e o
+# agendamento de reserva ter demorado a religar.
 TOLERANCIA_MIN = 90
 
 
@@ -60,7 +64,13 @@ def ja_feito():
 
 
 def responder(rodar, modo, marca, motivo):
+    """Fala duas vezes: uma pra gente ler e uma pra maquina ler.
+
+    O plantao do busca.yml pega a linha DECISAO= com cut; o $GITHUB_OUTPUT fica
+    pra quando isso for chamado como um passo de workflow por conta propria.
+    """
     print(motivo)
+    print(f"DECISAO={'sim' if rodar else 'nao'}|{modo}|{marca}")
     saida = os.environ.get("GITHUB_OUTPUT")
     if saida:
         with open(saida, "a", encoding="utf-8") as f:
