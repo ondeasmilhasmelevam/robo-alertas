@@ -22,6 +22,36 @@ try:
     from config import SOURCES
 except: SOURCES = []
 
+# PROGRAMAS DESLIGADOS — o interruptor fica aqui, nao no channels_config.json,
+# porque a configuracao da nuvem mora num Secret do GitHub e mexer nela exige
+# colar o arquivo inteiro a mao. Aqui e uma linha, e vale pras duas varreduras
+# (a completa e a de Avios), que leem a lista de programas do canal por este
+# mesmo caminho.
+#
+# qatar, desligado em 27/11/2026: estava ligado em dois grupos (Europa e
+# America Central) e nunca entregou UM alerta, enquanto iberia entregou 22 e
+# british 15. Motivo: saindo da America do Sul o Qatar vai pra Doha, e
+# get_destination_region('DOH') devolve 'asia' — regiao que nenhum dos 5
+# grupos compra. Ou seja: o robo pedia, recebia Doha e jogava fora, cinco
+# vezes por dia, gastando chamada de uma cota que e de 1000 por dia.
+#
+# PENDENTE DE MEDICAO: o Qatar Privilege Club tambem emite em parceiro
+# oneworld. Se o seats.aero devolver GRU->MAD na Iberia cobrado em Avios do
+# Qatar, isso tem valor e o programa deve voltar — basta tirar daqui. Nao deu
+# pra medir em 27/11 porque a cota do dia estava em zero (HTTP 429).
+PROGRAMAS_DESLIGADOS = {"qatar"}
+
+
+def programas_do_canal(channel):
+    """Os programas que o canal pede, menos os desligados acima.
+
+    Usar SEMPRE isto em vez de channel.get("programs") — e o que garante que
+    desligar um programa valha pra varredura completa e pra de Avios ao mesmo
+    tempo, sem depender de editar o Secret da nuvem.
+    """
+    return [p for p in (channel.get("programs") or SOURCES)
+            if p not in PROGRAMAS_DESLIGADOS]
+
 logger = logging.getLogger("miles_bot")
 
 _price_records = None
@@ -193,7 +223,7 @@ def run_cycle_for_channel(client, bot, channel, origins, max_alerts, callback=No
     regions = channel["regions"]
     cabins = channel["cabins"]
     chat_id = channel["chat_id"]
-    channel_programs = channel.get("programs", SOURCES)
+    channel_programs = programas_do_canal(channel)
 
     pr = get_price_records(); sp = get_smart_pricing()
 
@@ -634,7 +664,7 @@ def run_iberia_scan(client, bot, channels, origins, max_alerts, callback=None):
         if not channel.get("enabled", True):
             continue
 
-        ch_programs = channel.get("programs", SOURCES)
+        ch_programs = programas_do_canal(channel)
         # Verificar se canal tem iberia, british ou qatar habilitados
         scan_programs = [s for s in SCHEDULED_SCAN_SOURCES if s in ch_programs]
         if not scan_programs:

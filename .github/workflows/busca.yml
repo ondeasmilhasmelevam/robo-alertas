@@ -6,9 +6,15 @@ name: Busca de alertas
 #   varredura AVIOS    (iberia/british/qatar)     ...  ~65 chamadas
 # Por isso 5 varreduras completas por dia NAO cabem (seriam 1750). O desenho:
 #   21h -> completa (~400) + 0h, 2h, 3h e 6h -> avios (~75 cada)
-#   9h  -> completa so nos grupos sem Avios (~150)
-# Da uns 850/dia, sobrando pouco pra forcar busca a mao: antes de acrescentar
+#   9h  -> completa so nos grupos sem Avios (~200)
+# Da uns 800/dia, sobrando pouco pra forcar busca a mao: antes de acrescentar
 # horario ou programa, meca o gasto.
+# Em 27/11/2026 o programa `qatar` foi desligado (PROGRAMAS_DESLIGADOS no
+# engine.py): pedia 17 consultas por dia e nunca entregou um alerta, porque
+# saindo da America do Sul ele so vai pra Doha e nenhum grupo compra 'asia'.
+# Com ele fora, o America Central/Caribe ficou sem nenhum programa Avios e
+# por isso entrou na rodada das 9h (+6 consultas). Saldo: ~11 consultas por
+# dia a menos.
 # Desde 27/11/2026 uma busca so serve os 5 grupos (iniciar_cache_do_ciclo no
 # engine.py), entao ligar os cinco grupos nao mexeu nessa conta.
 #

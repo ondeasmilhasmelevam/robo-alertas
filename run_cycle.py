@@ -111,9 +111,15 @@ def main():
         # escrita a mao: se um dia voce ligar iberia/british/qatar no grupo do
         # Brasil, ele sai daqui sozinho e passa a ser atendido pelas quatro
         # varreduras avios da madrugada.
-        from engine import SCHEDULED_SCAN_SOURCES
+        # programas_do_canal (e nao c["programs"] crua) porque um programa
+        # DESLIGADO no engine.py nao atende grupo nenhum: contar com ele aqui
+        # deixaria o grupo de fora das 9h achando que a varredura de Avios
+        # cuida dele, quando na verdade ninguem cuida. Foi o que ia acontecer
+        # com o America Central/Caribe quando o qatar saiu em 27/11/2026: era
+        # o unico programa Avios dele.
+        from engine import SCHEDULED_SCAN_SOURCES, programas_do_canal
         canais = [c for c in canais
-                  if not any(s in (c.get("programs") or [])
+                  if not any(s in programas_do_canal(c)
                              for s in SCHEDULED_SCAN_SOURCES)]
     if not canais:
         _log("Nenhum canal ligado (ou nenhum bateu com o filtro). Nada a fazer.")
