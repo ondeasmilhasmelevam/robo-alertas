@@ -797,6 +797,30 @@
       "route": "FOR->MAD",
       "source": "iberia",
       "miles": 40500
+    },
+    "GRU-MAD-iberia-36750-ba769522": {
+      "sent_at": "2026-11-27T14:42:45.896416",
+      "route": "GRU->MAD",
+      "source": "iberia",
+      "miles": 36750
+    },
+    "GRU-MAD-british-36750-b030199e": {
+      "sent_at": "2026-11-27T14:42:45.899936",
+      "route": "GRU->MAD",
+      "source": "british",
+      "miles": 36750
+    },
+    "GRU-LHR-british-55000-8023bba2": {
+      "sent_at": "2026-11-27T14:42:45.914063",
+      "route": "GRU->LHR",
+      "source": "british",
+      "miles": 55000
+    },
+    "GIG-LHR-british-55000-f08e4f5a": {
+      "sent_at": "2026-11-27T14:42:45.918164",
+      "route": "GIG->LHR",
+      "source": "british",
+      "miles": 55000
     }
   },
   "best_prices": {
@@ -1457,6 +1481,34 @@
       "route": "BOG->LHR",
       "source": "aeroplan_drop",
       "cabin": "business"
+    },
+    "GRU-MAD|iberia|premium": {
+      "miles": 36750,
+      "sent_at": "2026-11-27T14:42:45.896416",
+      "route": "GRU->MAD",
+      "source": "iberia",
+      "cabin": "premium"
+    },
+    "GRU-MAD|british|premium": {
+      "miles": 36750,
+      "sent_at": "2026-11-27T14:42:45.899936",
+      "route": "GRU->MAD",
+      "source": "british",
+      "cabin": "premium"
+    },
+    "GRU-LHR|british|premium": {
+      "miles": 55000,
+      "sent_at": "2026-11-27T14:42:45.914063",
+      "route": "GRU->LHR",
+      "source": "british",
+      "cabin": "premium"
+    },
+    "GIG-LHR|british|premium": {
+      "miles": 55000,
+      "sent_at": "2026-11-27T14:42:45.918164",
+      "route": "GIG->LHR",
+      "source": "british",
+      "cabin": "premium"
     }
   }
 }
