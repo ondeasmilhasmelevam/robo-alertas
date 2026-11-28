@@ -37,29 +37,44 @@ COTA = "cota_seats.txt"      # "2026-11-27 412" — gravado pelo run_cycle.py
 # a varredura das 21h ser cortada no meio da paginacao (foi o que aconteceu
 # em 27/11/2026, sem ninguem ficar sabendo).
 HORARIOS_QUE_CEDEM = {9}
-COTA_MINIMA = 250
+# 250 -> 200 em 28/11/2026. Com 250 a rodada das 9h cedia a vez TODO DIA e
+# nunca rodava (medido: o dia fechava em 844 de 1000 e sobravam 156). Tirando
+# as 6h sobram ~238, que passa de 200 com folga. O custo real das 9h ainda nao
+# foi medido — a estimativa e ~150 chamadas; se vier acima de 238 ela corta no
+# meio da paginacao e o conferir_grupos.py vai mostrar.
+COTA_MINIMA = 200
 
 # Horario de Brasilia -> (o que buscar, quem). Ver o ORCAMENTO DA API no
 # busca.yml antes de acrescentar horario: a seats.aero da 1000 chamadas por dia.
 #
 # O "quem" vazio quer dizer todos os grupos ligados. "sem-avios" quer dizer so
 # os grupos que nao tem iberia/british/qatar — hoje America do Norte e Brasil.
-# Eles existem porque as quatro varreduras da madrugada sao horario de
-# liberacao da familia Avios e pulam esses dois grupos; sem as 9h, eles so
-# receberiam passagem uma vez por dia. Custo medido: 18 consultas (~150
-# chamadas), contra 48 da varredura completa.
-# As 3h sairam em 28/11/2026. Motivo: a varredura completa das 21h foi MEDIDA
-# em 598 chamadas (a estimativa no comentario era 350-400, errada em 50%), e
-# com ela nesse tamanho o dia nao cabia: na hora das 9h sobravam ~220, abaixo
-# do COTA_MINIMA, e a rodada dos grupos sem Avios cedia a vez todo dia. As 3h
-# eram o horario mais dispensavel por serem vizinhas das 2h — perde pouca
-# abertura e libera ~45 chamadas, o bastante pra sobrar ~267 as 9h.
+# Eles existem porque as varreduras da madrugada sao horario de liberacao da
+# familia Avios e pulam esses dois grupos; sem as 9h, eles so receberiam
+# passagem uma vez por dia.
+#
+# ORCAMENTO MEDIDO EM 28/11/2026 (nao e estimativa):
+#   varredura completa das 21h .... 598 chamadas
+#   varredura avios (cada uma) .... ~82 chamadas   <- a estimativa era 45
+#   rodada das 9h (sem-avios) ..... ~150, AINDA NAO MEDIDA
+#
+# Historico das duas correcoes, pra ninguem repetir:
+# - As 3h sairam em 28/11 de manha. O motivo escrito era que tirar elas
+#   liberava ~45 chamadas e sobrariam ~267 as 9h. Estava ERRADO: a conta usava
+#   45 por varredura avios, e o valor real e ~82.
+# - As 6h sairam em 28/11 a tarde, com a conta certa: 598 + 3x82 = 844, sobram
+#   156, e as 9h exigiam 250 — ou seja, cediam a vez TODO DIA e nunca rodavam.
+#   Entre 0h, 2h e 6h a escolhida foi a das 6h por dois motivos: no unico dia
+#   de dados limpos (28/11) ela entregou 0 alertas contra 3 das 0h e 1 das 2h,
+#   e e a mais distante da virada da meia-noite, que e quando a Ibéria libera.
+#   Um dia de dados e pouco; se o grupo Europa cair, o primeiro suspeito e
+#   esta decisao e as 6h voltam.
+# Conta de hoje: 598 + 2x82 = 762, sobram 238 pras 9h.
 HORARIOS = [
     (21, "completo", ""),           # 21h: todo mundo
     (0,  "avios",    ""),           # madrugada: horario de liberacao da Avios
     (2,  "avios",    ""),
-    (6,  "avios",    ""),
-    (9,  "completo", "sem-avios"),  # 9h: a vez dos tres grupos sem Avios
+    (9,  "completo", "sem-avios"),  # 9h: a vez dos grupos sem Avios
 ]
 
 # Quanto tempo depois da hora ainda vale correr atras do prejuizo. Passou

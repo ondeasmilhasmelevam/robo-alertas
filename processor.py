@@ -254,6 +254,39 @@ def is_award(cost, source, origin, dest, cabin="business"):
         logger.info(f"Termometro cortou {source} {origin}->{dest} {cabin}: {cost:,} = {tier}")
         return False
 
+    # EXCECAO: voo DOMESTICO (regiao `brasil`).
+    # O termometro NUNCA teve faixa pra domestico — nem o do robo (REGUA_PAINEL
+    # e TIERS cobrem europa, eua, america_sul_sul, america_sul_norte,
+    # america_central e asia) nem o dados/termometro.json do site, que tem so 5
+    # regioes. Com o modo estrito abaixo, isso deixou o grupo Brasil MUDO de
+    # 09/10/2026 a 28/11/2026 — 50 dias, depois de 321 alertas em outubro.
+    #
+    # Medido em 28/11/2026 (conferir_brasil.py): a API devolveu 164 awards
+    # domesticos ex-GIG/SDU, 34 deles ABAIXO do teto de AWARD_RULES (American
+    # GIG->CGH, SDU->CGH, SDU->SSA, GIG->SSA e GIG->GYN a 7.500; Smiles
+    # GIG->FLN a 12.400) e todos os 34 foram descartados por falta de faixa.
+    # Nao era grupo desligado, nao era falta de oferta, nao era teto apertado.
+    #
+    # Enquanto nao existir tabela de domestico, o TETO DURO de
+    # AWARD_RULES["brasil_*"] e a regua. Decidido pelo Felipe em 28/11/2026.
+    # Conferido no caminho real do engine com dado vivo da API: os 19 alertas
+    # do grupo Brasil saem com etiqueta normal ("BOM"), que o process_results
+    # poe pelo SmartPricing — nao depende da faixa do termometro.
+    #
+    # Isto vem DEPOIS do tclassify de proposito: no dia em que o termometro
+    # ganhar a regiao `brasil`, ele volta a decidir e este bloco nao e
+    # alcancado.
+    if get_destination_region(dest) == "brasil":
+        teto = _ceiling_for(source, dest, cabin)
+        if teto <= 0:
+            logger.info(f"Domestico sem teto para {source} {cabin}: cortado")
+            return False
+        if cost > teto:
+            logger.info(f"Teto domestico cortou {source} {origin}->{dest} "
+                        f"{cabin}: {cost:,} > teto {teto:,}")
+            return False
+        return True
+
     # MODO ESTRITO (rules_config "exigir_regua"): sem regua para este
     # programa/regiao/cabine, NAO envia. O pedido do usuario e que so entre o que
     # a regua classifica como espetacular/muito bom/bom; cair no SmartPricing
