@@ -139,6 +139,31 @@ TIERS = {
             "caro":        {"latam": 120_000, "smiles": 220_000},
         },
     },
+    # ═══ BRASIL (voos nacionais) ═══
+    # Criada em 28/11/2026 (aprovada pelo Felipe). Antes nao existia faixa para
+    # voo domestico: classify() devolvia None e o modo estrito (exigir_regua)
+    # cortava TODO voo nacional — o grupo Brasil ficou mudo de 09/10 a 28/11.
+    # Valores POR TRECHO, tirados do que a API devolveu entre 30/08 e 26/11/2026
+    # (pricing_history.json): Smiles e Azul aparecem quase sempre caros (mediana
+    # ~105k e ~120k), entao o teto e baixo para so passar promocao de verdade;
+    # Aeroplan cobra 10k fixo em quase todo nacional, entao 10k e "normal".
+    # Nao separa curto de longo (Rio-SP e Rio-Manaus tem o mesmo teto).
+    "brasil": {
+        "economy": {
+            "espetacular": {"latam": 6_000, "smiles": 6_000, "azul": 10_000, "american": 6_000, "flyingblue": 7_000, "united": 6_000, "aeroplan": 4_000},
+            "muito_bom":   {"latam": 9_000, "smiles": 9_000, "azul": 15_000, "american": 7_000, "flyingblue": 9_000, "united": 7_500, "aeroplan": 5_000},
+            "bom":         {"latam": 12_000, "smiles": 12_500, "azul": 20_000, "american": 7_500, "flyingblue": 12_000, "united": 10_000, "aeroplan": 7_500},
+            "normal":      {"latam": 20_000, "smiles": 25_000, "azul": 40_000, "american": 12_500, "flyingblue": 20_000, "united": 15_000, "aeroplan": 10_000},
+            "caro":        {"latam": 35_000, "smiles": 50_000, "azul": 80_000, "american": 25_000, "flyingblue": 30_000, "united": 25_000, "aeroplan": 20_000},
+            "pessimo":     {"latam": 50_000, "smiles": 80_000, "azul": 120_000, "american": 40_000},
+        },
+        # Executiva nacional e rara (nos dados: LATAM >= 50k, United 30k).
+        "business": {
+            "bom":         {"latam": 25_000, "smiles": 30_000, "azul": 40_000, "united": 20_000},
+            "normal":      {"latam": 50_000, "smiles": 60_000, "azul": 80_000, "united": 30_000},
+            "caro":        {"latam": 80_000, "smiles": 100_000, "azul": 130_000, "united": 45_000},
+        },
+    },
 }
 
 # Aeroportos da America do Sul "Andina/Norte" (Colombia, Peru, Equador, Venezuela)
