@@ -1,9 +1,18 @@
 name: Busca de alertas
 
 # ORCAMENTO DA API — leia antes de mexer nos horarios.
-# A conta da seats.aero da 1000 chamadas por dia. Medido em 26/11/2026:
-#   varredura COMPLETA (14 programas x 3 cabines) ... ~350 chamadas
-#   varredura AVIOS    (iberia/british/qatar)     ...  ~65 chamadas
+# A conta da seats.aero da 1000 chamadas por dia.
+#
+# MEDIDO DE VERDADE em 28/11/2026 00h UTC (a varredura das 21h de Brasilia e a
+# PRIMEIRA a gastar da cota nova, que vira a meia-noite UTC — por isso o numero
+# dela sai limpo, sem nada misturado):
+#   varredura COMPLETA ... 598 chamadas. Sobraram 402 de 1000.
+# A estimativa anterior neste comentario era ~350-400. Estava ERRADA em ~50%.
+# Com 598 na completa, o dia inteiro NAO cabe folgado: as 4 varreduras de Avios
+# (~45 cada, agora que o qatar saiu) levam ~180, e a das 9h ~200 — total ~980
+# de 1000, sem margem pra forcar busca a mao. Nao acrescentar horario nem
+# programa sem medir de novo por aqui.
+#   varredura AVIOS (iberia/british) ... ~45 chamadas
 # Por isso 5 varreduras completas por dia NAO cabem (seriam 1750). O desenho:
 #   21h -> completa (~400) + 0h, 2h, 3h e 6h -> avios (~75 cada)
 #   9h  -> completa so nos grupos sem Avios (~200)

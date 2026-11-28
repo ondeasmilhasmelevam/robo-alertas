@@ -43,7 +43,11 @@ REGIOES_QUE_ALGUEM_COMPRA = {"europa", "america_sul", "eua",
 
 
 def olhar(chave, programa, cabine="economy"):
-    r = requests.get("https://seats.aero/partnerapi/search",
+    # /availability (nao /search): o /search exige origin_airport ou
+    # destination_airport e devolve 400 "missing_airports" quando a gente
+    # pergunta por regiao. E o mesmo endpoint que seats_api.bulk_availability
+    # usa, so que aqui numa pagina unica, pra gastar 1 chamada em vez de 15.
+    r = requests.get("https://seats.aero/partnerapi/availability",
                      params={"source": programa,
                              "origin_region": "South America",
                              "cabin": cabine, "take": 1000},
