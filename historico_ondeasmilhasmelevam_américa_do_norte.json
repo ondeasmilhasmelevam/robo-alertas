@@ -1,81 +1,58 @@
 {
   "alerts": {
-    "GIG-IAH-aeroplan-29400-ab92cbd9": {
-      "sent_at": "2026-06-28T15:43:28.272447",
-      "route": "GIG->IAH",
-      "source": "aeroplan",
-      "miles": 29400
-    },
-    "GIG-SFO-aeroplan-45000-ab92cbd9": {
-      "sent_at": "2026-06-28T15:43:28.272447",
-      "route": "GIG->SFO",
-      "source": "aeroplan",
-      "miles": 45000
-    },
-    "GIG-SFO-aeroplan_drop-45000-d41d8cd9": {
-      "sent_at": "2026-06-28T15:43:29.806607",
-      "route": "GIG->SFO",
-      "source": "aeroplan_drop",
-      "miles": 45000
-    },
-    "GIG-IAH-united-45000-567c7d08": {
-      "sent_at": "2026-06-28T17:46:42.993251",
-      "route": "GIG->IAH",
-      "source": "united",
-      "miles": 45000
-    },
-    "GIG-JFK-virginatlantic-49000-27621afa": {
-      "sent_at": "2026-06-28T18:48:47.960577",
-      "route": "GIG->JFK",
-      "source": "virginatlantic",
-      "miles": 49000
-    },
-    "GIG-MCO-american_drop-40500-d41d8cd9": {
-      "sent_at": "2026-07-10T11:56:59.278487",
+    "GIG-MCO-smiles-207000-357d4ee1": {
+      "sent_at": "2026-11-28T00:15:31.968828",
       "route": "GIG->MCO",
-      "source": "american_drop",
-      "miles": 40500
+      "source": "smiles",
+      "miles": 207000
     },
-    "GIG-SFO-united_drop-45400-d41d8cd9": {
-      "sent_at": "2026-07-10T11:57:03.817328",
-      "route": "GIG->SFO",
-      "source": "united_drop",
-      "miles": 45400
-    },
-    "GIG-JFK-smiles-95000-56985565": {
-      "sent_at": "2026-07-12T13:07:23.041915",
+    "GIG-JFK-smiles-223000-89e2445f": {
+      "sent_at": "2026-11-28T00:15:31.968828",
       "route": "GIG->JFK",
       "source": "smiles",
-      "miles": 95000
+      "miles": 223000
     },
-    "GIG-JFK-smiles_drop-95000-d41d8cd9": {
-      "sent_at": "2026-07-12T13:07:26.142340",
-      "route": "GIG->JFK",
-      "source": "smiles_drop",
-      "miles": 95000
+    "GIG-YYZ-smiles-247000-077b1755": {
+      "sent_at": "2026-11-28T00:15:31.968828",
+      "route": "GIG->YYZ",
+      "source": "smiles",
+      "miles": 247000
+    },
+    "GIG-DFW-smiles-254000-43dcb3a7": {
+      "sent_at": "2026-11-28T00:15:31.968828",
+      "route": "GIG->DFW",
+      "source": "smiles",
+      "miles": 254000
     }
   },
   "best_prices": {
-    "GIG-JFK|smiles|economy": {
-      "miles": 95000,
-      "sent_at": "2026-07-12T13:07:23.041915",
+    "GIG-MCO|smiles|business": {
+      "miles": 207000,
+      "sent_at": "2026-11-28T00:15:31.968828",
+      "route": "GIG->MCO",
+      "source": "smiles",
+      "cabin": "business"
+    },
+    "GIG-JFK|smiles|business": {
+      "miles": 223000,
+      "sent_at": "2026-11-28T00:15:31.968828",
       "route": "GIG->JFK",
       "source": "smiles",
-      "cabin": "economy"
+      "cabin": "business"
     },
-    "GIG-SFO|united_drop|economy": {
-      "miles": 45400,
-      "sent_at": "2026-07-10T11:57:03.817328",
-      "route": "GIG->SFO",
-      "source": "united_drop",
-      "cabin": "economy"
+    "GIG-YYZ|smiles|business": {
+      "miles": 247000,
+      "sent_at": "2026-11-28T00:15:31.968828",
+      "route": "GIG->YYZ",
+      "source": "smiles",
+      "cabin": "business"
     },
-    "GIG-JFK|smiles_drop|economy": {
-      "miles": 95000,
-      "sent_at": "2026-07-12T13:07:26.142340",
-      "route": "GIG->JFK",
-      "source": "smiles_drop",
-      "cabin": "economy"
+    "GIG-DFW|smiles|business": {
+      "miles": 254000,
+      "sent_at": "2026-11-28T00:15:31.968828",
+      "route": "GIG->DFW",
+      "source": "smiles",
+      "cabin": "business"
     }
   }
 }
