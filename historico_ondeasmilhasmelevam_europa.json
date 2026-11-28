@@ -1091,12 +1091,30 @@
       "route": "BOG->FRA",
       "source": "aeroplan_drop",
       "miles": 80000
+    },
+    "EZE-MAD-iberia-24000-79af78c6": {
+      "sent_at": "2026-11-28T03:02:33.078497",
+      "route": "EZE->MAD",
+      "source": "iberia",
+      "miles": 24000
+    },
+    "GIG-LHR-british-55000-7f62e209": {
+      "sent_at": "2026-11-28T03:02:34.276650",
+      "route": "GIG->LHR",
+      "source": "british",
+      "miles": 55000
+    },
+    "SCL-LHR-british-60500-e1791542": {
+      "sent_at": "2026-11-28T03:02:35.430240",
+      "route": "SCL->LHR",
+      "source": "british",
+      "miles": 60500
     }
   },
   "best_prices": {
     "EZE-MAD|iberia|economy": {
       "miles": 24000,
-      "sent_at": "2026-11-28T00:14:46.386674",
+      "sent_at": "2026-11-28T03:02:33.078497",
       "route": "EZE->MAD",
       "source": "iberia",
       "cabin": "economy"
@@ -1775,7 +1793,7 @@
     },
     "GIG-LHR|british|premium": {
       "miles": 55000,
-      "sent_at": "2026-11-28T00:14:46.386674",
+      "sent_at": "2026-11-28T03:02:34.276650",
       "route": "GIG->LHR",
       "source": "british",
       "cabin": "premium"
@@ -1810,7 +1828,7 @@
     },
     "SCL-LHR|british|premium": {
       "miles": 60500,
-      "sent_at": "2026-11-28T00:14:46.386674",
+      "sent_at": "2026-11-28T03:02:35.430240",
       "route": "SCL->LHR",
       "source": "british",
       "cabin": "premium"
