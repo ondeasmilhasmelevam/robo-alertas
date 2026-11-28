@@ -1109,6 +1109,12 @@
       "route": "SCL->LHR",
       "source": "british",
       "miles": 60500
+    },
+    "GRU-LHR-british-55000-c193b2be": {
+      "sent_at": "2026-11-28T05:03:10.805547",
+      "route": "GRU->LHR",
+      "source": "british",
+      "miles": 55000
     }
   },
   "best_prices": {
@@ -1786,7 +1792,7 @@
     },
     "GRU-LHR|british|premium": {
       "miles": 55000,
-      "sent_at": "2026-11-28T00:14:46.386674",
+      "sent_at": "2026-11-28T05:03:10.805547",
       "route": "GRU->LHR",
       "source": "british",
       "cabin": "premium"
