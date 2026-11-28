@@ -14,8 +14,10 @@ name: Busca de alertas
 # programa sem medir de novo por aqui.
 #   varredura AVIOS (iberia/british) ... ~45 chamadas
 # Por isso 5 varreduras completas por dia NAO cabem (seriam 1750). O desenho:
-#   21h -> completa (~400) + 0h, 2h, 3h e 6h -> avios (~75 cada)
+#   21h -> completa (598, medida) + 0h, 2h e 6h -> avios (~45 cada)
 #   9h  -> completa so nos grupos sem Avios (~200)
+# O horario das 3h saiu em 28/11/2026 pra essa conta fechar — ver o comentario
+# em cima de HORARIOS no decidir_busca.py.
 # Da uns 800/dia, sobrando pouco pra forcar busca a mao: antes de acrescentar
 # horario ou programa, meca o gasto.
 # Em 27/11/2026 o programa `qatar` foi desligado (PROGRAMAS_DESLIGADOS no

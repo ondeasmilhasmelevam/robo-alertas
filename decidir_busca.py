@@ -48,13 +48,18 @@ COTA_MINIMA = 250
 # liberacao da familia Avios e pulam esses dois grupos; sem as 9h, eles so
 # receberiam passagem uma vez por dia. Custo medido: 18 consultas (~150
 # chamadas), contra 48 da varredura completa.
+# As 3h sairam em 28/11/2026. Motivo: a varredura completa das 21h foi MEDIDA
+# em 598 chamadas (a estimativa no comentario era 350-400, errada em 50%), e
+# com ela nesse tamanho o dia nao cabia: na hora das 9h sobravam ~220, abaixo
+# do COTA_MINIMA, e a rodada dos grupos sem Avios cedia a vez todo dia. As 3h
+# eram o horario mais dispensavel por serem vizinhas das 2h — perde pouca
+# abertura e libera ~45 chamadas, o bastante pra sobrar ~267 as 9h.
 HORARIOS = [
     (21, "completo", ""),           # 21h: todo mundo
     (0,  "avios",    ""),           # madrugada: horario de liberacao da Avios
     (2,  "avios",    ""),
-    (3,  "avios",    ""),
     (6,  "avios",    ""),
-    (9,  "completo", "sem-avios"),  # 9h: a vez dos dois grupos sem Avios
+    (9,  "completo", "sem-avios"),  # 9h: a vez dos tres grupos sem Avios
 ]
 
 # Quanto tempo depois da hora ainda vale correr atras do prejuizo. Passou
